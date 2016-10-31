@@ -1,0 +1,23 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Player.cs" Line="4" Column="38" />
+      <File FileName="Assets\Scripts\Decoy.cs" Line="37" Column="19" />
+      <File FileName="Assets\Scripts\Floor.cs" Line="23" Column="42" />
+      <File FileName="Assets\Scripts\MatrixMap.cs" Line="61" Column="25" />
+      <File FileName="Assets\Scripts\CreateMap.cs" Line="33" Column="133" />
+      <File FileName="Assets\Scripts\Camera.cs" Line="23" Column="38" />
+      <File FileName="Assets\Scripts\CreateEnemies.cs" Line="4" Column="45" />
+      <File FileName="Assets\Scripts\Enemy.cs" Line="13" Column="17" />
+      <File FileName="Assets\Scripts\Farmer.cs" Line="30" Column="15" />
+      <File FileName="Assets\Scripts\Footstep.cs" Line="14" Column="18" />
+      <File FileName="Assets\Scripts\FPSDisplay.cs" Line="24" Column="32" />
+      <File FileName="Assets\Scripts\Sight.cs" Line="17" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

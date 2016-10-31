@@ -1,0 +1,5 @@
+Vaca que segue
+Poça d'água
+Inimigo vira ao ver chega no ponto
+Inimigo vira ao ouvir o inimigo(Proximidade)
+Pegadas
