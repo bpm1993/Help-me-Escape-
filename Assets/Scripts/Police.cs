@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Farmer : Enemy {
+public class Police : Enemy {
 
 	private float[,] positions;
 	private int index;
@@ -12,7 +12,7 @@ public class Farmer : Enemy {
 	public Transform pivot;
 	public Transform light;
 
-    /*
+	/*
      * States:
      * 1 = Normal;
      * 2 = Spot;
@@ -21,11 +21,10 @@ public class Farmer : Enemy {
      * 5 = Mind Control;
      * 6 = Run;
     */
-     
+
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
-        state = 1;
 		positions = new float[4, 2] {
 			{ 2, 10 },
 			{ -7, 10 },
@@ -37,25 +36,25 @@ public class Farmer : Enemy {
 		nextPosition = new Vector3 (positions [index, 0], positions [index, 1], transform.position.z);
 		LookAt (nextPosition);
 	}
-	
+
 	// Update is called once per frame
-	protected override void Update () {
+	protected override void Update () {	
 		base.Update ();
 		if (state == 1) {
 			LookAt (nextPosition);
 			Walk ();
 		} else if (state == 2 && stop != true) {
 			stop = true;
-			callPolice ();
+
 		} else if (state == 3) {
-			LookAt (nextPosition);
+			
 		} else if (state == 5){
 			LookAt (nextPosition);
 			Walk ();
 			Invoke ("resetState", 3f);
-        } else if (state == 6){
-			if (transform.position != nextPosition){
-				transform.position = Vector3.MoveTowards (transform.position, nextPosition, (speed * Time.deltaTime * 2) * slowMoSpeed);
+		} else if (state == 6){
+			if (transform.position != nextPosition) {
+				transform.position = Vector3.MoveTowards (transform.position, nextPosition, speed * Time.deltaTime * 2);
 				Quaternion target = Quaternion.LookRotation (Vector3.forward, nextPosition - transform.position);
 				transform.rotation = Quaternion.Slerp (transform.rotation, target, Time.deltaTime * 2.5f);
 			} else {
@@ -77,16 +76,6 @@ public class Farmer : Enemy {
 		} else {
 			transform.position = Vector3.MoveTowards (transform.position, nextPosition, (speed * Time.deltaTime) * slowMoSpeed);
 		}
-	}
-		
-	void callPolice(){
-		Invoke ("runAway", 2f);
-	}
-
-	void runAway(){
-		state = 6;
-		stop = false;
-		nextPosition = new Vector3 (transform.position.x, 30f, transform.position.z);
 	}
 
 	void resetNextPosition(){

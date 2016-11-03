@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{11BCC2A4-477B-D8E9-3CFD-852DE1969059}</ProjectGuid>
+    <ProjectGuid>{364ECB58-AF16-5FCC-411D-3E6AA365E290}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Footstep.cs" />
      <Compile Include="Assets\Scripts\MatrixMap.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Police.cs" />
      <Compile Include="Assets\Scripts\Sight.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
