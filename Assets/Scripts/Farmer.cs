@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Farmer : Enemy {
@@ -23,7 +23,8 @@ public class Farmer : Enemy {
     */
      
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
+		base.Start ();
         state = 1;
 		positions = new float[4, 2] {
 			{ 2, 10 },
@@ -34,26 +35,27 @@ public class Farmer : Enemy {
 		index = 0;
 		speed = 3f;
 		nextPosition = new Vector3 (positions [index, 0], positions [index, 1], transform.position.z);
-		LookAt ();
+		LookAt (nextPosition);
 	}
 	
 	// Update is called once per frame
-	void Update () {	
+	protected override void Update () {
+		base.Update ();
 		if (state == 1) {
-			LookAt ();
+			LookAt (nextPosition);
 			Walk ();
 		} else if (state == 2 && stop != true) {
 			stop = true;
 			callPolice ();
 		} else if (state == 3) {
-			LookAt ();
+			LookAt (nextPosition);
 		} else if (state == 5){
-			LookAt ();
+			LookAt (nextPosition);
 			Walk ();
 			Invoke ("resetState", 3f);
         } else if (state == 6){
-			if (transform.position != nextPosition) {
-				transform.position = Vector3.MoveTowards (transform.position, nextPosition, speed * Time.deltaTime * 2);
+			if (transform.position != nextPosition){
+				transform.position = Vector3.MoveTowards (transform.position, nextPosition, (speed * Time.deltaTime * 2) * slowMoSpeed);
 				Quaternion target = Quaternion.LookRotation (Vector3.forward, nextPosition - transform.position);
 				transform.rotation = Quaternion.Slerp (transform.rotation, target, Time.deltaTime * 2.5f);
 			} else {
@@ -73,15 +75,10 @@ public class Farmer : Enemy {
 			nextPosition = new Vector3 (positions [index, 0], positions [index, 1], transform.position.z);
 			nextPosition.z = transform.position.z;
 		} else {
-			transform.position = Vector3.MoveTowards (transform.position, nextPosition, speed * Time.deltaTime);
+			transform.position = Vector3.MoveTowards (transform.position, nextPosition, (speed * Time.deltaTime) * slowMoSpeed);
 		}
 	}
-
-	void LookAt(){
-		Quaternion target = Quaternion.LookRotation (Vector3.forward, nextPosition - transform.position);
-		transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 2.5f);
-	}
-
+		
 	void callPolice(){
 		Invoke ("runAway", 2f);
 	}
@@ -90,10 +87,6 @@ public class Farmer : Enemy {
 		state = 6;
 		stop = false;
 		nextPosition = new Vector3 (transform.position.x, 30f, transform.position.z);
-	}
-
-	void resetState(){
-		setState (1);
 	}
 
 	void resetNextPosition(){
