@@ -92,14 +92,17 @@ public class CreateMap : MonoBehaviour {
 				Sprite underPlant = (Sprite)underMilhoList [Random.Range (0, underMilhoList.Count)];
 				SpriteRenderer underRenderer = dirt.transform.FindChild ("Corn").FindChild("Under Plant").gameObject.GetComponent<SpriteRenderer> ();
 				underRenderer.sprite = underPlant;
+				underRenderer.material = Resources.Load<Material> ("Lightning2");
 
 				Sprite midlePlant = (Sprite)midMilhoList [Random.Range (0, underMilhoList.Count)];
 				SpriteRenderer midRenderer= dirt.transform.FindChild ("Corn").FindChild("Mid Plant").gameObject.GetComponent<SpriteRenderer> ();
 				midRenderer.sprite = midlePlant;
+				midRenderer.material = Resources.Load<Material> ("Lightning2");
 
 				Sprite topPlant = (Sprite)topMilhoList [Random.Range (0, underMilhoList.Count)];
 				SpriteRenderer topRenderer= dirt.transform.FindChild ("Corn").FindChild("Top Plant").gameObject.GetComponent<SpriteRenderer> ();
 				topRenderer.sprite = topPlant;
+				topRenderer.material = Resources.Load<Material> ("Lightning2");
 
 
 				dirt.transform.position = new Vector3 (pointX + contX, pointY + contY, 1);

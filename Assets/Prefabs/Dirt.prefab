@@ -352,7 +352,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 00cf82de868a64d4d953cf2fa1765098, type: 2}
+  - {fileID: 2100000, guid: 657dba6250a6e41abb8650ec395a546b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
