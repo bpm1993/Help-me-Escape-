@@ -19,6 +19,9 @@ public class Player : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown ("space")) {
+			GetComponent<MatrixMap> ().StartSlowMotion ();
+		}
 		float moveHorizontal = Input.GetAxis("Horizontal");
 		float moveVertical = Input.GetAxis("Vertical");
 
