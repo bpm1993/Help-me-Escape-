@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour {
 	private float speed = 5.0f;
@@ -21,10 +20,10 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown ("space")) {
-//			GetComponent<MatrixMap> ().StartSlowMotion ();
+			GetComponent<MatrixMap> ().StartSlowMotion ();
 		}
-		float moveHorizontal = CrossPlatformInputManager.GetAxis("Horizontal");//Input.GetAxis("Horizontal");
-		float moveVertical = CrossPlatformInputManager.GetAxis("Vertical");
+		float moveHorizontal = Input.GetAxis("Horizontal");
+		float moveVertical = Input.GetAxis("Vertical");
 
 		move (moveHorizontal, moveVertical);
 		footstep ();
