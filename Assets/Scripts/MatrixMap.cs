@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class MatrixMap : MonoBehaviour {
+	public bool warned = false;
 	float windForce = 0.0f;
 	float timer = 0;
 	float timerStop = 0;
@@ -21,14 +22,7 @@ public class MatrixMap : MonoBehaviour {
 
 	void Update(){
 		timer = timer + Time.deltaTime;
-		
-		if (timer > 2f) {
-			timer = 0;
-			Wind (true);
-		} else {
-			Wind (false);
-		}
-
+		print (warned);
 		if (slowMotion == 1) {
 			timerStop = timerStop + Time.deltaTime;
 			if (Time.timeScale > 0.2f) {

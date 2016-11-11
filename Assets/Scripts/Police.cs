@@ -8,7 +8,6 @@ public class Police : Enemy {
 	private float speed;
 	private Vector3 nextPosition;
 	private Vector3 tempPosition;
-	public Transform pivot;
 	public Transform light;
 
 	/*
@@ -48,22 +47,26 @@ public class Police : Enemy {
 			LookAt (nextPosition);
 			Walk ();
 		} else if (state == 2) {
-			if (mainGame.warned) {
-				setState (5, 0);
+			GameObject mainGame = GameObject.Find ("Main Game");
+			if (mainGame.GetComponent<MatrixMap> ().warned) {
+				state = 5;
 			} else {
-				mainGame.warned = true;
+				mainGame.GetComponent<MatrixMap> ().warned = true;
 			}
 			state = 10;
 			callPolice ();
 		} else if (state == 3) {
 			LookAt (nextPosition);
+		} else if (state == 4) {
+			speed = 4.5f;
 		} else if (state == 5) {
 			LookAt (nextPosition);
-			GameObject player = GameObject.FindObjectsOfType (typeof(Player));
+			GameObject player = GameObject.Find("Player");
+			print (player);
 			nextPosition = player.transform.position;
 			speed = 6.0f;
 			Walk ();
-			Invoke ("resetState", 3f);
+			setState()
 		} else if (state == 6) {
 			if (transform.position != nextPosition) {
 				transform.position = Vector3.MoveTowards (transform.position, nextPosition, (speed * Time.deltaTime * 2) * slowMoSpeed);
@@ -99,18 +102,21 @@ public class Police : Enemy {
 	}
 
 	void callPolice(){
-		Police[] allPolices = GameObject.FindObjectsOfType (typeof(Police));
+		GameObject[] allPolices = GameObject.FindGameObjectsWithTag ("Police");
 		for (int count = 0; count < allPolices.Length; count++) {
-			if (allPolices [count] != gameObject) {
-				getWarned ();
+			if (allPolices[count] != gameObject) {
+				allPolices[count].GetComponent<Police>().getWarned ();
 			}
 		}
-		StartCoroutine (setState(3, 2.0f));
+		StartCoroutine (setState(5, 2.0f));
 	}
 
-	protected void getWarned(Vector3 position){
-		StartCoroutine (setState(3, 2.0f));
-		nextPosition = position;
+	protected void getWarned(){
+		StartCoroutine (setState(5, 2.0f));
+	}
+
+	void Inspect(){
+		
 	}
 
 	void runAway(){
@@ -125,6 +131,7 @@ public class Police : Enemy {
 
 	IEnumerator setState(int state, float delayTime){
 		yield return new WaitForSeconds(delayTime);
+		this.state = state;
 	}
 
 	void OnTriggerEnter2D (Collider2D col){
