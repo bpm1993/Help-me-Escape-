@@ -66,7 +66,6 @@ public class Police : Enemy {
 			nextPosition = player.transform.position;
 			speed = 6.0f;
 			Walk ();
-			setState()
 		} else if (state == 6) {
 			if (transform.position != nextPosition) {
 				transform.position = Vector3.MoveTowards (transform.position, nextPosition, (speed * Time.deltaTime * 2) * slowMoSpeed);
