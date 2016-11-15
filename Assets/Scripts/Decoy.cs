@@ -15,7 +15,7 @@ public class Decoy : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Time.time - startTime >= 5.0f) {
+		if (Time.time - startTime >= 10.0f) {
 			DestroyMe ();
 		}
 	}
@@ -23,8 +23,8 @@ public class Decoy : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col){
 		if (col.GetComponent<Enemy>() != null) {
 			targets [enemiesCount] = col;
+			col.GetComponent<Enemy>().decoy();
 			enemiesCount++;
-			print (enemiesCount);
 		}
 	}
 		

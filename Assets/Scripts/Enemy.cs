@@ -16,7 +16,6 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	protected virtual void Update () {
-		print (slowMoSpeed);
 		if(Input.GetKeyDown(KeyCode.Space) && !slowMo){
 			startTime = Time.time;
 			slowMo = true;
@@ -29,6 +28,9 @@ public class Enemy : MonoBehaviour {
 			float t = (Time.time - startTime) / 2f;
 			slowMoSpeed = Mathf.SmoothStep (0.3f, 1f, t);
 		}
+	}
+	public void decoy(){
+		
 	}
 
 	public void resetState(){

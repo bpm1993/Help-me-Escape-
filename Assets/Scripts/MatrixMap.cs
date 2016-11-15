@@ -22,7 +22,6 @@ public class MatrixMap : MonoBehaviour {
 
 	void Update(){
 		timer = timer + Time.deltaTime;
-		print (warned);
 		if (slowMotion == 1) {
 			timerStop = timerStop + Time.deltaTime;
 			if (Time.timeScale > 0.2f) {
@@ -83,57 +82,6 @@ public class MatrixMap : MonoBehaviour {
 	public void addObject(GameObject obj, int x, int y){
 		matrix [x, y] = obj;
 	}
-
-	/*
-
-	bool sideBool = true;
-	int force = 0;
-	
-	// Use this for initialization
-
-	
-	// Update is called once per frame
-	void Update () {
-		timer = timer + Time.deltaTime;
-		if (timer >= 0.1f) {
-			timer = 0f;
-			if (force >= 6) {
-				sideBool = false;
-			} else if(force <= -6) {
-				sideBool = true;
-			}
-			if (sideBool) {
-				force++;
-			} else {
-				force--;
-			}
-			Wind ();
-		}
-	}
-
-	public void Wind(){
-		float side;
-		if (sideBool) {
-			side = 1f;
-		} else {
-			side = -1f;
-		}
-
-		for (int count = 0; count < 40; count++) {
-			for (int count2 = 0; count2 < 40; count2++) {
-				GameObject corn = matrix [count, count2];
-				corn.transform.GetChild (0).transform.Translate (new Vector3 (0.02f * side, 0, 0));
-				corn.transform.GetChild (1).transform.Translate (new Vector3 (0.04f * side, 0, 0));
-				corn.transform.GetChild (2).transform.Translate (new Vector3 (0.06f * side, 0, 0));
-				corn.transform.GetChild (3).transform.Translate (new Vector3 (0.07f * side, 0, 0));
-			}
-		}
-	}
-
-	public void createWindWall(){
-
-	}
-	*/
 
     internal static void addObject(GameObject dirt)
     {

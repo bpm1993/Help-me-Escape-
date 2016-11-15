@@ -25,7 +25,6 @@ public class Farmer : Enemy {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
-        state = 1;
 		positions = new float[4, 2] {
 			{ 2, 10 },
 			{ -7, 10 },
@@ -37,6 +36,10 @@ public class Farmer : Enemy {
 		nextPosition = new Vector3 (positions [index, 0], positions [index, 1], transform.position.z);
 		LookAt (nextPosition);
 	}
+
+	protected void decoy(){
+		setState (7);
+	}
 	
 	// Update is called once per frame
 	protected override void Update () {
@@ -47,14 +50,12 @@ public class Farmer : Enemy {
 		} else if (state == 2 && stop != true) {
 			stop = true;
 			callPolice ();
-		} else if (state == 3) {
-			LookAt (nextPosition);
-		} else if (state == 5){
+		} else if (state == 5) {
 			LookAt (nextPosition);
 			Walk ();
 			Invoke ("resetState", 3f);
-        } else if (state == 6){
-			if (transform.position != nextPosition){
+		} else if (state == 6) {
+			if (transform.position != nextPosition) {
 				transform.position = Vector3.MoveTowards (transform.position, nextPosition, (speed * Time.deltaTime * 2) * slowMoSpeed);
 				Quaternion target = Quaternion.LookRotation (Vector3.forward, nextPosition - transform.position);
 				transform.rotation = Quaternion.Slerp (transform.rotation, target, Time.deltaTime * 2.5f);
@@ -62,6 +63,9 @@ public class Farmer : Enemy {
 				Destroy (transform.gameObject);
 				Destroy (this);
 			}
+		} else if (state == 7) {
+			LookAt (nextPosition);
+			Walk ();
 		}
 	}
 

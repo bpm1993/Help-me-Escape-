@@ -27,7 +27,6 @@ public class Police : Enemy {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
-		state = 1;
 		positions = new float[4, 2] {
 			{ Random.Range(-15, 15), Random.Range(-15, 15) },
 			{ Random.Range(-15, 15), Random.Range(-15, 15) },
@@ -36,12 +35,13 @@ public class Police : Enemy {
 		};
 		index = 0;
 		speed = 3f;
-		nextPosition = new Vector3 (positions [index, 0], positions [index, 1], transform.position.z);
+		nextPosition = new Vector3 (transform.position.x, 0, transform.position.z);
 		LookAt (nextPosition);
 	}
 
 	// Update is called once per frame
 	protected override void Update () {
+		print (state);
 		base.Update ();
 		if (state == 1) {
 			LookAt (nextPosition);
@@ -58,13 +58,12 @@ public class Police : Enemy {
 		} else if (state == 3) {
 			LookAt (nextPosition);
 		} else if (state == 4) {
-			speed = 4.5f;
+			speed = 4.0f;
 		} else if (state == 5) {
 			LookAt (nextPosition);
-			GameObject player = GameObject.Find("Player");
-			print (player);
+			GameObject player = GameObject.Find ("Player");
 			nextPosition = player.transform.position;
-			speed = 6.0f;
+			speed = 4.5f;
 			Walk ();
 		} else if (state == 6) {
 			if (transform.position != nextPosition) {
@@ -75,9 +74,14 @@ public class Police : Enemy {
 				Destroy (transform.gameObject);
 				Destroy (this);
 			}
-		} else if (state == 10) {
-
+		} else if (state == 7) {
+			LookAt (nextPosition);
+			Walk ();
 		}
+	}
+
+	protected void decoy(){
+		setState (7);
 	}
 
 	void Walk(){
@@ -135,7 +139,7 @@ public class Police : Enemy {
 
 	void OnTriggerEnter2D (Collider2D col){
 		if (col.name == "Decoy" && state != 2) {
-			setState (3);
+			setState (7);
 			tempPosition = nextPosition;
 			nextPosition = col.transform.position;
 		}
