@@ -23,7 +23,6 @@ public class Decoy : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col){
 		if (col.GetComponent<Enemy>() != null) {
 			targets [enemiesCount] = col;
-			col.GetComponent<Enemy>().decoy();
 			enemiesCount++;
 		}
 	}

@@ -970,6 +970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80787b05893560e4d8830efa7e0397da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decoy: {fileID: 1000013033800958, guid: de92ee28b33d16f4e8f3c3f4a1e3c860, type: 2}
   warned: 0
 --- !u!114 &829889702
 MonoBehaviour:
