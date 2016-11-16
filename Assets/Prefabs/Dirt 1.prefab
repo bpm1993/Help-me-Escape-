@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7f9f365988ebf4a95ba59a7d5bf400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newMat: {fileID: 2100000, guid: ad555950ddfdd1c49a5e33497318febb, type: 2}
 --- !u!212 &21212624
 SpriteRenderer:
   m_ObjectHideFlags: 1

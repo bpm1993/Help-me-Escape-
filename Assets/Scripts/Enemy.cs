@@ -32,7 +32,8 @@ public class Enemy : MonoBehaviour {
 	}
 
 	public void mindControl(){
-		StartCoroutine (setState(7, 7.0f));
+		setState (7);
+		StartCoroutine (setState(1, 7.0f));
 	}
 
 	IEnumerator setState(int state, float delayTime){

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Floor : MonoBehaviour {
 	private Color curColor;
+	public Material newMat;
 
 	// Use this for initialization
 	void Start () {
@@ -16,12 +17,17 @@ public class Floor : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col) {
 		if (col.name == "Player") {
-			curColor = Color.green;
+			changeMaterial ();
 		}
 	}
 
 	public void SetColorVar(float colorVar){
 		Material mat = GetComponent<Renderer> ().material;
 		mat.SetColor ("_EmissionColor", curColor * colorVar);
+	}
+
+	public void changeMaterial(){
+		GetComponent<Renderer> ().material = newMat;
+		GetComponent<Renderer> ().material.color = Color.green;
 	}
 }

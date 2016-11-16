@@ -1,14 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MatrixMap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shader\GreenShader.shader">
     <Files>
-      <File FileName="Assets\Scripts\MatrixMap.cs" Line="17" Column="46" />
-      <File FileName="Assets\Scripts\Enemy.cs" Line="32" Column="3" />
-      <File FileName="Assets\Scripts\Police.cs" Line="113" Column="4" />
-      <File FileName="Assets\Scripts\Sight.cs" Line="26" Column="42" />
-      <File FileName="Assets\Scripts\Decoy.cs" Line="21" Column="3" />
-      <File FileName="Assets\Scripts\Farmer.cs" Line="41" Column="16" />
-      <File FileName="Assets\Scripts\Player.cs" Line="92" Column="3" />
+      <File FileName="Assets\Scripts\MatrixMap.cs" Line="150" Column="17" />
+      <File FileName="Assets\Scripts\Enemy.cs" Line="30" Column="17" />
+      <File FileName="Assets\Scripts\Police.cs" Line="85" Column="9" />
+      <File FileName="Assets\Scripts\Sight.cs" Line="35" Column="2" />
+      <File FileName="Assets\Scripts\Decoy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Farmer.cs" Line="105" Column="35" />
+      <File FileName="Assets\Scripts\Player.cs" Line="74" Column="1" />
+      <File FileName="Assets\Scripts\Floor.cs" Line="28" Column="2" />
+      <File FileName="Assets\Scripts\CreateMap.cs" Line="86" Column="21" />
+      <File FileName="Assets\Shader\ShineShader.shader" Line="29" Column="17" />
+      <File FileName="Assets\Shader\GreenShader.shader" Line="11" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

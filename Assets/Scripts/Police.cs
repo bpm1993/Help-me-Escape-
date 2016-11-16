@@ -18,9 +18,9 @@ public class Police : Enemy {
      * 4 = Alert;
      * 5 = Chase;
      * 6 = Spot;
-     * 7 = Decoy;
+     * 7 = Mind Control;
      * 8 = Time Stop;
-     * 9 = Mind Control;
+     * 9 = Decoy;
      * 10 = Stop;
     */
 
@@ -77,11 +77,15 @@ public class Police : Enemy {
 		} else if (state == 7) {
 			LookAt (nextPosition);
 			Walk ();
+		} else if (state == 9) {
+			LookAt (nextPosition);
 		}
 	}
 
-	protected void decoy(){
-		setState (7);
+	public void decoy(Vector3 position){
+		setState (9);
+		tempPosition = nextPosition;
+		nextPosition = position;
 	}
 
 	void Walk(){
@@ -138,10 +142,8 @@ public class Police : Enemy {
 	}
 
 	void OnTriggerEnter2D (Collider2D col){
-		if (col.name == "Decoy" && state != 2) {
-			setState (7);
-			tempPosition = nextPosition;
-			nextPosition = col.transform.position;
+		if (col.tag == "Decoy" && state != 2) {
+			decoy (col.transform.position);
 		}
 	}
 }

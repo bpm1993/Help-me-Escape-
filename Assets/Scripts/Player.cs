@@ -66,8 +66,7 @@ public class Player : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D col){
 		if (col.name == "Corn" && col.transform.parent.name == "Dirt 1(Clone)") {
-			Material mat = col.transform.parent.GetComponent<Renderer> ().material;
-			mat.SetColor ("_EmissionColor", Color.green * 0.2f);
+			col.transform.parent.GetComponent<Floor> ().changeMaterial ();
 			Destroy (col.gameObject);
 		}
 	}

@@ -20,10 +20,16 @@ public class Sight : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D (Collider2D col){
-		if (col.name == "Player" && parent.state == 2 && sight && parent.GetComponent<Police>() != null) {
+		if (col.tag == "Player" && parent.state == 2 && sight && parent.GetComponent<Police> () != null) {
 			parent.setState (4);
 			sight = false;
 			parent.GetComponentInChildren<Light> ().color = Color.yellow;
+		} else if (col.tag == "Decoy") {
+			if (parent.tag == "Police") {
+				parent.GetComponent<Police> ().decoy (col.transform.position);
+			} else if(parent.tag == "Farmer"){
+				parent.GetComponent<Farmer> ().decoy (col.transform.position);
+			}
 		}
 	}
 }

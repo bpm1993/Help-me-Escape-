@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Police
+  - Farmer
+  - Player
+  - Decoy
   layers:
   - Default
   - TransparentFX

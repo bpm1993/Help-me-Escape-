@@ -37,8 +37,10 @@ public class Farmer : Enemy {
 		LookAt (nextPosition);
 	}
 
-	protected void decoy(){
-		setState (7);
+	public void decoy(Vector3 position){
+		setState (3);
+		tempPosition = nextPosition;
+		nextPosition = position;
 	}
 	
 	// Update is called once per frame
@@ -99,10 +101,8 @@ public class Farmer : Enemy {
 	}
 
 	void OnTriggerEnter2D (Collider2D col){
-		if (col.name == "Decoy" && state != 2) {
-			setState (3);
-			tempPosition = nextPosition;
-			nextPosition = col.transform.position;
+		if (col.tag == "Decoy" && state != 2) {
+			decoy (col.transform.position);
 		}
 	}
 }
