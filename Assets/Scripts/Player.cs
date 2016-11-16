@@ -12,19 +12,12 @@ public class Player : MonoBehaviour {
 	public GameObject foot2;
 	public GameObject gameControl;
 	private bool lastFootBool;
-	//Daniel
-	public Image controleMentalImg;
-	public bool coolingDown;
-	public float waitTime = 5.0f;
-	private float secondsTime = 0.0f;
-	private float startTime;
-	//Fim Daniel
 
 	// Use this for initialization
 	void Start () {
 		lastFoot = this.transform.position;
 		lastFootBool = false;
-		startTime = Time.time;
+
 	
 	}
 
@@ -36,19 +29,7 @@ public class Player : MonoBehaviour {
 		move (moveHorizontal, moveVertical);
 		footstep ();
 
-		if (coolingDown == true && secondsTime<=waitTime)
-		{
-			//Reduce fill amount over 30 seconds
 
-			secondsTime = Time.timeSinceLevelLoad - startTime;
-			controleMentalImg.fillAmount = secondsTime/waitTime;
-			print (secondsTime/waitTime);
-			if (secondsTime/waitTime >= 1.0f) {
-				startTime = Time.timeSinceLevelLoad;
-				//				secondsTime = Time.timeSinceLevelLoad - startTime;
-				waitTime = secondsTime + 5.0f;
-			}
-		}
 	}
 
 	void move(float moveHorizontal, float moveVertical) {
