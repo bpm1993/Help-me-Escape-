@@ -139,7 +139,6 @@ public class MatrixMap : MonoBehaviour {
 	}
 
 	public void setBrightness(){
-		print (shineTimer);
 		float t = (Time.time - shineTimer) / 1f;
 		if (isShine) {
 			shine.SetFloat("_Adjust",Mathf.SmoothStep (2f, 4f, t));
@@ -153,6 +152,22 @@ public class MatrixMap : MonoBehaviour {
 				isShine = false;
 			} else {
 				isShine = true;
+			}
+		}
+	}
+
+	public void onSightCheck(Vector3 position){
+		bool check = false;
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Police");
+		for (int count = 0; count < enemies.Length; count++) {
+			if (enemies [count].GetComponent<Police>().onSight) {
+				check = true;
+			}
+		}
+
+		if (!check) {
+			for (int count = 0; count < enemies.Length; count++) {
+				enemies [count].GetComponent<Police>().inspectPosition(position);
 			}
 		}
 	}

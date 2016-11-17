@@ -5,7 +5,6 @@ public class Farmer : Enemy {
 
 	private float[,] positions;
 	private int index;
-	private float speed;
 	private bool stop;
 	private Vector3 nextPosition;
 	private Vector3 tempPosition;
@@ -33,6 +32,7 @@ public class Farmer : Enemy {
 		};
 		index = 0;
 		speed = 3f;
+		this.CONST_SPEED = speed;
 		nextPosition = new Vector3 (positions [index, 0], positions [index, 1], transform.position.z);
 		LookAt (nextPosition);
 	}

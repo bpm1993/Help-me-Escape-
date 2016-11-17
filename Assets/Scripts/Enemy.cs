@@ -4,6 +4,10 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 	public int state { set; get;}
 	public float slowMoSpeed { set; get;}
+	public bool onSight { set; get;}
+	public float CONST_SPEED { set; get; }
+	public float CONST_ROTATION { set; get; }
+	public float speed { set; get;}
 	float startTime;
 	bool slowMo;
 
@@ -12,6 +16,7 @@ public class Enemy : MonoBehaviour {
 		slowMo = false;
 		state = 1;
 		slowMoSpeed = 1.0f;
+		onSight = false;
 	}
 	
 	// Update is called once per frame
@@ -42,6 +47,7 @@ public class Enemy : MonoBehaviour {
 	}
 
 	public void resetState(){
+		speed = CONST_SPEED;
 		setState (1);
 	}
 

@@ -5,17 +5,20 @@ public class Police : Enemy {
 
 	private float[,] positions;
 	private int index;
-	private float speed;
 	private Vector3 nextPosition;
 	private Vector3 tempPosition;
 	public Transform light;
+	private Vector3 lastPos;
+	private bool isRotating;
+	private float rotationTimer;
+	private float rotation;
 
 	/*
      * States:
      * 1 = Normal;
      * 2 = Spot;
      * 3 = Warned;
-     * 4 = Alert;
+     * 4 = Inspect;
      * 5 = Chase;
      * 6 = Spot;
      * 7 = Mind Control;
@@ -35,13 +38,17 @@ public class Police : Enemy {
 		};
 		index = 0;
 		speed = 3f;
+		rotation = transform.rotation.z;
+		this.CONST_ROTATION = rotation;
+		this.CONST_SPEED = speed;
+		isRotating = false;
+		rotationTimer = Time.time;
 		nextPosition = new Vector3 (transform.position.x, 0, transform.position.z);
 		LookAt (nextPosition);
 	}
 
 	// Update is called once per frame
 	protected override void Update () {
-		print (state);
 		base.Update ();
 		if (state == 1) {
 			LookAt (nextPosition);
@@ -58,7 +65,15 @@ public class Police : Enemy {
 		} else if (state == 3) {
 			LookAt (nextPosition);
 		} else if (state == 4) {
-			speed = 4.0f;
+			if (transform.position == nextPosition) {
+				if (index == positions.GetLength (0) - 1) {
+					StartCoroutine (setState (1, 2f));
+				} else {
+					index++;
+				}
+			} else {
+				inspect ();
+			}
 		} else if (state == 5) {
 			LookAt (nextPosition);
 			GameObject player = GameObject.Find ("Player");
@@ -122,13 +137,40 @@ public class Police : Enemy {
 		StartCoroutine (setState(5, 2.0f));
 	}
 
-	void Inspect(){
-		
+	public void inspectPosition(Vector3 position){
+		positions = new float[2, 2] {
+			{ position.x + Random.Range(-3, 3), position.y + Random.Range(-3, 3) },
+			{ position.x + Random.Range(-3, 3), position.y + Random.Range(-3, 3) },
+		};
+		print (positions [0, 0] + " " + positions [0, 1]);
+		print (positions [1, 0] + " " + positions [1, 1]);
+		setState (4);
 	}
 
-	void runAway(){
-		state = 6;
-		nextPosition = new Vector3 (transform.position.x, 30f, transform.position.z);
+	void inspect(){
+		float t = (Time.time - rotationTimer) / 1f;
+		if (isRotating) {
+			rotation = Mathf.SmoothStep (-30f, 30f, t);
+		} else {
+			rotation = Mathf.SmoothStep (30f, -30f, t);
+		}
+		Vector3 sight = transform.FindChild ("Sight").transform.rotation.eulerAngles;
+
+		transform.FindChild ("Sight").transform.Rotate(new Vector3(sight.x, sight.y, rotation));
+
+		if (t >= 1f) {
+			rotationTimer = Time.time;
+			if (isRotating) {
+				isRotating = false;
+			} else {
+				isRotating = true;
+			}
+		}
+
+		if(Vector3.Distance(transform.position, nextPosition) < 3f){
+			speed = 2.0f;
+		}
+		Walk();
 	}
 
 	void resetNextPosition(){

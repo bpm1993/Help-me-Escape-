@@ -14,16 +14,16 @@ public class Sight : MonoBehaviour {
 	void OnTriggerStay2D (Collider2D col){
 		if (col.name == "Player" && parent.state!= 7 && !sight) {
 			parent.setState (2);
-			sight = true;
+			parent.GetComponent<Police>().onSight = true;
 			parent.GetComponentInChildren<Light> ().color = Color.red;
 		}
 	}
 
 	void OnTriggerExit2D (Collider2D col){
-		if (col.tag == "Player" && parent.state == 2 && sight && parent.GetComponent<Police> () != null) {
-			parent.setState (4);
-			sight = false;
-			parent.GetComponentInChildren<Light> ().color = Color.yellow;
+		if (col.tag == "Player" && parent.state == 5 && sight && transform.parent.GetComponent<Police> () != null) {
+			transform.parent.GetComponent<Police>().onSight = false;
+			transform.parent.GetComponentInChildren<Light> ().color = Color.yellow;
+			GameObject.FindGameObjectWithTag ("MainGame").GetComponent<MatrixMap> ().onSightCheck (GameObject.FindGameObjectWithTag ("Player").transform.position);
 		} else if (col.tag == "Decoy") {
 			if (parent.tag == "Police") {
 				parent.GetComponent<Police> ().decoy (col.transform.position);
