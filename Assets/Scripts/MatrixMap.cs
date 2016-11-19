@@ -27,6 +27,9 @@ public class MatrixMap : MonoBehaviour {
 	public float waitTimeSlow = 5.0f;
 	private float secondsTimeSlow = 0.0f;
 	private float startTimeSlow;
+	//Condicao de vitoria
+	private int redCorns;
+	private int cornsDobrados;
 	//Fim Daniel
 
 	float shineTimer;
@@ -41,9 +44,18 @@ public class MatrixMap : MonoBehaviour {
 		isShine = false;
 		shineTimer = Time.time;
 		shine.SetFloat ("_Adjust", 2);
+		//condicao de vitoria
+//		redCorns = gameObject.GetComponentInParent<CreateMap>().redCorns;
+//		print ("Red: " + redCorns);
+
 	}
 	void Update(){
 		setBrightness ();
+
+		if (cornsDobrados == redCorns) {
+			print ("VENCEU");
+			Time.timeScale = 0;
+		}
 
 		//Mind
 		if (coolingDownMind == true && secondsTimeMind<=waitTimeMind)
@@ -75,6 +87,16 @@ public class MatrixMap : MonoBehaviour {
 				coolingDownSlow = false;
 			}
 		}
+	}
+
+	public void RecebeRedCorns(int numberOfRedCorns){
+		redCorns = numberOfRedCorns;
+		print ("Red: " + redCorns);
+	}
+
+	public void CornDobrado(){
+		cornsDobrados++;
+		print ("Green: " + cornsDobrados);
 	}
 		
 	public void addObject(GameObject obj, int x, int y){

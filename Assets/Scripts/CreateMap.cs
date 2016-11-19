@@ -6,6 +6,7 @@ public class CreateMap : MonoBehaviour {
 	public GameObject bush;
 	public GameObject dirtGO;
 	public GameObject lightDirt;
+	public int redCorns = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -86,6 +87,7 @@ public class CreateMap : MonoBehaviour {
 				GameObject dirt;
 				if (map[contY,contX] == 1) {
 					dirt = (GameObject)Instantiate(this.lightDirt);
+					redCorns++;
 				} else {
 					dirt = (GameObject)Instantiate(this.dirtGO);
 				}
@@ -109,10 +111,7 @@ public class CreateMap : MonoBehaviour {
                 GetComponent<MatrixMap>().addObject(dirt,contX, contY);
 			}
 		}
-	}
-
-	// Update is called once per frame
-	void Update () {
-
+		print (redCorns);
+		gameObject.GetComponentInParent<MatrixMap> ().RecebeRedCorns (redCorns);
 	}
 }

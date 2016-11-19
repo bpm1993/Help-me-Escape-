@@ -187,5 +187,8 @@ public class Police : Enemy {
 		if (col.tag == "Decoy" && state != 2) {
 			decoy (col.transform.position);
 		}
+		if (col.name == "Player") {
+			print ("Pegou com sarna!");
+		}
 	}
 }
