@@ -54,7 +54,7 @@ public class MatrixMap : MonoBehaviour {
 
 		if (cornsDobrados == redCorns) {
 			print ("VENCEU");
-			Time.timeScale = 0;
+//			Time.timeScale = 0;
 		}
 
 		//Mind
