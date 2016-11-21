@@ -43,6 +43,8 @@ public class MatrixMap : MonoBehaviour {
 	float shineTimer;
 	bool isShine;
 
+	float fireflyTimer;
+
 
 	void Start () {
 		matrix = new GameObject[42, 42];
@@ -53,12 +55,23 @@ public class MatrixMap : MonoBehaviour {
 		shineTimer = Time.time;
 		shine.SetFloat ("_Adjust", 2);
 		pego = false;
+		fireflyTimer = Time.time;
 		//condicao de vitoria
 //		redCorns = gameObject.GetComponentInParent<CreateMap>().redCorns;
 //		print ("Red: " + redCorns);
 
 	}
 	void Update(){
+		float delta = Time.time - fireflyTimer;
+		int rand = Random.Range (0, 10);
+		if (delta >= 5f) {
+			if (rand >= 5) {
+				gameObject.GetComponent<FireflyManager> ().addFirefly ();
+			} else {
+				fireflyTimer = Time.time;
+			}
+		}
+
 		setBrightness ();
 
 		if (cornsDobrados == redCorns) {
@@ -109,7 +122,6 @@ public class MatrixMap : MonoBehaviour {
 		}
 
 		PlayerEmPerigo ();
-
 	}
 
 	public void PlayerPego (){
