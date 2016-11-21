@@ -72,7 +72,7 @@ Material:
     m_Floats:
     - first:
         name: _Adjust
-      second: 3.293292
+      second: 2.3962278
     - first:
         name: _BumpScale
       second: 1

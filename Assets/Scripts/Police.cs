@@ -189,6 +189,7 @@ public class Police : Enemy {
 		}
 		if (col.name == "Player") {
 			print ("Pegou com sarna!");
+			GameObject.Find("Main Game").GetComponent<MatrixMap>().PlayerPego();
 		}
 	}
 }

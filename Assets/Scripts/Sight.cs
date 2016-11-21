@@ -16,6 +16,7 @@ public class Sight : MonoBehaviour {
 			parent.setState (2);
 			parent.GetComponent<Police>().onSight = true;
 			parent.GetComponentInChildren<Light> ().color = Color.red;
+			GameObject.Find("Main Game").GetComponent<MatrixMap>().alertBool = true;
 		}
 	}
 

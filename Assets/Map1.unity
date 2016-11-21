@@ -123,7 +123,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 657dba6250a6e41abb8650ec395a546b, type: 2}
+  - {fileID: 2100000, guid: 46a1ce66feb6d44d2ae03517ba9e0801, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -724,6 +724,7 @@ MonoBehaviour:
   bush: {fileID: 192730, guid: 7d882140806c19c4a9997df6f0b01aea, type: 2}
   dirtGO: {fileID: 105024, guid: 81821e5ddc28d794cae94427a99e5e14, type: 2}
   lightDirt: {fileID: 110538, guid: 1a46fb9e9f686634bb44b30353b3f547, type: 2}
+  redCorns: 0
 --- !u!4 &829889700
 Transform:
   m_ObjectHideFlags: 0
@@ -949,6 +950,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 108000012615979402, guid: 1a6a9c43357a0db4db1ec08de54ddc0d,
+        type: 2}
+      propertyPath: m_Range
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a6a9c43357a0db4db1ec08de54ddc0d, type: 2}
   m_IsPrefabParent: 0
@@ -1053,7 +1059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5735294, g: 0.5735294, b: 0.5735294, a: 1}
+  m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1333,7 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.625, g: 0.6204044, b: 0.6204044, a: 1}
+  m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1607,7 +1613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6691177, g: 0.6691177, b: 0.6691177, a: 1}
+  m_Color: {r: 0.50980395, g: 0.51075906, b: 0.51075906, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
