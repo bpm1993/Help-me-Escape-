@@ -72,7 +72,7 @@ Material:
     m_Floats:
     - first:
         name: _Adjust
-      second: 3.270405
+      second: 2.6589713
     - first:
         name: _BumpScale
       second: 1
@@ -124,7 +124,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 0, b: 0, a: 1}
+      second: {r: 0.4901961, g: 0.29411766, b: 0.19215688, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0.208, g: 0, b: 0, a: 1}

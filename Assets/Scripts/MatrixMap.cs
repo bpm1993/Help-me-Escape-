@@ -38,6 +38,8 @@ public class MatrixMap : MonoBehaviour {
 	public Image alertPerigoBorder;
 	private float alertTimer = 3;
 	public bool alertBool;
+	//Text milhos que faltam
+	public Text milhosRestantesText;
 	//Fim Daniel
 
 	float shineTimer;
@@ -131,11 +133,14 @@ public class MatrixMap : MonoBehaviour {
 
 	public void RecebeRedCorns(int numberOfRedCorns){
 		redCorns = numberOfRedCorns;
+		milhosRestantesText.text = redCorns.ToString ();
 		print ("Red: " + redCorns);
 	}
 
 	public void CornDobrado(){
 		cornsDobrados++;
+		int milhosRestantes = redCorns - cornsDobrados;
+		milhosRestantesText.text = milhosRestantes.ToString();
 		print ("Green: " + cornsDobrados);
 	}
 
@@ -145,10 +150,10 @@ public class MatrixMap : MonoBehaviour {
 		float t = (Time.time - alertTimer) / 1.0f;
 		if (alertBool) {
 //			shine.SetFloat("_Adjust",Mathf.SmoothStep (2f, 4f, t));
-			color.a = t/8;
+			color.a = t/1.5f;
 		} else {
 //			shine.SetFloat("_Adjust",Mathf.SmoothStep (4f, 2f, t));
-			color.a = t/8;
+			color.a = t/1.5f;
 		}
 		alertPerigoBorder.color = color;
 
