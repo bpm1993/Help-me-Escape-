@@ -34,7 +34,6 @@ public class Floor : MonoBehaviour {
 	public void changeMaterial(){
 		GetComponent<Renderer> ().material = newMat;
 		GetComponent<Renderer> ().material.color = Color.green;
-		print ("AQUI");
 		GameObject.Find("Main Game").GetComponent<MatrixMap>().CornDobrado();
 	}
 }

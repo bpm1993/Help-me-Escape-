@@ -122,8 +122,9 @@ public class MatrixMap : MonoBehaviour {
 				coolingDownSlow = false;
 			}
 		}
-
-		PlayerEmPerigo ();
+//		if (alertBool == true) {
+			PlayerEmPerigo ();
+//		}
 	}
 
 	public void PlayerPego (){
@@ -145,27 +146,35 @@ public class MatrixMap : MonoBehaviour {
 	}
 
 	public void PlayerEmPerigo(){
-		Color color = alertPerigoBorder.color;
-
-		float t = (Time.time - alertTimer) / 1.0f;
 		if (alertBool) {
-//			shine.SetFloat("_Adjust",Mathf.SmoothStep (2f, 4f, t));
-			color.a = t/1.5f;
-		} else {
-//			shine.SetFloat("_Adjust",Mathf.SmoothStep (4f, 2f, t));
-			color.a = t/1.5f;
-		}
-		alertPerigoBorder.color = color;
-
-		if (t >= 1.0f) {
-			alertTimer = Time.time;
+			
+			Color color = alertPerigoBorder.color;
+			print ("OE");
+			float t = (Time.time - alertTimer) / 1.0f;
 			if (alertBool) {
-				alertBool = false;
+//			shine.SetFloat("_Adjust",Mathf.SmoothStep (2f, 4f, t));
+				color.a = t / 1.5f;
 			} else {
-				alertBool = true;
+//			shine.SetFloat("_Adjust",Mathf.SmoothStep (4f, 2f, t));
+				color.a = t / 1.5f;
 			}
-		}
+			alertPerigoBorder.color = color;
 
+			if (t >= 1.0f) {
+				alertTimer = Time.time;
+				if (alertBool) {
+					alertBool = false;
+				} else {
+					alertBool = true;
+				}
+			}
+		} else {
+			print("AQUI");
+			alertBool = false;
+			Color color = alertPerigoBorder.color;
+			color.a = 0.0f;
+			alertPerigoBorder.color = color;
+		}
 	}
 		
 	public void addObject(GameObject obj, int x, int y){
