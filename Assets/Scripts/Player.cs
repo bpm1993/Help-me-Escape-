@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
 	public GameObject foot2;
 	public GameObject gameControl;
 	private bool lastFootBool;
+	public GameObject milhoDobrado;
 
 	// Use this for initialization
 	void Start () {
@@ -67,6 +68,7 @@ public class Player : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col){
 		if (col.name == "Corn" && col.transform.parent.name == "Dirt 1(Clone)") {
 			col.transform.parent.GetComponent<Floor> ().changeMaterial ();
+			Instantiate (milhoDobrado, col.transform.position, col.transform.rotation);
 			Destroy (col.gameObject);
 		}
 	}
