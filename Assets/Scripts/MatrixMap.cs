@@ -38,10 +38,14 @@ public class MatrixMap : MonoBehaviour {
 	public Image alertPerigoBorder;
 	private float alertTimer = 3;
 	public bool alertBool;
+	//Text milhos que faltam
+	public Text milhosRestantesText;
 	//Fim Daniel
 
 	float shineTimer;
 	bool isShine;
+
+	float fireflyTimer;
 
 
 	void Start () {
@@ -53,12 +57,23 @@ public class MatrixMap : MonoBehaviour {
 		shineTimer = Time.time;
 		shine.SetFloat ("_Adjust", 2);
 		pego = false;
+		fireflyTimer = Time.time;
 		//condicao de vitoria
 //		redCorns = gameObject.GetComponentInParent<CreateMap>().redCorns;
 //		print ("Red: " + redCorns);
 
 	}
 	void Update(){
+		float delta = Time.time - fireflyTimer;
+		int rand = Random.Range (0, 10);
+		if (delta >= 5f) {
+			if (rand >= 5) {
+				gameObject.GetComponent<FireflyManager> ().addFirefly ();
+			} else {
+				fireflyTimer = Time.time;
+			}
+		}
+
 		setBrightness ();
 
 		if (cornsDobrados == redCorns) {
@@ -107,9 +122,9 @@ public class MatrixMap : MonoBehaviour {
 				coolingDownSlow = false;
 			}
 		}
-
-		PlayerEmPerigo ();
-
+//		if (alertBool == true) {
+			PlayerEmPerigo ();
+//		}
 	}
 
 	public void PlayerPego (){
@@ -119,36 +134,47 @@ public class MatrixMap : MonoBehaviour {
 
 	public void RecebeRedCorns(int numberOfRedCorns){
 		redCorns = numberOfRedCorns;
+		milhosRestantesText.text = redCorns.ToString ();
 		print ("Red: " + redCorns);
 	}
 
 	public void CornDobrado(){
 		cornsDobrados++;
+		int milhosRestantes = redCorns - cornsDobrados;
+		milhosRestantesText.text = milhosRestantes.ToString();
 		print ("Green: " + cornsDobrados);
 	}
 
 	public void PlayerEmPerigo(){
-		Color color = alertPerigoBorder.color;
-
-		float t = (Time.time - alertTimer) / 1.0f;
 		if (alertBool) {
-//			shine.SetFloat("_Adjust",Mathf.SmoothStep (2f, 4f, t));
-			color.a = t/8;
-		} else {
-//			shine.SetFloat("_Adjust",Mathf.SmoothStep (4f, 2f, t));
-			color.a = t/8;
-		}
-		alertPerigoBorder.color = color;
-
-		if (t >= 1.0f) {
-			alertTimer = Time.time;
+			
+			Color color = alertPerigoBorder.color;
+			print ("OE");
+			float t = (Time.time - alertTimer) / 1.0f;
 			if (alertBool) {
-				alertBool = false;
+//			shine.SetFloat("_Adjust",Mathf.SmoothStep (2f, 4f, t));
+				color.a = t / 1.5f;
 			} else {
-				alertBool = true;
+//			shine.SetFloat("_Adjust",Mathf.SmoothStep (4f, 2f, t));
+				color.a = t / 1.5f;
 			}
-		}
+			alertPerigoBorder.color = color;
 
+			if (t >= 1.0f) {
+				alertTimer = Time.time;
+				if (alertBool) {
+					alertBool = false;
+				} else {
+					alertBool = true;
+				}
+			}
+		} else {
+			print("AQUI");
+			alertBool = false;
+			Color color = alertPerigoBorder.color;
+			color.a = 0.0f;
+			alertPerigoBorder.color = color;
+		}
 	}
 		
 	public void addObject(GameObject obj, int x, int y){

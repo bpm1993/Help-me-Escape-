@@ -4,6 +4,8 @@ using System.Collections;
 public class Floor : MonoBehaviour {
 	private Color curColor;
 	public Material newMat;
+	public AudioClip milhoSound;
+	private AudioSource source;
 //	private int cornsDobrados;
 //	private int redCorns;
 
@@ -12,9 +14,10 @@ public class Floor : MonoBehaviour {
 		curColor = Color.red;
 //		redCorns = gameObject.GetComponentInParent<CreateMap>().redCorns;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void Awake () {
+
+		source = GetComponent<AudioSource>();
 
 	}
 
@@ -34,7 +37,7 @@ public class Floor : MonoBehaviour {
 	public void changeMaterial(){
 		GetComponent<Renderer> ().material = newMat;
 		GetComponent<Renderer> ().material.color = Color.green;
-		print ("AQUI");
 		GameObject.Find("Main Game").GetComponent<MatrixMap>().CornDobrado();
+		source.PlayOneShot(milhoSound,.2f);
 	}
 }

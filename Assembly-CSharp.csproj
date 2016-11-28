@@ -52,6 +52,8 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\FPSDisplay.cs" />
      <Compile Include="Assets\Scripts\Farmer.cs" />
+     <Compile Include="Assets\Scripts\Firefly.cs" />
+     <Compile Include="Assets\Scripts\FireflyManager.cs" />
      <Compile Include="Assets\Scripts\Floor.cs" />
      <Compile Include="Assets\Scripts\Footstep.cs" />
      <Compile Include="Assets\Scripts\MatrixMap.cs" />

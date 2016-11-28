@@ -4,6 +4,9 @@ using System.Collections;
 public class Sight : MonoBehaviour {
 	private bool sight;
 	private Enemy parent;
+	public AudioClip achouSound;
+	private AudioSource source;
+	public GameObject alertSymbol;
 
 	// Use this for initialization
 	void Start () {
@@ -11,10 +14,27 @@ public class Sight : MonoBehaviour {
 		parent = transform.parent.GetComponent<Enemy> ();
 	}
 
+	void Awake () {
+
+		source = GetComponent<AudioSource>();
+
+	}
+
+	void OnTriggerEnter2D(Collider2D col){
+		if (col.name == "Player" && parent.state!= 7 && !sight) {
+			source.PlayOneShot(achouSound,.5f);
+
+			SpriteRenderer renderer = alertSymbol.GetComponent<SpriteRenderer> ();
+			Color color = renderer.color;
+			color.a = 1.0f;
+			renderer.color = color;
+		}
+	}
+
 	void OnTriggerStay2D (Collider2D col){
 		if (col.name == "Player" && parent.state!= 7 && !sight) {
 			parent.setState (2);
-			parent.GetComponent<Police>().onSight = true;
+//			parent.GetComponent<Police>().onSight = true;
 			parent.GetComponentInChildren<Light> ().color = Color.red;
 			GameObject.Find("Main Game").GetComponent<MatrixMap>().alertBool = true;
 		}
