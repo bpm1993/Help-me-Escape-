@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000012294576920}
   - 212: {fileID: 212000011946823848}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: milhoDobradoPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
