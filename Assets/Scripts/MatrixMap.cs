@@ -271,5 +271,9 @@ public class MatrixMap : MonoBehaviour {
 			}
 		}
 	}
+
+	public void test(){
+		print ("teste");
+	}
 }
 	
