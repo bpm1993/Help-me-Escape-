@@ -68,7 +68,7 @@ public class Player : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col){
 		if (col.name == "Corn" && col.transform.parent.name == "Dirt 1(Clone)") {
 			col.transform.parent.GetComponent<Floor> ().changeMaterial ();
-			Instantiate (milhoDobrado, col.transform.position, col.transform.rotation);
+			Instantiate (milhoDobrado,  new Vector3(col.transform.position.x, col.transform.position.y, col.transform.position.z+3), col.transform.rotation);
 			Destroy (col.gameObject);
 		}
 	}

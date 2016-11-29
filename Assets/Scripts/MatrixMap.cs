@@ -78,7 +78,7 @@ public class MatrixMap : MonoBehaviour {
 
 		if (cornsDobrados == redCorns) {
 			print ("VENCEU");
-//			Time.timeScale = 0;
+			Time.timeScale = 0;
 			finalText.text = "Você está mais perto de ser resgatado!";
 			if (panelFinal.transform.position.x > 0){
 				panelFinal.transform.position = Vector3.MoveTowards(panelFinal.transform.position, new Vector3(panelFinal.transform.parent.position.x, panelFinal.transform.position.y, panelFinal.transform.position.z), 150f);
@@ -87,6 +87,7 @@ public class MatrixMap : MonoBehaviour {
 
 		if (pego == true) {
 			finalText.text = "Você foi levado para a área 51!";
+			Time.timeScale = 0;
 			if (panelFinal.transform.position.x > 0){
 				panelFinal.transform.position = Vector3.MoveTowards(panelFinal.transform.position, new Vector3(panelFinal.transform.parent.position.x, panelFinal.transform.position.y, panelFinal.transform.position.z), 150f);
 			}
