@@ -21,9 +21,6 @@ public class FireflyManager : MonoBehaviour {
 			int directionX = Random.Range (0, 2);
 			int directionY = Random.Range (0, 2);
 
-			print (directionX);
-			print (directionY);
-
 			if (directionX == 0 && directionY == 0) {
 				newFirefly.transform.position = new Vector3 (-22f, Random.Range(-20f, 20f));
 			}

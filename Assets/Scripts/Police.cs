@@ -12,6 +12,7 @@ public class Police : Enemy {
 	private bool isRotating;
 	private float rotationTimer;
 	private float rotation;
+	private bool stop;
 
 	/*
      * States:
@@ -49,27 +50,32 @@ public class Police : Enemy {
 
 	// Update is called once per frame
 	protected override void Update () {
+		print (state);
 		base.Update ();
 		if (state == 1) {
 			LookAt (nextPosition);
 			Walk ();
 		} else if (state == 2) {
-			GameObject mainGame = GameObject.Find ("Main Game");
-			if (mainGame.GetComponent<MatrixMap> ().warned) {
-				state = 5;
-			} else {
-				mainGame.GetComponent<MatrixMap> ().warned = true;
-			}
-			state = 10;
-			callPolice ();
+			nextPosition = GameObject.Find ("Player").transform.position;
+			Walk ();
+			LookAt (nextPosition);
+			speed = 4.5f;
 		} else if (state == 3) {
 			LookAt (nextPosition);
 		} else if (state == 4) {
 			if (transform.position == nextPosition) {
-				if (index == positions.GetLength (0) - 1) {
-					StartCoroutine (setState (1, 2f));
+				if (!stop) {
+					if (index == positions.GetLength (0) - 1) {
+						transform.GetComponentInChildren<Light> ().color = Color.white;
+						StartCoroutine (setState (1, 2f));
+						stop = true;
+					} else {
+						index++;
+						nextPosition = new Vector3 (positions [index, 0], positions [index, 1], transform.position.z);
+						stop = true;
+					}
 				} else {
-					index++;
+					StartCoroutine (Stop ());
 				}
 			} else {
 				inspect ();
@@ -103,6 +109,11 @@ public class Police : Enemy {
 		nextPosition = position;
 	}
 
+	IEnumerator Stop(){
+		stop = false;
+		yield return new WaitForSeconds (2);
+	}
+
 	void Walk(){
 		if (transform.position == nextPosition && positions != null) {
 			if (index == positions.GetLength (0) - 1) {
@@ -117,7 +128,6 @@ public class Police : Enemy {
 				index++;
 			}
 			nextPosition = new Vector3 (positions [index, 0], positions [index, 1], transform.position.z);
-			nextPosition.z = transform.position.z;
 		} else {
 			transform.position = Vector3.MoveTowards (transform.position, nextPosition, (speed * Time.deltaTime) * slowMoSpeed);
 		}
@@ -138,39 +148,29 @@ public class Police : Enemy {
 	}
 
 	public void inspectPosition(Vector3 position){
-		positions = new float[2, 2] {
+		positions = new float[8, 2] {
 			{ position.x + Random.Range(-3, 3), position.y + Random.Range(-3, 3) },
 			{ position.x + Random.Range(-3, 3), position.y + Random.Range(-3, 3) },
+			{ position.x + Random.Range(-3, 3), position.y + Random.Range(-3, 3) },
+			{ position.x + Random.Range(-3, 3), position.y + Random.Range(-3, 3) },
+			{ position.x + Random.Range(-3, 3), position.y + Random.Range(-3, 3) },
+			{ position.x + Random.Range(-3, 3), position.y + Random.Range(-3, 3) },
+			{ position.x + Random.Range(-3, 3), position.y + Random.Range(-3, 3) },
+			{ position.x + Random.Range(-3, 3), position.y + Random.Range(-3, 3) }
 		};
-		print (positions [0, 0] + " " + positions [0, 1]);
-		print (positions [1, 0] + " " + positions [1, 1]);
+		index = 0;
+		speed = 2f;
+		nextPosition = new Vector3 (positions [index, 0], positions [index, 1], transform.position.z);
+		stop = true;
 		setState (4);
 	}
 
 	void inspect(){
-		float t = (Time.time - rotationTimer) / 1f;
-		if (isRotating) {
-			rotation = Mathf.SmoothStep (-30f, 30f, t);
-		} else {
-			rotation = Mathf.SmoothStep (30f, -30f, t);
-		}
-		Vector3 sight = transform.FindChild ("Sight").transform.rotation.eulerAngles;
-
-		transform.FindChild ("Sight").transform.Rotate(new Vector3(sight.x, sight.y, rotation));
-
-		if (t >= 1f) {
-			rotationTimer = Time.time;
-			if (isRotating) {
-				isRotating = false;
-			} else {
-				isRotating = true;
-			}
-		}
-
 		if(Vector3.Distance(transform.position, nextPosition) < 3f){
 			speed = 2.0f;
 		}
-		Walk();
+		LookAt (nextPosition);
+		transform.position = Vector3.MoveTowards (transform.position, nextPosition, (speed * Time.deltaTime) * slowMoSpeed);
 	}
 
 	void resetNextPosition(){
@@ -190,6 +190,7 @@ public class Police : Enemy {
 		if (col.name == "Player") {
 			print ("Pegou com sarna!");
 			GameObject.Find("Main Game").GetComponent<MatrixMap>().PlayerPego();
+			Time.timeScale = 0;
 		}
 	}
 }

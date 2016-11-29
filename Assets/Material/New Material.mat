@@ -72,7 +72,11 @@ Material:
     m_Floats:
     - first:
         name: _Adjust
+<<<<<<< HEAD
       second: 3.2038846
+=======
+      second: 3.340449
+>>>>>>> origin/master
     - first:
         name: _BumpScale
       second: 1

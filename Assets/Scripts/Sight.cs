@@ -2,15 +2,14 @@
 using System.Collections;
 
 public class Sight : MonoBehaviour {
-	private bool sight;
 	private Enemy parent;
 	public AudioClip achouSound;
 	private AudioSource source;
 	public GameObject alertSymbol;
+	private Vector3 searchPosition;
 
 	// Use this for initialization
 	void Start () {
-		sight = false;
 		parent = transform.parent.GetComponent<Enemy> ();
 	}
 
@@ -21,7 +20,7 @@ public class Sight : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		if (col.name == "Player" && parent.state!= 7 && !sight) {
+		if (col.name == "Player" && parent.state!= 7 && !parent.onSight) {
 			source.PlayOneShot(achouSound,.5f);
 
 			SpriteRenderer renderer = alertSymbol.GetComponent<SpriteRenderer> ();
@@ -32,19 +31,24 @@ public class Sight : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D (Collider2D col){
-		if (col.name == "Player" && parent.state!= 7 && !sight) {
-			parent.setState (2);
-//			parent.GetComponent<Police>().onSight = true;
-			parent.GetComponentInChildren<Light> ().color = Color.red;
+		if (col.name == "Player") {
 			GameObject.Find("Main Game").GetComponent<MatrixMap>().alertBool = true;
+		}
+
+		if (col.name == "Player" && parent.state!= 7 && !parent.onSight) {
+			parent.setState (2);
+			parent.onSight = true;
+			parent.GetComponentInChildren<Light> ().color = Color.red;
 		}
 	}
 
 	void OnTriggerExit2D (Collider2D col){
-		if (col.tag == "Player" && parent.state == 5 && sight && transform.parent.GetComponent<Police> () != null) {
+		if (col.tag == "Player" && parent.state == 2 && parent.onSight && transform.parent.GetComponent<Police> () != null) {
 			transform.parent.GetComponent<Police>().onSight = false;
 			transform.parent.GetComponentInChildren<Light> ().color = Color.yellow;
-			GameObject.FindGameObjectWithTag ("MainGame").GetComponent<MatrixMap> ().onSightCheck (GameObject.FindGameObjectWithTag ("Player").transform.position);
+			parent.state = 0;
+			searchPosition = GameObject.Find ("Player").transform.position;
+			Invoke ("policeCallback", 3f);
 		} else if (col.tag == "Decoy") {
 			if (parent.tag == "Police") {
 				parent.GetComponent<Police> ().decoy (col.transform.position);
@@ -52,5 +56,9 @@ public class Sight : MonoBehaviour {
 				parent.GetComponent<Farmer> ().decoy (col.transform.position);
 			}
 		}
+	}
+
+	void policeCallback(){
+		parent.GetComponent<Police> ().inspectPosition (searchPosition);
 	}
 }
