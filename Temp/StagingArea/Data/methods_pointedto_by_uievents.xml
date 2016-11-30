@@ -1,9 +1,0 @@
-<linker>
-	<assembly fullname="Assembly-CSharp">
-		<type fullname="MatrixMap">
-			<method name="distraction"/>
-			<method name="mindControl"/>
-			<method name="slowMotion"/>
-		</type>
-	</assembly>
-</linker>

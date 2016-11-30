@@ -6,9 +6,6 @@
 .project
 bin/
 tmp/
-Temp/
-Temp\
-Temp
 *.tmp
 *.bak
 *.swp
