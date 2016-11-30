@@ -91,6 +91,7 @@ struct Collider2D_t1552025098;
 #include "UnityEngine_UnityEngine_Vector34282066566.h"
 #include "UnityEngine_UnityEngine_Vector44282066567.h"
 #include "UnityEngine_UnityEngine_Vector24282066565.h"
+#include "UnityEngine_UnityEngine_Color4194546905.h"
 #include "UnityEngine_UnityEngine_Color32598853688.h"
 #include "UnityEngine_UnityEngine_Camera2727095145.h"
 #include "UnityEngine_UnityEngine_Behaviour200106419.h"
@@ -357,6 +358,20 @@ public:
 	inline Vector2_t4282066565  GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
 	inline Vector2_t4282066565 * GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
 	inline void SetAt(il2cpp_array_size_t index, Vector2_t4282066565  value)
+	{
+		m_Items[index] = value;
+	}
+};
+// UnityEngine.Color[]
+struct ColorU5BU5D_t2441545636  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) Color_t4194546905  m_Items[1];
+
+public:
+	inline Color_t4194546905  GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline Color_t4194546905 * GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, Color_t4194546905  value)
 	{
 		m_Items[index] = value;
 	}

@@ -243,9 +243,9 @@ struct GUILayoutOption_t331591504;
 #include "UnityEngine_UnityEngine_Keyframe4079056114.h"
 #include "mscorlib_System_Object4170816371MethodDeclarations.h"
 #include "mscorlib_System_Object4170816371.h"
+#include "mscorlib_System_Single4291918972.h"
 #include "UnityEngine_UnityEngine_AnimationEvent3669457594.h"
 #include "UnityEngine_UnityEngine_AnimationEvent3669457594MethodDeclarations.h"
-#include "mscorlib_System_Single4291918972.h"
 #include "mscorlib_System_String7231557MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Object3071478659.h"
 #include "UnityEngine_UnityEngine_AnimationEventSource2152433973.h"
@@ -648,6 +648,15 @@ IL_0012:
 	{
 		return;
 	}
+}
+// System.Single UnityEngine.AnimationCurve::Evaluate(System.Single)
+extern "C"  float AnimationCurve_Evaluate_m547727012 (AnimationCurve_t3667593487 * __this, float ___time0, const MethodInfo* method)
+{
+	typedef float (*AnimationCurve_Evaluate_m547727012_ftn) (AnimationCurve_t3667593487 *, float);
+	static AnimationCurve_Evaluate_m547727012_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AnimationCurve_Evaluate_m547727012_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AnimationCurve::Evaluate(System.Single)");
+	return _il2cpp_icall_func(__this, ___time0);
 }
 // System.Void UnityEngine.AnimationCurve::Init(UnityEngine.Keyframe[])
 extern "C"  void AnimationCurve_Init_m4012213483 (AnimationCurve_t3667593487 * __this, KeyframeU5BU5D_t3589549831* ___keys0, const MethodInfo* method)
@@ -5075,6 +5084,24 @@ extern "C"  Color_t4194546905  Color_get_clear_m2578346879 (Il2CppObject * __thi
 		memset(&L_0, 0, sizeof(L_0));
 		Color__ctor_m2252924356(&L_0, (0.0f), (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
 		return L_0;
+	}
+}
+// UnityEngine.Color UnityEngine.Color::op_Addition(UnityEngine.Color,UnityEngine.Color)
+extern "C"  Color_t4194546905  Color_op_Addition_m1421556689 (Il2CppObject * __this /* static, unused */, Color_t4194546905  ___a0, Color_t4194546905  ___b1, const MethodInfo* method)
+{
+	{
+		float L_0 = (&___a0)->get_r_0();
+		float L_1 = (&___b1)->get_r_0();
+		float L_2 = (&___a0)->get_g_1();
+		float L_3 = (&___b1)->get_g_1();
+		float L_4 = (&___a0)->get_b_2();
+		float L_5 = (&___b1)->get_b_2();
+		float L_6 = (&___a0)->get_a_3();
+		float L_7 = (&___b1)->get_a_3();
+		Color_t4194546905  L_8;
+		memset(&L_8, 0, sizeof(L_8));
+		Color__ctor_m2252924356(&L_8, ((float)((float)L_0+(float)L_1)), ((float)((float)L_2+(float)L_3)), ((float)((float)L_4+(float)L_5)), ((float)((float)L_6+(float)L_7)), /*hidden argument*/NULL);
+		return L_8;
 	}
 }
 // UnityEngine.Color UnityEngine.Color::op_Multiply(UnityEngine.Color,System.Single)
@@ -12329,6 +12356,27 @@ IL_0012:
 	{
 		return;
 	}
+}
+// UnityEngine.Color UnityEngine.Gradient::Evaluate(System.Single)
+extern "C"  Color_t4194546905  Gradient_Evaluate_m2694873412 (Gradient_t3661184436 * __this, float ___time0, const MethodInfo* method)
+{
+	Color_t4194546905  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		float L_0 = ___time0;
+		Gradient_INTERNAL_CALL_Evaluate_m620788655(NULL /*static, unused*/, __this, L_0, (&V_0), /*hidden argument*/NULL);
+		Color_t4194546905  L_1 = V_0;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.Gradient::INTERNAL_CALL_Evaluate(UnityEngine.Gradient,System.Single,UnityEngine.Color&)
+extern "C"  void Gradient_INTERNAL_CALL_Evaluate_m620788655 (Il2CppObject * __this /* static, unused */, Gradient_t3661184436 * ___self0, float ___time1, Color_t4194546905 * ___value2, const MethodInfo* method)
+{
+	typedef void (*Gradient_INTERNAL_CALL_Evaluate_m620788655_ftn) (Gradient_t3661184436 *, float, Color_t4194546905 *);
+	static Gradient_INTERNAL_CALL_Evaluate_m620788655_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Gradient_INTERNAL_CALL_Evaluate_m620788655_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Gradient::INTERNAL_CALL_Evaluate(UnityEngine.Gradient,System.Single,UnityEngine.Color&)");
+	_il2cpp_icall_func(___self0, ___time1, ___value2);
 }
 // Conversion methods for marshalling of: UnityEngine.Gradient
 extern "C" void Gradient_t3661184436_marshal_pinvoke(const Gradient_t3661184436& unmarshaled, Gradient_t3661184436_marshaled_pinvoke& marshaled)

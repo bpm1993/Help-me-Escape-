@@ -49,3 +49,5 @@ extern "C"  void MatrixMap_slowMotion_m295552555 (MatrixMap_t3049394619 * __this
 extern "C"  void MatrixMap_setBrightness_m3540508641 (MatrixMap_t3049394619 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void MatrixMap::onSightCheck(UnityEngine.Vector3)
 extern "C"  void MatrixMap_onSightCheck_m1446998747 (MatrixMap_t3049394619 * __this, Vector3_t4282066566  ___position0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void MatrixMap::test()
+extern "C"  void MatrixMap_test_m3038339366 (MatrixMap_t3049394619 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

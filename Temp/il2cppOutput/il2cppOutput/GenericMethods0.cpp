@@ -143,6 +143,8 @@ struct IEnumerator_1_t1936533030;
 struct IEnumerator_1_t1936533125;
 // System.Collections.Generic.IEnumerator`1<System.Uri/UriScheme>
 struct IEnumerator_1_t3202534024;
+// System.Collections.Generic.IEnumerator`1<UnityEngine.Color>
+struct IEnumerator_1_t1811444658;
 // System.Collections.Generic.IEnumerator`1<UnityEngine.Color32>
 struct IEnumerator_1_t2510718737;
 // System.Collections.Generic.IEnumerator`1<UnityEngine.ContactPoint>
@@ -305,6 +307,8 @@ struct UInt32U5BU5D_t3230734560;
 struct UInt64U5BU5D_t2173929509;
 // System.Uri/UriScheme[]
 struct UriSchemeU5BU5D_t4293835958;
+// UnityEngine.Color[]
+struct ColorU5BU5D_t2441545636;
 // UnityEngine.ContactPoint[]
 struct ContactPointU5BU5D_t715040733;
 // UnityEngine.ContactPoint2D[]
@@ -395,8 +399,6 @@ struct LayoutGroup_t352294875;
 struct String_t;
 // UnityEngine.Object[]
 struct ObjectU5BU5D_t1015136018;
-// System.Converter`2<System.Object,System.Object>
-struct Converter_2_t3715610867;
 
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array1146569071.h"
@@ -483,6 +485,8 @@ struct Converter_2_t3715610867;
 #include "mscorlib_System_UInt6424668076.h"
 #include "mscorlib_System_UInt6424668076MethodDeclarations.h"
 #include "System_System_Uri_UriScheme1290668975.h"
+#include "UnityEngine_UnityEngine_Color4194546905.h"
+#include "UnityEngine_UnityEngine_Color4194546905MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_ContactPoint243083348.h"
 #include "UnityEngine_UnityEngine_ContactPoint2D4288432358.h"
 #include "UnityEngine_UnityEngine_Experimental_Director_Playab70832698MethodDeclarations.h"
@@ -629,6 +633,8 @@ struct Converter_2_t3715610867;
 #include "mscorlib_System_Array_InternalEnumerator_1_gen3101978048MethodDeclarations.h"
 #include "mscorlib_System_Array_InternalEnumerator_1_gen73011651.h"
 #include "mscorlib_System_Array_InternalEnumerator_1_gen73011651MethodDeclarations.h"
+#include "mscorlib_System_Array_InternalEnumerator_1_gen2976889581.h"
+#include "mscorlib_System_Array_InternalEnumerator_1_gen2976889581MethodDeclarations.h"
 #include "mscorlib_System_Array_InternalEnumerator_1_gen3676163660.h"
 #include "mscorlib_System_Array_InternalEnumerator_1_gen3676163660MethodDeclarations.h"
 #include "mscorlib_System_Array_InternalEnumerator_1_gen3320393320.h"
@@ -807,7 +813,6 @@ struct Converter_2_t3715610867;
 #include "UnityEngine_UnityEngine_GameObject3674682005MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Events_BaseInvokableCall1559630662.h"
 #include "UnityEngine_UnityEngine_UnityString3369712284MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Color4194546905.h"
 #include "UnityEngine_UI_UnityEngine_UI_ListPool_1_gen2599153559MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen574734531MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen574734531.h"
@@ -829,12 +834,6 @@ struct Converter_2_t3715610867;
 #include "UnityEngine_UnityEngine_ScriptableObject2970544072MethodDeclarations.h"
 #include "UnityEngine_UI_UnityEngine_UI_Dropdown4201779933.h"
 #include "mscorlib_System_Reflection_CustomAttributeData2955630591.h"
-#include "mscorlib_System_Converter_2_gen3715610867.h"
-#include "mscorlib_System_Converter_2_gen3715610867MethodDeclarations.h"
-#include "mscorlib_System_Collections_Generic_List_1_gen3027308338MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Transform1659122786.h"
-#include "mscorlib_System_Collections_Generic_List_1_gen3027308338.h"
-#include "UnityEngine_UnityEngine_Transform1659122786MethodDeclarations.h"
 
 // System.Array/Swapper System.Array::get_swapper<System.Byte>(T[])
 extern "C"  Swapper_t4166107989 * Array_get_swapper_TisByte_t2862609660_m525536776_gshared (Il2CppObject * __this /* static, unused */, ByteU5BU5D_t4260760469* ___array0, const MethodInfo* method);
@@ -1121,6 +1120,12 @@ extern "C"  bool Array_InternalArray__ICollection_Contains_TisUriScheme_t1290668
 // System.Void System.Array::GetGenericValueImpl<System.Uri/UriScheme>(System.Int32,!!0&)
 extern "C"  void Array_GetGenericValueImpl_TisUriScheme_t1290668975_m4227749606_gshared (Il2CppArray * __this, int32_t p0, UriScheme_t1290668975 * p1, const MethodInfo* method);
 #define Array_GetGenericValueImpl_TisUriScheme_t1290668975_m4227749606(__this, p0, p1, method) ((  void (*) (Il2CppArray *, int32_t, UriScheme_t1290668975 *, const MethodInfo*))Array_GetGenericValueImpl_TisUriScheme_t1290668975_m4227749606_gshared)(__this, p0, p1, method)
+// System.Boolean System.Array::InternalArray__ICollection_Contains<UnityEngine.Color>(T)
+extern "C"  bool Array_InternalArray__ICollection_Contains_TisColor_t4194546905_m207472885_gshared (Il2CppArray * __this, Color_t4194546905  ___item0, const MethodInfo* method);
+#define Array_InternalArray__ICollection_Contains_TisColor_t4194546905_m207472885(__this, ___item0, method) ((  bool (*) (Il2CppArray *, Color_t4194546905 , const MethodInfo*))Array_InternalArray__ICollection_Contains_TisColor_t4194546905_m207472885_gshared)(__this, ___item0, method)
+// System.Void System.Array::GetGenericValueImpl<UnityEngine.Color>(System.Int32,!!0&)
+extern "C"  void Array_GetGenericValueImpl_TisColor_t4194546905_m855411061_gshared (Il2CppArray * __this, int32_t p0, Color_t4194546905 * p1, const MethodInfo* method);
+#define Array_GetGenericValueImpl_TisColor_t4194546905_m855411061(__this, p0, p1, method) ((  void (*) (Il2CppArray *, int32_t, Color_t4194546905 *, const MethodInfo*))Array_GetGenericValueImpl_TisColor_t4194546905_m855411061_gshared)(__this, p0, p1, method)
 // System.Boolean System.Array::InternalArray__ICollection_Contains<UnityEngine.Color32>(T)
 extern "C"  bool Array_InternalArray__ICollection_Contains_TisColor32_t598853688_m1506607700_gshared (Il2CppArray * __this, Color32_t598853688  ___item0, const MethodInfo* method);
 #define Array_InternalArray__ICollection_Contains_TisColor32_t598853688_m1506607700(__this, ___item0, method) ((  bool (*) (Il2CppArray *, Color32_t598853688 , const MethodInfo*))Array_InternalArray__ICollection_Contains_TisColor32_t598853688_m1506607700_gshared)(__this, ___item0, method)
@@ -1355,6 +1360,9 @@ extern "C"  bool Array_InternalArray__ICollection_Remove_TisUInt64_t24668076_m13
 // System.Boolean System.Array::InternalArray__ICollection_Remove<System.Uri/UriScheme>(T)
 extern "C"  bool Array_InternalArray__ICollection_Remove_TisUriScheme_t1290668975_m879912959_gshared (Il2CppArray * __this, UriScheme_t1290668975  ___item0, const MethodInfo* method);
 #define Array_InternalArray__ICollection_Remove_TisUriScheme_t1290668975_m879912959(__this, ___item0, method) ((  bool (*) (Il2CppArray *, UriScheme_t1290668975 , const MethodInfo*))Array_InternalArray__ICollection_Remove_TisUriScheme_t1290668975_m879912959_gshared)(__this, ___item0, method)
+// System.Boolean System.Array::InternalArray__ICollection_Remove<UnityEngine.Color>(T)
+extern "C"  bool Array_InternalArray__ICollection_Remove_TisColor_t4194546905_m559531866_gshared (Il2CppArray * __this, Color_t4194546905  ___item0, const MethodInfo* method);
+#define Array_InternalArray__ICollection_Remove_TisColor_t4194546905_m559531866(__this, ___item0, method) ((  bool (*) (Il2CppArray *, Color_t4194546905 , const MethodInfo*))Array_InternalArray__ICollection_Remove_TisColor_t4194546905_m559531866_gshared)(__this, ___item0, method)
 // System.Boolean System.Array::InternalArray__ICollection_Remove<UnityEngine.Color32>(T)
 extern "C"  bool Array_InternalArray__ICollection_Remove_TisColor32_t598853688_m532872057_gshared (Il2CppArray * __this, Color32_t598853688  ___item0, const MethodInfo* method);
 #define Array_InternalArray__ICollection_Remove_TisColor32_t598853688_m532872057(__this, ___item0, method) ((  bool (*) (Il2CppArray *, Color32_t598853688 , const MethodInfo*))Array_InternalArray__ICollection_Remove_TisColor32_t598853688_m532872057_gshared)(__this, ___item0, method)
@@ -1616,6 +1624,9 @@ extern "C"  Il2CppObject* Array_InternalArray__IEnumerable_GetEnumerator_TisUInt
 // System.Collections.Generic.IEnumerator`1<T> System.Array::InternalArray__IEnumerable_GetEnumerator<System.Uri/UriScheme>()
 extern "C"  Il2CppObject* Array_InternalArray__IEnumerable_GetEnumerator_TisUriScheme_t1290668975_m1636451147_gshared (Il2CppArray * __this, const MethodInfo* method);
 #define Array_InternalArray__IEnumerable_GetEnumerator_TisUriScheme_t1290668975_m1636451147(__this, method) ((  Il2CppObject* (*) (Il2CppArray *, const MethodInfo*))Array_InternalArray__IEnumerable_GetEnumerator_TisUriScheme_t1290668975_m1636451147_gshared)(__this, method)
+// System.Collections.Generic.IEnumerator`1<T> System.Array::InternalArray__IEnumerable_GetEnumerator<UnityEngine.Color>()
+extern "C"  Il2CppObject* Array_InternalArray__IEnumerable_GetEnumerator_TisColor_t4194546905_m1537715192_gshared (Il2CppArray * __this, const MethodInfo* method);
+#define Array_InternalArray__IEnumerable_GetEnumerator_TisColor_t4194546905_m1537715192(__this, method) ((  Il2CppObject* (*) (Il2CppArray *, const MethodInfo*))Array_InternalArray__IEnumerable_GetEnumerator_TisColor_t4194546905_m1537715192_gshared)(__this, method)
 // System.Collections.Generic.IEnumerator`1<T> System.Array::InternalArray__IEnumerable_GetEnumerator<UnityEngine.Color32>()
 extern "C"  Il2CppObject* Array_InternalArray__IEnumerable_GetEnumerator_TisColor32_t598853688_m265710329_gshared (Il2CppArray * __this, const MethodInfo* method);
 #define Array_InternalArray__IEnumerable_GetEnumerator_TisColor32_t598853688_m265710329(__this, method) ((  Il2CppObject* (*) (Il2CppArray *, const MethodInfo*))Array_InternalArray__IEnumerable_GetEnumerator_TisColor32_t598853688_m265710329_gshared)(__this, method)
@@ -1934,6 +1945,9 @@ extern "C"  int32_t Array_InternalArray__IndexOf_TisUInt64_t24668076_m1255474638
 // System.Int32 System.Array::InternalArray__IndexOf<System.Uri/UriScheme>(T)
 extern "C"  int32_t Array_InternalArray__IndexOf_TisUriScheme_t1290668975_m4017860342_gshared (Il2CppArray * __this, UriScheme_t1290668975  ___item0, const MethodInfo* method);
 #define Array_InternalArray__IndexOf_TisUriScheme_t1290668975_m4017860342(__this, ___item0, method) ((  int32_t (*) (Il2CppArray *, UriScheme_t1290668975 , const MethodInfo*))Array_InternalArray__IndexOf_TisUriScheme_t1290668975_m4017860342_gshared)(__this, ___item0, method)
+// System.Int32 System.Array::InternalArray__IndexOf<UnityEngine.Color>(T)
+extern "C"  int32_t Array_InternalArray__IndexOf_TisColor_t4194546905_m4090215363_gshared (Il2CppArray * __this, Color_t4194546905  ___item0, const MethodInfo* method);
+#define Array_InternalArray__IndexOf_TisColor_t4194546905_m4090215363(__this, ___item0, method) ((  int32_t (*) (Il2CppArray *, Color_t4194546905 , const MethodInfo*))Array_InternalArray__IndexOf_TisColor_t4194546905_m4090215363_gshared)(__this, ___item0, method)
 // System.Int32 System.Array::InternalArray__IndexOf<UnityEngine.Color32>(T)
 extern "C"  int32_t Array_InternalArray__IndexOf_TisColor32_t598853688_m495548834_gshared (Il2CppArray * __this, Color32_t598853688  ___item0, const MethodInfo* method);
 #define Array_InternalArray__IndexOf_TisColor32_t598853688_m495548834(__this, ___item0, method) ((  int32_t (*) (Il2CppArray *, Color32_t598853688 , const MethodInfo*))Array_InternalArray__IndexOf_TisColor32_t598853688_m495548834_gshared)(__this, ___item0, method)
@@ -2147,6 +2161,9 @@ extern "C"  void Array_InternalArray__ICollection_Add_TisUInt64_t24668076_m16325
 // System.Void System.Array::InternalArray__ICollection_Add<System.Uri/UriScheme>(T)
 extern "C"  void Array_InternalArray__ICollection_Add_TisUriScheme_t1290668975_m127047346_gshared (Il2CppArray * __this, UriScheme_t1290668975  ___item0, const MethodInfo* method);
 #define Array_InternalArray__ICollection_Add_TisUriScheme_t1290668975_m127047346(__this, ___item0, method) ((  void (*) (Il2CppArray *, UriScheme_t1290668975 , const MethodInfo*))Array_InternalArray__ICollection_Add_TisUriScheme_t1290668975_m127047346_gshared)(__this, ___item0, method)
+// System.Void System.Array::InternalArray__ICollection_Add<UnityEngine.Color>(T)
+extern "C"  void Array_InternalArray__ICollection_Add_TisColor_t4194546905_m242765191_gshared (Il2CppArray * __this, Color_t4194546905  ___item0, const MethodInfo* method);
+#define Array_InternalArray__ICollection_Add_TisColor_t4194546905_m242765191(__this, ___item0, method) ((  void (*) (Il2CppArray *, Color_t4194546905 , const MethodInfo*))Array_InternalArray__ICollection_Add_TisColor_t4194546905_m242765191_gshared)(__this, ___item0, method)
 // System.Void System.Array::InternalArray__ICollection_Add<UnityEngine.Color32>(T)
 extern "C"  void Array_InternalArray__ICollection_Add_TisColor32_t598853688_m1062775398_gshared (Il2CppArray * __this, Color32_t598853688  ___item0, const MethodInfo* method);
 #define Array_InternalArray__ICollection_Add_TisColor32_t598853688_m1062775398(__this, ___item0, method) ((  void (*) (Il2CppArray *, Color32_t598853688 , const MethodInfo*))Array_InternalArray__ICollection_Add_TisColor32_t598853688_m1062775398_gshared)(__this, ___item0, method)
@@ -2324,6 +2341,9 @@ extern "C"  void Array_InternalArray__ICollection_CopyTo_TisUInt64_t24668076_m29
 // System.Void System.Array::InternalArray__ICollection_CopyTo<System.Uri/UriScheme>(T[],System.Int32)
 extern "C"  void Array_InternalArray__ICollection_CopyTo_TisUriScheme_t1290668975_m630562344_gshared (Il2CppArray * __this, UriSchemeU5BU5D_t4293835958* ___array0, int32_t ___index1, const MethodInfo* method);
 #define Array_InternalArray__ICollection_CopyTo_TisUriScheme_t1290668975_m630562344(__this, ___array0, ___index1, method) ((  void (*) (Il2CppArray *, UriSchemeU5BU5D_t4293835958*, int32_t, const MethodInfo*))Array_InternalArray__ICollection_CopyTo_TisUriScheme_t1290668975_m630562344_gshared)(__this, ___array0, ___index1, method)
+// System.Void System.Array::InternalArray__ICollection_CopyTo<UnityEngine.Color>(T[],System.Int32)
+extern "C"  void Array_InternalArray__ICollection_CopyTo_TisColor_t4194546905_m1472642321_gshared (Il2CppArray * __this, ColorU5BU5D_t2441545636* ___array0, int32_t ___index1, const MethodInfo* method);
+#define Array_InternalArray__ICollection_CopyTo_TisColor_t4194546905_m1472642321(__this, ___array0, ___index1, method) ((  void (*) (Il2CppArray *, ColorU5BU5D_t2441545636*, int32_t, const MethodInfo*))Array_InternalArray__ICollection_CopyTo_TisColor_t4194546905_m1472642321_gshared)(__this, ___array0, ___index1, method)
 // System.Void System.Array::InternalArray__ICollection_CopyTo<UnityEngine.Color32>(T[],System.Int32)
 extern "C"  void Array_InternalArray__ICollection_CopyTo_TisColor32_t598853688_m1932157586_gshared (Il2CppArray * __this, Color32U5BU5D_t2960766953* ___array0, int32_t ___index1, const MethodInfo* method);
 #define Array_InternalArray__ICollection_CopyTo_TisColor32_t598853688_m1932157586(__this, ___array0, ___index1, method) ((  void (*) (Il2CppArray *, Color32U5BU5D_t2960766953*, int32_t, const MethodInfo*))Array_InternalArray__ICollection_CopyTo_TisColor32_t598853688_m1932157586_gshared)(__this, ___array0, ___index1, method)
@@ -2501,6 +2521,9 @@ extern "C"  void Array_InternalArray__Insert_TisUInt64_t24668076_m958571299_gsha
 // System.Void System.Array::InternalArray__Insert<System.Uri/UriScheme>(System.Int32,T)
 extern "C"  void Array_InternalArray__Insert_TisUriScheme_t1290668975_m1211202023_gshared (Il2CppArray * __this, int32_t ___index0, UriScheme_t1290668975  ___item1, const MethodInfo* method);
 #define Array_InternalArray__Insert_TisUriScheme_t1290668975_m1211202023(__this, ___index0, ___item1, method) ((  void (*) (Il2CppArray *, int32_t, UriScheme_t1290668975 , const MethodInfo*))Array_InternalArray__Insert_TisUriScheme_t1290668975_m1211202023_gshared)(__this, ___index0, ___item1, method)
+// System.Void System.Array::InternalArray__Insert<UnityEngine.Color>(System.Int32,T)
+extern "C"  void Array_InternalArray__Insert_TisColor_t4194546905_m225738318_gshared (Il2CppArray * __this, int32_t ___index0, Color_t4194546905  ___item1, const MethodInfo* method);
+#define Array_InternalArray__Insert_TisColor_t4194546905_m225738318(__this, ___index0, ___item1, method) ((  void (*) (Il2CppArray *, int32_t, Color_t4194546905 , const MethodInfo*))Array_InternalArray__Insert_TisColor_t4194546905_m225738318_gshared)(__this, ___index0, ___item1, method)
 // System.Void System.Array::InternalArray__Insert<UnityEngine.Color32>(System.Int32,T)
 extern "C"  void Array_InternalArray__Insert_TisColor32_t598853688_m1091612751_gshared (Il2CppArray * __this, int32_t ___index0, Color32_t598853688  ___item1, const MethodInfo* method);
 #define Array_InternalArray__Insert_TisColor32_t598853688_m1091612751(__this, ___index0, ___item1, method) ((  void (*) (Il2CppArray *, int32_t, Color32_t598853688 , const MethodInfo*))Array_InternalArray__Insert_TisColor32_t598853688_m1091612751_gshared)(__this, ___index0, ___item1, method)
@@ -2798,6 +2821,12 @@ extern "C"  void Array_InternalArray__set_Item_TisUriScheme_t1290668975_m8533489
 // System.Void System.Array::SetGenericValueImpl<System.Uri/UriScheme>(System.Int32,!!0&)
 extern "C"  void Array_SetGenericValueImpl_TisUriScheme_t1290668975_m1143725914_gshared (Il2CppArray * __this, int32_t p0, UriScheme_t1290668975 * p1, const MethodInfo* method);
 #define Array_SetGenericValueImpl_TisUriScheme_t1290668975_m1143725914(__this, p0, p1, method) ((  void (*) (Il2CppArray *, int32_t, UriScheme_t1290668975 *, const MethodInfo*))Array_SetGenericValueImpl_TisUriScheme_t1290668975_m1143725914_gshared)(__this, p0, p1, method)
+// System.Void System.Array::InternalArray__set_Item<UnityEngine.Color>(System.Int32,T)
+extern "C"  void Array_InternalArray__set_Item_TisColor_t4194546905_m1033798935_gshared (Il2CppArray * __this, int32_t ___index0, Color_t4194546905  ___item1, const MethodInfo* method);
+#define Array_InternalArray__set_Item_TisColor_t4194546905_m1033798935(__this, ___index0, ___item1, method) ((  void (*) (Il2CppArray *, int32_t, Color_t4194546905 , const MethodInfo*))Array_InternalArray__set_Item_TisColor_t4194546905_m1033798935_gshared)(__this, ___index0, ___item1, method)
+// System.Void System.Array::SetGenericValueImpl<UnityEngine.Color>(System.Int32,!!0&)
+extern "C"  void Array_SetGenericValueImpl_TisColor_t4194546905_m4125947265_gshared (Il2CppArray * __this, int32_t p0, Color_t4194546905 * p1, const MethodInfo* method);
+#define Array_SetGenericValueImpl_TisColor_t4194546905_m4125947265(__this, p0, p1, method) ((  void (*) (Il2CppArray *, int32_t, Color_t4194546905 *, const MethodInfo*))Array_SetGenericValueImpl_TisColor_t4194546905_m4125947265_gshared)(__this, p0, p1, method)
 // System.Void System.Array::InternalArray__set_Item<UnityEngine.Color32>(System.Int32,T)
 extern "C"  void Array_InternalArray__set_Item_TisColor32_t598853688_m248785112_gshared (Il2CppArray * __this, int32_t ___index0, Color32_t598853688  ___item1, const MethodInfo* method);
 #define Array_InternalArray__set_Item_TisColor32_t598853688_m248785112(__this, ___index0, ___item1, method) ((  void (*) (Il2CppArray *, int32_t, Color32_t598853688 , const MethodInfo*))Array_InternalArray__set_Item_TisColor32_t598853688_m248785112_gshared)(__this, ___index0, ___item1, method)
@@ -3442,6 +3471,18 @@ extern "C"  void GameObject_GetComponents_TisIl2CppObject_m3411665840_gshared (G
 #define GameObject_GetComponents_TisIl2CppObject_m3411665840(__this, p0, method) ((  void (*) (GameObject_t3674682005 *, List_1_t1244034627 *, const MethodInfo*))GameObject_GetComponents_TisIl2CppObject_m3411665840_gshared)(__this, p0, method)
 // System.Void UnityEngine.GameObject::GetComponents<UnityEngine.Component>(System.Collections.Generic.List`1<!!0>)
 #define GameObject_GetComponents_TisComponent_t3501516275_m1834772720(__this, p0, method) ((  void (*) (GameObject_t3674682005 *, List_1_t574734531 *, const MethodInfo*))GameObject_GetComponents_TisIl2CppObject_m3411665840_gshared)(__this, p0, method)
+// System.Void UnityEngine.Mesh::SetArrayForChannel<System.Object>(UnityEngine.Mesh/InternalShaderChannel,T[])
+extern "C"  void Mesh_SetArrayForChannel_TisIl2CppObject_m2669751145_gshared (Mesh_t4241756145 * __this, int32_t ___channel0, ObjectU5BU5D_t1108656482* ___values1, const MethodInfo* method);
+#define Mesh_SetArrayForChannel_TisIl2CppObject_m2669751145(__this, ___channel0, ___values1, method) ((  void (*) (Mesh_t4241756145 *, int32_t, ObjectU5BU5D_t1108656482*, const MethodInfo*))Mesh_SetArrayForChannel_TisIl2CppObject_m2669751145_gshared)(__this, ___channel0, ___values1, method)
+// System.Void UnityEngine.Mesh::SetArrayForChannel<UnityEngine.Color>(UnityEngine.Mesh/InternalShaderChannel,T[])
+extern "C"  void Mesh_SetArrayForChannel_TisColor_t4194546905_m81354303_gshared (Mesh_t4241756145 * __this, int32_t ___channel0, ColorU5BU5D_t2441545636* ___values1, const MethodInfo* method);
+#define Mesh_SetArrayForChannel_TisColor_t4194546905_m81354303(__this, ___channel0, ___values1, method) ((  void (*) (Mesh_t4241756145 *, int32_t, ColorU5BU5D_t2441545636*, const MethodInfo*))Mesh_SetArrayForChannel_TisColor_t4194546905_m81354303_gshared)(__this, ___channel0, ___values1, method)
+// System.Void UnityEngine.Mesh::SetArrayForChannel<UnityEngine.Vector2>(UnityEngine.Mesh/InternalShaderChannel,T[])
+extern "C"  void Mesh_SetArrayForChannel_TisVector2_t4282066565_m929449235_gshared (Mesh_t4241756145 * __this, int32_t ___channel0, Vector2U5BU5D_t4024180168* ___values1, const MethodInfo* method);
+#define Mesh_SetArrayForChannel_TisVector2_t4282066565_m929449235(__this, ___channel0, ___values1, method) ((  void (*) (Mesh_t4241756145 *, int32_t, Vector2U5BU5D_t4024180168*, const MethodInfo*))Mesh_SetArrayForChannel_TisVector2_t4282066565_m929449235_gshared)(__this, ___channel0, ___values1, method)
+// System.Void UnityEngine.Mesh::SetArrayForChannel<UnityEngine.Vector3>(UnityEngine.Mesh/InternalShaderChannel,T[])
+extern "C"  void Mesh_SetArrayForChannel_TisVector3_t4282066566_m1899030258_gshared (Mesh_t4241756145 * __this, int32_t ___channel0, Vector3U5BU5D_t215400611* ___values1, const MethodInfo* method);
+#define Mesh_SetArrayForChannel_TisVector3_t4282066566_m1899030258(__this, ___channel0, ___values1, method) ((  void (*) (Mesh_t4241756145 *, int32_t, Vector3U5BU5D_t215400611*, const MethodInfo*))Mesh_SetArrayForChannel_TisVector3_t4282066566_m1899030258_gshared)(__this, ___channel0, ___values1, method)
 // System.Void UnityEngine.Mesh::SetListForChannel<System.Object>(UnityEngine.Mesh/InternalShaderChannel,System.Collections.Generic.List`1<T>)
 extern "C"  void Mesh_SetListForChannel_TisIl2CppObject_m1933614382_gshared (Mesh_t4241756145 * __this, int32_t ___channel0, List_1_t1244034627 * ___values1, const MethodInfo* method);
 #define Mesh_SetListForChannel_TisIl2CppObject_m1933614382(__this, ___channel0, ___values1, method) ((  void (*) (Mesh_t4241756145 *, int32_t, List_1_t1244034627 *, const MethodInfo*))Mesh_SetListForChannel_TisIl2CppObject_m1933614382_gshared)(__this, ___channel0, ___values1, method)
@@ -3622,6 +3663,9 @@ extern "C"  uint64_t Array_InternalArray__get_Item_TisUInt64_t24668076_m82678650
 // T System.Array::InternalArray__get_Item<System.Uri/UriScheme>(System.Int32)
 extern "C"  UriScheme_t1290668975  Array_InternalArray__get_Item_TisUriScheme_t1290668975_m2328943123_gshared (Il2CppArray * __this, int32_t ___index0, const MethodInfo* method);
 #define Array_InternalArray__get_Item_TisUriScheme_t1290668975_m2328943123(__this, ___index0, method) ((  UriScheme_t1290668975  (*) (Il2CppArray *, int32_t, const MethodInfo*))Array_InternalArray__get_Item_TisUriScheme_t1290668975_m2328943123_gshared)(__this, ___index0, method)
+// T System.Array::InternalArray__get_Item<UnityEngine.Color>(System.Int32)
+extern "C"  Color_t4194546905  Array_InternalArray__get_Item_TisColor_t4194546905_m3851996850_gshared (Il2CppArray * __this, int32_t ___index0, const MethodInfo* method);
+#define Array_InternalArray__get_Item_TisColor_t4194546905_m3851996850(__this, ___index0, method) ((  Color_t4194546905  (*) (Il2CppArray *, int32_t, const MethodInfo*))Array_InternalArray__get_Item_TisColor_t4194546905_m3851996850_gshared)(__this, ___index0, method)
 // T System.Array::InternalArray__get_Item<UnityEngine.Color32>(System.Int32)
 extern "C"  Color32_t598853688  Array_InternalArray__get_Item_TisColor32_t598853688_m2218876403_gshared (Il2CppArray * __this, int32_t ___index0, const MethodInfo* method);
 #define Array_InternalArray__get_Item_TisColor32_t598853688_m2218876403(__this, ___index0, method) ((  Color32_t598853688  (*) (Il2CppArray *, int32_t, const MethodInfo*))Array_InternalArray__get_Item_TisColor32_t598853688_m2218876403_gshared)(__this, ___index0, method)
@@ -3698,8 +3742,8 @@ extern "C"  Il2CppObject * ExecuteEvents_ValidateEventData_TisIl2CppObject_m1498
 extern "C"  Il2CppObject * GameObject_AddComponent_TisIl2CppObject_m337943659_gshared (GameObject_t3674682005 * __this, const MethodInfo* method);
 #define GameObject_AddComponent_TisIl2CppObject_m337943659(__this, method) ((  Il2CppObject * (*) (GameObject_t3674682005 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m337943659_gshared)(__this, method)
 // T UnityEngine.GameObject::GetComponent<System.Object>()
-extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared (GameObject_t3674682005 * __this, const MethodInfo* method);
-#define GameObject_GetComponent_TisIl2CppObject_m2447772384(__this, method) ((  Il2CppObject * (*) (GameObject_t3674682005 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m3652735468_gshared (GameObject_t3674682005 * __this, const MethodInfo* method);
+#define GameObject_GetComponent_TisIl2CppObject_m3652735468(__this, method) ((  Il2CppObject * (*) (GameObject_t3674682005 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m3652735468_gshared)(__this, method)
 // T UnityEngine.GameObject::GetComponentInChildren<System.Object>()
 extern "C"  Il2CppObject * GameObject_GetComponentInChildren_TisIl2CppObject_m782999868_gshared (GameObject_t3674682005 * __this, const MethodInfo* method);
 #define GameObject_GetComponentInChildren_TisIl2CppObject_m782999868(__this, method) ((  Il2CppObject * (*) (GameObject_t3674682005 *, const MethodInfo*))GameObject_GetComponentInChildren_TisIl2CppObject_m782999868_gshared)(__this, method)
@@ -3794,17 +3838,8 @@ extern "C"  Vector4U5BU5D_t701588350* Mesh_GetAllocArrayFromChannel_TisVector4_t
 extern "C"  ObjectU5BU5D_t1108656482* Object_FindObjectsOfType_TisIl2CppObject_m3888714627_gshared (Il2CppObject * __this /* static, unused */, const MethodInfo* method);
 #define Object_FindObjectsOfType_TisIl2CppObject_m3888714627(__this /* static, unused */, method) ((  ObjectU5BU5D_t1108656482* (*) (Il2CppObject * /* static, unused */, const MethodInfo*))Object_FindObjectsOfType_TisIl2CppObject_m3888714627_gshared)(__this /* static, unused */, method)
 // !!0[] UnityEngine.Resources::ConvertObjects<System.Object>(UnityEngine.Object[])
-extern "C"  ObjectU5BU5D_t1108656482* Resources_ConvertObjects_TisIl2CppObject_m1537961554_gshared (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t1015136018* p0, const MethodInfo* method);
-#define Resources_ConvertObjects_TisIl2CppObject_m1537961554(__this /* static, unused */, p0, method) ((  ObjectU5BU5D_t1108656482* (*) (Il2CppObject * /* static, unused */, ObjectU5BU5D_t1015136018*, const MethodInfo*))Resources_ConvertObjects_TisIl2CppObject_m1537961554_gshared)(__this /* static, unused */, p0, method)
-// TOutput[] System.Array::ConvertAll<System.Object,System.Object>(TInput[],System.Converter`2<TInput,TOutput>)
-extern "C"  ObjectU5BU5D_t1108656482* Array_ConvertAll_TisIl2CppObject_TisIl2CppObject_m2583007410_gshared (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t1108656482* ___array0, Converter_2_t3715610867 * ___converter1, const MethodInfo* method);
-#define Array_ConvertAll_TisIl2CppObject_TisIl2CppObject_m2583007410(__this /* static, unused */, ___array0, ___converter1, method) ((  ObjectU5BU5D_t1108656482* (*) (Il2CppObject * /* static, unused */, ObjectU5BU5D_t1108656482*, Converter_2_t3715610867 *, const MethodInfo*))Array_ConvertAll_TisIl2CppObject_TisIl2CppObject_m2583007410_gshared)(__this /* static, unused */, ___array0, ___converter1, method)
-// UnityEngine.GameObject UnityEngine.EventSystems.ExecuteEvents::ExecuteHierarchy<System.Object>(UnityEngine.GameObject,UnityEngine.EventSystems.BaseEventData,UnityEngine.EventSystems.ExecuteEvents/EventFunction`1<T>)
-extern "C"  GameObject_t3674682005 * ExecuteEvents_ExecuteHierarchy_TisIl2CppObject_m2445823293_gshared (Il2CppObject * __this /* static, unused */, GameObject_t3674682005 * ___root0, BaseEventData_t2054899105 * ___eventData1, EventFunction_1_t864200549 * ___callbackFunction2, const MethodInfo* method);
-#define ExecuteEvents_ExecuteHierarchy_TisIl2CppObject_m2445823293(__this /* static, unused */, ___root0, ___eventData1, ___callbackFunction2, method) ((  GameObject_t3674682005 * (*) (Il2CppObject * /* static, unused */, GameObject_t3674682005 *, BaseEventData_t2054899105 *, EventFunction_1_t864200549 *, const MethodInfo*))ExecuteEvents_ExecuteHierarchy_TisIl2CppObject_m2445823293_gshared)(__this /* static, unused */, ___root0, ___eventData1, ___callbackFunction2, method)
-// UnityEngine.GameObject UnityEngine.EventSystems.ExecuteEvents::GetEventHandler<System.Object>(UnityEngine.GameObject)
-extern "C"  GameObject_t3674682005 * ExecuteEvents_GetEventHandler_TisIl2CppObject_m2285942506_gshared (Il2CppObject * __this /* static, unused */, GameObject_t3674682005 * ___root0, const MethodInfo* method);
-#define ExecuteEvents_GetEventHandler_TisIl2CppObject_m2285942506(__this /* static, unused */, ___root0, method) ((  GameObject_t3674682005 * (*) (Il2CppObject * /* static, unused */, GameObject_t3674682005 *, const MethodInfo*))ExecuteEvents_GetEventHandler_TisIl2CppObject_m2285942506_gshared)(__this /* static, unused */, ___root0, method)
+extern "C"  ObjectU5BU5D_t1108656482* Resources_ConvertObjects_TisIl2CppObject_m126419862_gshared (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t1015136018* p0, const MethodInfo* method);
+#define Resources_ConvertObjects_TisIl2CppObject_m126419862(__this /* static, unused */, p0, method) ((  ObjectU5BU5D_t1108656482* (*) (Il2CppObject * /* static, unused */, ObjectU5BU5D_t1015136018*, const MethodInfo*))Resources_ConvertObjects_TisIl2CppObject_m126419862_gshared)(__this /* static, unused */, p0, method)
 // System.Array/Swapper System.Array::get_swapper<System.Byte>(T[])
 extern Il2CppClass* Int32U5BU5D_t3230847821_il2cpp_TypeInfo_var;
 extern Il2CppClass* Swapper_t4166107989_il2cpp_TypeInfo_var;
@@ -8478,6 +8513,99 @@ IL_006b:
 		return (bool)0;
 	}
 }
+// System.Boolean System.Array::InternalArray__ICollection_Contains<UnityEngine.Color>(T)
+extern Il2CppClass* RankException_t3671413657_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3363540468;
+extern const uint32_t Array_InternalArray__ICollection_Contains_TisColor_t4194546905_m207472885_MetadataUsageId;
+extern "C"  bool Array_InternalArray__ICollection_Contains_TisColor_t4194546905_m207472885_gshared (Il2CppArray * __this, Color_t4194546905  ___item0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Array_InternalArray__ICollection_Contains_TisColor_t4194546905_m207472885_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	Color_t4194546905  V_2;
+	memset(&V_2, 0, sizeof(V_2));
+	{
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_0 = Array_get_Rank_m1671008509((Il2CppArray *)__this, /*hidden argument*/NULL);
+		if ((((int32_t)L_0) <= ((int32_t)1)))
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		String_t* L_1 = Locale_GetText_m2389348044(NULL /*static, unused*/, (String_t*)_stringLiteral3363540468, /*hidden argument*/NULL);
+		RankException_t3671413657 * L_2 = (RankException_t3671413657 *)il2cpp_codegen_object_new(RankException_t3671413657_il2cpp_TypeInfo_var);
+		RankException__ctor_m3451921812(L_2, (String_t*)L_1, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	}
+
+IL_001c:
+	{
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_3 = Array_get_Length_m1203127607((Il2CppArray *)__this, /*hidden argument*/NULL);
+		V_0 = (int32_t)L_3;
+		V_1 = (int32_t)0;
+		goto IL_006b;
+	}
+
+IL_002a:
+	{
+		int32_t L_4 = V_1;
+		NullCheck((Il2CppArray *)__this);
+		ArrayGetGenericValueImpl((Il2CppArray *)__this, (int32_t)L_4, (Color_t4194546905 *)(&V_2));
+		goto IL_004d;
+	}
+	{
+		goto IL_004b;
+	}
+	{
+		return (bool)1;
+	}
+
+IL_004b:
+	{
+		return (bool)0;
+	}
+
+IL_004d:
+	{
+		Color_t4194546905  L_7 = V_2;
+		Color_t4194546905  L_8 = L_7;
+		Il2CppObject * L_9 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_8);
+		bool L_10 = Color_Equals_m3016668205((Color_t4194546905 *)(&___item0), (Il2CppObject *)L_9, /*hidden argument*/NULL);
+		if (!L_10)
+		{
+			goto IL_0067;
+		}
+	}
+	{
+		return (bool)1;
+	}
+
+IL_0067:
+	{
+		int32_t L_11 = V_1;
+		V_1 = (int32_t)((int32_t)((int32_t)L_11+(int32_t)1));
+	}
+
+IL_006b:
+	{
+		int32_t L_12 = V_1;
+		int32_t L_13 = V_0;
+		if ((((int32_t)L_12) < ((int32_t)L_13)))
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		return (bool)0;
+	}
+}
 // System.Boolean System.Array::InternalArray__ICollection_Contains<UnityEngine.Color32>(T)
 extern Il2CppClass* RankException_t3671413657_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3363540468;
@@ -10994,6 +11122,24 @@ extern "C"  bool Array_InternalArray__ICollection_Remove_TisUriScheme_t129066897
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
 	}
 }
+// System.Boolean System.Array::InternalArray__ICollection_Remove<UnityEngine.Color>(T)
+extern Il2CppClass* NotSupportedException_t1732551818_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral615244847;
+extern const uint32_t Array_InternalArray__ICollection_Remove_TisColor_t4194546905_m559531866_MetadataUsageId;
+extern "C"  bool Array_InternalArray__ICollection_Remove_TisColor_t4194546905_m559531866_gshared (Il2CppArray * __this, Color_t4194546905  ___item0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Array_InternalArray__ICollection_Remove_TisColor_t4194546905_m559531866_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		NotSupportedException_t1732551818 * L_0 = (NotSupportedException_t1732551818 *)il2cpp_codegen_object_new(NotSupportedException_t1732551818_il2cpp_TypeInfo_var);
+		NotSupportedException__ctor_m133757637(L_0, (String_t*)_stringLiteral615244847, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
+	}
+}
 // System.Boolean System.Array::InternalArray__ICollection_Remove<UnityEngine.Color32>(T)
 extern Il2CppClass* NotSupportedException_t1732551818_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral615244847;
@@ -12782,6 +12928,18 @@ extern "C"  Il2CppObject* Array_InternalArray__IEnumerable_GetEnumerator_TisUriS
 		memset(&L_0, 0, sizeof(L_0));
 		InternalEnumerator_1__ctor_m2879257728(&L_0, (Il2CppArray *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
 		InternalEnumerator_1_t73011651  L_1 = L_0;
+		Il2CppObject * L_2 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_1);
+		return (Il2CppObject*)L_2;
+	}
+}
+// System.Collections.Generic.IEnumerator`1<T> System.Array::InternalArray__IEnumerable_GetEnumerator<UnityEngine.Color>()
+extern "C"  Il2CppObject* Array_InternalArray__IEnumerable_GetEnumerator_TisColor_t4194546905_m1537715192_gshared (Il2CppArray * __this, const MethodInfo* method)
+{
+	{
+		InternalEnumerator_1_t2976889581  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		InternalEnumerator_1__ctor_m1839379985(&L_0, (Il2CppArray *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		InternalEnumerator_1_t2976889581  L_1 = L_0;
 		Il2CppObject * L_2 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_1);
 		return (Il2CppObject*)L_2;
 	}
@@ -21699,6 +21857,109 @@ IL_0083:
 		return ((int32_t)((int32_t)L_20-(int32_t)1));
 	}
 }
+// System.Int32 System.Array::InternalArray__IndexOf<UnityEngine.Color>(T)
+extern Il2CppClass* RankException_t3671413657_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3363540468;
+extern const uint32_t Array_InternalArray__IndexOf_TisColor_t4194546905_m4090215363_MetadataUsageId;
+extern "C"  int32_t Array_InternalArray__IndexOf_TisColor_t4194546905_m4090215363_gshared (Il2CppArray * __this, Color_t4194546905  ___item0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Array_InternalArray__IndexOf_TisColor_t4194546905_m4090215363_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	Color_t4194546905  V_2;
+	memset(&V_2, 0, sizeof(V_2));
+	{
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_0 = Array_get_Rank_m1671008509((Il2CppArray *)__this, /*hidden argument*/NULL);
+		if ((((int32_t)L_0) <= ((int32_t)1)))
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		String_t* L_1 = Locale_GetText_m2389348044(NULL /*static, unused*/, (String_t*)_stringLiteral3363540468, /*hidden argument*/NULL);
+		RankException_t3671413657 * L_2 = (RankException_t3671413657 *)il2cpp_codegen_object_new(RankException_t3671413657_il2cpp_TypeInfo_var);
+		RankException__ctor_m3451921812(L_2, (String_t*)L_1, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	}
+
+IL_001c:
+	{
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_3 = Array_get_Length_m1203127607((Il2CppArray *)__this, /*hidden argument*/NULL);
+		V_0 = (int32_t)L_3;
+		V_1 = (int32_t)0;
+		goto IL_0083;
+	}
+
+IL_002a:
+	{
+		int32_t L_4 = V_1;
+		NullCheck((Il2CppArray *)__this);
+		ArrayGetGenericValueImpl((Il2CppArray *)__this, (int32_t)L_4, (Color_t4194546905 *)(&V_2));
+		goto IL_005d;
+	}
+	{
+		goto IL_0053;
+	}
+	{
+		int32_t L_7 = V_1;
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_8 = Array_GetLowerBound_m2369136542((Il2CppArray *)__this, (int32_t)0, /*hidden argument*/NULL);
+		return ((int32_t)((int32_t)L_7+(int32_t)L_8));
+	}
+
+IL_0053:
+	{
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_9 = Array_GetLowerBound_m2369136542((Il2CppArray *)__this, (int32_t)0, /*hidden argument*/NULL);
+		return ((int32_t)((int32_t)L_9-(int32_t)1));
+	}
+
+IL_005d:
+	{
+		Color_t4194546905  L_10 = ___item0;
+		Color_t4194546905  L_11 = L_10;
+		Il2CppObject * L_12 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_11);
+		bool L_13 = Color_Equals_m3016668205((Color_t4194546905 *)(&V_2), (Il2CppObject *)L_12, /*hidden argument*/NULL);
+		if (!L_13)
+		{
+			goto IL_007f;
+		}
+	}
+	{
+		int32_t L_14 = V_1;
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_15 = Array_GetLowerBound_m2369136542((Il2CppArray *)__this, (int32_t)0, /*hidden argument*/NULL);
+		return ((int32_t)((int32_t)L_14+(int32_t)L_15));
+	}
+
+IL_007f:
+	{
+		int32_t L_16 = V_1;
+		V_1 = (int32_t)((int32_t)((int32_t)L_16+(int32_t)1));
+	}
+
+IL_0083:
+	{
+		int32_t L_17 = V_1;
+		int32_t L_18 = V_0;
+		if ((((int32_t)L_17) < ((int32_t)L_18)))
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_19 = Array_GetLowerBound_m2369136542((Il2CppArray *)__this, (int32_t)0, /*hidden argument*/NULL);
+		return ((int32_t)((int32_t)L_19-(int32_t)1));
+	}
+}
 // System.Int32 System.Array::InternalArray__IndexOf<UnityEngine.Color32>(T)
 extern Il2CppClass* RankException_t3671413657_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral3363540468;
@@ -24884,6 +25145,24 @@ extern "C"  void Array_InternalArray__ICollection_Add_TisUriScheme_t1290668975_m
 	if (!s_Il2CppMethodIntialized)
 	{
 		il2cpp_codegen_initialize_method (Array_InternalArray__ICollection_Add_TisUriScheme_t1290668975_m127047346_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		NotSupportedException_t1732551818 * L_0 = (NotSupportedException_t1732551818 *)il2cpp_codegen_object_new(NotSupportedException_t1732551818_il2cpp_TypeInfo_var);
+		NotSupportedException__ctor_m133757637(L_0, (String_t*)_stringLiteral615244847, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
+	}
+}
+// System.Void System.Array::InternalArray__ICollection_Add<UnityEngine.Color>(T)
+extern Il2CppClass* NotSupportedException_t1732551818_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral615244847;
+extern const uint32_t Array_InternalArray__ICollection_Add_TisColor_t4194546905_m242765191_MetadataUsageId;
+extern "C"  void Array_InternalArray__ICollection_Add_TisColor_t4194546905_m242765191_gshared (Il2CppArray * __this, Color_t4194546905  ___item0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Array_InternalArray__ICollection_Add_TisColor_t4194546905_m242765191_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	{
@@ -29794,6 +30073,120 @@ IL_008d:
 		return;
 	}
 }
+// System.Void System.Array::InternalArray__ICollection_CopyTo<UnityEngine.Color>(T[],System.Int32)
+extern Il2CppClass* ArgumentNullException_t3573189601_il2cpp_TypeInfo_var;
+extern Il2CppClass* RankException_t3671413657_il2cpp_TypeInfo_var;
+extern Il2CppClass* ArgumentException_t928607144_il2cpp_TypeInfo_var;
+extern Il2CppClass* ArgumentOutOfRangeException_t3816648464_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral93090393;
+extern Il2CppCodeGenString* _stringLiteral3363540468;
+extern Il2CppCodeGenString* _stringLiteral2331082323;
+extern Il2CppCodeGenString* _stringLiteral100346066;
+extern Il2CppCodeGenString* _stringLiteral2582657682;
+extern const uint32_t Array_InternalArray__ICollection_CopyTo_TisColor_t4194546905_m1472642321_MetadataUsageId;
+extern "C"  void Array_InternalArray__ICollection_CopyTo_TisColor_t4194546905_m1472642321_gshared (Il2CppArray * __this, ColorU5BU5D_t2441545636* ___array0, int32_t ___index1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Array_InternalArray__ICollection_CopyTo_TisColor_t4194546905_m1472642321_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		ColorU5BU5D_t2441545636* L_0 = ___array0;
+		if (L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		ArgumentNullException_t3573189601 * L_1 = (ArgumentNullException_t3573189601 *)il2cpp_codegen_object_new(ArgumentNullException_t3573189601_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_1, (String_t*)_stringLiteral93090393, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0011:
+	{
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_2 = Array_get_Rank_m1671008509((Il2CppArray *)__this, /*hidden argument*/NULL);
+		if ((((int32_t)L_2) <= ((int32_t)1)))
+		{
+			goto IL_002d;
+		}
+	}
+	{
+		String_t* L_3 = Locale_GetText_m2389348044(NULL /*static, unused*/, (String_t*)_stringLiteral3363540468, /*hidden argument*/NULL);
+		RankException_t3671413657 * L_4 = (RankException_t3671413657 *)il2cpp_codegen_object_new(RankException_t3671413657_il2cpp_TypeInfo_var);
+		RankException__ctor_m3451921812(L_4, (String_t*)L_3, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4);
+	}
+
+IL_002d:
+	{
+		int32_t L_5 = ___index1;
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_6 = Array_GetLength_m1450876743((Il2CppArray *)__this, (int32_t)0, /*hidden argument*/NULL);
+		ColorU5BU5D_t2441545636* L_7 = ___array0;
+		NullCheck((Il2CppArray *)(Il2CppArray *)L_7);
+		int32_t L_8 = Array_GetLowerBound_m2369136542((Il2CppArray *)(Il2CppArray *)L_7, (int32_t)0, /*hidden argument*/NULL);
+		ColorU5BU5D_t2441545636* L_9 = ___array0;
+		NullCheck((Il2CppArray *)(Il2CppArray *)L_9);
+		int32_t L_10 = Array_GetLength_m1450876743((Il2CppArray *)(Il2CppArray *)L_9, (int32_t)0, /*hidden argument*/NULL);
+		if ((((int32_t)((int32_t)((int32_t)L_5+(int32_t)L_6))) <= ((int32_t)((int32_t)((int32_t)L_8+(int32_t)L_10)))))
+		{
+			goto IL_0055;
+		}
+	}
+	{
+		ArgumentException_t928607144 * L_11 = (ArgumentException_t928607144 *)il2cpp_codegen_object_new(ArgumentException_t928607144_il2cpp_TypeInfo_var);
+		ArgumentException__ctor_m3544856547(L_11, (String_t*)_stringLiteral2331082323, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_11);
+	}
+
+IL_0055:
+	{
+		ColorU5BU5D_t2441545636* L_12 = ___array0;
+		NullCheck((Il2CppArray *)(Il2CppArray *)L_12);
+		int32_t L_13 = Array_get_Rank_m1671008509((Il2CppArray *)(Il2CppArray *)L_12, /*hidden argument*/NULL);
+		if ((((int32_t)L_13) <= ((int32_t)1)))
+		{
+			goto IL_0071;
+		}
+	}
+	{
+		String_t* L_14 = Locale_GetText_m2389348044(NULL /*static, unused*/, (String_t*)_stringLiteral3363540468, /*hidden argument*/NULL);
+		RankException_t3671413657 * L_15 = (RankException_t3671413657 *)il2cpp_codegen_object_new(RankException_t3671413657_il2cpp_TypeInfo_var);
+		RankException__ctor_m3451921812(L_15, (String_t*)L_14, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_15);
+	}
+
+IL_0071:
+	{
+		int32_t L_16 = ___index1;
+		if ((((int32_t)L_16) >= ((int32_t)0)))
+		{
+			goto IL_008d;
+		}
+	}
+	{
+		String_t* L_17 = Locale_GetText_m2389348044(NULL /*static, unused*/, (String_t*)_stringLiteral2582657682, /*hidden argument*/NULL);
+		ArgumentOutOfRangeException_t3816648464 * L_18 = (ArgumentOutOfRangeException_t3816648464 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3816648464_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m1193970951(L_18, (String_t*)_stringLiteral100346066, (String_t*)L_17, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_18);
+	}
+
+IL_008d:
+	{
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_19 = Array_GetLowerBound_m2369136542((Il2CppArray *)__this, (int32_t)0, /*hidden argument*/NULL);
+		ColorU5BU5D_t2441545636* L_20 = ___array0;
+		int32_t L_21 = ___index1;
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_22 = Array_GetLength_m1450876743((Il2CppArray *)__this, (int32_t)0, /*hidden argument*/NULL);
+		Array_Copy_m2598616668(NULL /*static, unused*/, (Il2CppArray *)__this, (int32_t)L_19, (Il2CppArray *)(Il2CppArray *)L_20, (int32_t)L_21, (int32_t)L_22, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void System.Array::InternalArray__ICollection_CopyTo<UnityEngine.Color32>(T[],System.Int32)
 extern Il2CppClass* ArgumentNullException_t3573189601_il2cpp_TypeInfo_var;
 extern Il2CppClass* RankException_t3671413657_il2cpp_TypeInfo_var;
@@ -32680,6 +33073,24 @@ extern "C"  void Array_InternalArray__Insert_TisUriScheme_t1290668975_m121120202
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
 	}
 }
+// System.Void System.Array::InternalArray__Insert<UnityEngine.Color>(System.Int32,T)
+extern Il2CppClass* NotSupportedException_t1732551818_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral615244847;
+extern const uint32_t Array_InternalArray__Insert_TisColor_t4194546905_m225738318_MetadataUsageId;
+extern "C"  void Array_InternalArray__Insert_TisColor_t4194546905_m225738318_gshared (Il2CppArray * __this, int32_t ___index0, Color_t4194546905  ___item1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Array_InternalArray__Insert_TisColor_t4194546905_m225738318_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		NotSupportedException_t1732551818 * L_0 = (NotSupportedException_t1732551818 *)il2cpp_codegen_object_new(NotSupportedException_t1732551818_il2cpp_TypeInfo_var);
+		NotSupportedException__ctor_m133757637(L_0, (String_t*)_stringLiteral615244847, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
+	}
+}
 // System.Void System.Array::InternalArray__Insert<UnityEngine.Color32>(System.Int32,T)
 extern Il2CppClass* NotSupportedException_t1732551818_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral615244847;
@@ -35377,6 +35788,65 @@ IL_002e:
 		int32_t L_9 = ___index0;
 		NullCheck((Il2CppArray *)__this);
 		ArraySetGenericValueImpl((Il2CppArray *)__this, (int32_t)L_9, (UriScheme_t1290668975 *)(&___item1));
+		return;
+	}
+}
+// System.Void System.Array::InternalArray__set_Item<UnityEngine.Color>(System.Int32,T)
+extern Il2CppClass* ArgumentOutOfRangeException_t3816648464_il2cpp_TypeInfo_var;
+extern Il2CppClass* ObjectU5BU5D_t1108656482_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral100346066;
+extern const uint32_t Array_InternalArray__set_Item_TisColor_t4194546905_m1033798935_MetadataUsageId;
+extern "C"  void Array_InternalArray__set_Item_TisColor_t4194546905_m1033798935_gshared (Il2CppArray * __this, int32_t ___index0, Color_t4194546905  ___item1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Array_InternalArray__set_Item_TisColor_t4194546905_m1033798935_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	ObjectU5BU5D_t1108656482* V_0 = NULL;
+	{
+		int32_t L_0 = ___index0;
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_1 = Array_get_Length_m1203127607((Il2CppArray *)__this, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_0) >= ((uint32_t)L_1))))
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		ArgumentOutOfRangeException_t3816648464 * L_2 = (ArgumentOutOfRangeException_t3816648464 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3816648464_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_2, (String_t*)_stringLiteral100346066, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	}
+
+IL_0017:
+	{
+		V_0 = (ObjectU5BU5D_t1108656482*)((ObjectU5BU5D_t1108656482*)IsInst(__this, ObjectU5BU5D_t1108656482_il2cpp_TypeInfo_var));
+		ObjectU5BU5D_t1108656482* L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_002e;
+		}
+	}
+	{
+		ObjectU5BU5D_t1108656482* L_4 = V_0;
+		int32_t L_5 = ___index0;
+		Color_t4194546905  L_6 = ___item1;
+		Color_t4194546905  L_7 = L_6;
+		Il2CppObject * L_8 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_7);
+		NullCheck(L_4);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_4, L_5);
+		ArrayElementTypeCheck (L_4, L_8);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(L_5), (Il2CppObject *)L_8);
+		return;
+	}
+
+IL_002e:
+	{
+		int32_t L_9 = ___index0;
+		NullCheck((Il2CppArray *)__this);
+		ArraySetGenericValueImpl((Il2CppArray *)__this, (int32_t)L_9, (Color_t4194546905 *)(&___item1));
 		return;
 	}
 }
@@ -53370,6 +53840,70 @@ extern "C"  void GameObject_GetComponentsInParent_TisIl2CppObject_m3568912686_gs
 		return;
 	}
 }
+// System.Void UnityEngine.Mesh::SetArrayForChannel<System.Object>(UnityEngine.Mesh/InternalShaderChannel,T[])
+extern "C"  void Mesh_SetArrayForChannel_TisIl2CppObject_m2669751145_gshared (Mesh_t4241756145 * __this, int32_t ___channel0, ObjectU5BU5D_t1108656482* ___values1, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___channel0;
+		int32_t L_1 = ___channel0;
+		int32_t L_2 = Mesh_DefaultDimensionForChannel_m1889643149(NULL /*static, unused*/, (int32_t)L_1, /*hidden argument*/NULL);
+		ObjectU5BU5D_t1108656482* L_3 = ___values1;
+		ObjectU5BU5D_t1108656482* L_4 = ___values1;
+		NullCheck((Mesh_t4241756145 *)__this);
+		int32_t L_5 = Mesh_SafeLength_m2932719837((Mesh_t4241756145 *)__this, (Il2CppArray *)(Il2CppArray *)L_4, /*hidden argument*/NULL);
+		NullCheck((Mesh_t4241756145 *)__this);
+		Mesh_SetSizedArrayForChannel_m2551235175((Mesh_t4241756145 *)__this, (int32_t)L_0, (int32_t)0, (int32_t)L_2, (Il2CppArray *)(Il2CppArray *)L_3, (int32_t)L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Mesh::SetArrayForChannel<UnityEngine.Color>(UnityEngine.Mesh/InternalShaderChannel,T[])
+extern "C"  void Mesh_SetArrayForChannel_TisColor_t4194546905_m81354303_gshared (Mesh_t4241756145 * __this, int32_t ___channel0, ColorU5BU5D_t2441545636* ___values1, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___channel0;
+		int32_t L_1 = ___channel0;
+		int32_t L_2 = Mesh_DefaultDimensionForChannel_m1889643149(NULL /*static, unused*/, (int32_t)L_1, /*hidden argument*/NULL);
+		ColorU5BU5D_t2441545636* L_3 = ___values1;
+		ColorU5BU5D_t2441545636* L_4 = ___values1;
+		NullCheck((Mesh_t4241756145 *)__this);
+		int32_t L_5 = Mesh_SafeLength_m2932719837((Mesh_t4241756145 *)__this, (Il2CppArray *)(Il2CppArray *)L_4, /*hidden argument*/NULL);
+		NullCheck((Mesh_t4241756145 *)__this);
+		Mesh_SetSizedArrayForChannel_m2551235175((Mesh_t4241756145 *)__this, (int32_t)L_0, (int32_t)0, (int32_t)L_2, (Il2CppArray *)(Il2CppArray *)L_3, (int32_t)L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Mesh::SetArrayForChannel<UnityEngine.Vector2>(UnityEngine.Mesh/InternalShaderChannel,T[])
+extern "C"  void Mesh_SetArrayForChannel_TisVector2_t4282066565_m929449235_gshared (Mesh_t4241756145 * __this, int32_t ___channel0, Vector2U5BU5D_t4024180168* ___values1, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___channel0;
+		int32_t L_1 = ___channel0;
+		int32_t L_2 = Mesh_DefaultDimensionForChannel_m1889643149(NULL /*static, unused*/, (int32_t)L_1, /*hidden argument*/NULL);
+		Vector2U5BU5D_t4024180168* L_3 = ___values1;
+		Vector2U5BU5D_t4024180168* L_4 = ___values1;
+		NullCheck((Mesh_t4241756145 *)__this);
+		int32_t L_5 = Mesh_SafeLength_m2932719837((Mesh_t4241756145 *)__this, (Il2CppArray *)(Il2CppArray *)L_4, /*hidden argument*/NULL);
+		NullCheck((Mesh_t4241756145 *)__this);
+		Mesh_SetSizedArrayForChannel_m2551235175((Mesh_t4241756145 *)__this, (int32_t)L_0, (int32_t)0, (int32_t)L_2, (Il2CppArray *)(Il2CppArray *)L_3, (int32_t)L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Mesh::SetArrayForChannel<UnityEngine.Vector3>(UnityEngine.Mesh/InternalShaderChannel,T[])
+extern "C"  void Mesh_SetArrayForChannel_TisVector3_t4282066566_m1899030258_gshared (Mesh_t4241756145 * __this, int32_t ___channel0, Vector3U5BU5D_t215400611* ___values1, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___channel0;
+		int32_t L_1 = ___channel0;
+		int32_t L_2 = Mesh_DefaultDimensionForChannel_m1889643149(NULL /*static, unused*/, (int32_t)L_1, /*hidden argument*/NULL);
+		Vector3U5BU5D_t215400611* L_3 = ___values1;
+		Vector3U5BU5D_t215400611* L_4 = ___values1;
+		NullCheck((Mesh_t4241756145 *)__this);
+		int32_t L_5 = Mesh_SafeLength_m2932719837((Mesh_t4241756145 *)__this, (Il2CppArray *)(Il2CppArray *)L_4, /*hidden argument*/NULL);
+		NullCheck((Mesh_t4241756145 *)__this);
+		Mesh_SetSizedArrayForChannel_m2551235175((Mesh_t4241756145 *)__this, (int32_t)L_0, (int32_t)0, (int32_t)L_2, (Il2CppArray *)(Il2CppArray *)L_3, (int32_t)L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void UnityEngine.Mesh::SetListForChannel<System.Object>(UnityEngine.Mesh/InternalShaderChannel,System.Collections.Generic.List`1<T>)
 extern "C"  void Mesh_SetListForChannel_TisIl2CppObject_m1933614382_gshared (Mesh_t4241756145 * __this, int32_t ___channel0, List_1_t1244034627 * ___values1, const MethodInfo* method)
 {
@@ -55655,6 +56189,44 @@ IL_0017:
 		return L_4;
 	}
 }
+// T System.Array::InternalArray__get_Item<UnityEngine.Color>(System.Int32)
+extern Il2CppClass* ArgumentOutOfRangeException_t3816648464_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral100346066;
+extern const uint32_t Array_InternalArray__get_Item_TisColor_t4194546905_m3851996850_MetadataUsageId;
+extern "C"  Color_t4194546905  Array_InternalArray__get_Item_TisColor_t4194546905_m3851996850_gshared (Il2CppArray * __this, int32_t ___index0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Array_InternalArray__get_Item_TisColor_t4194546905_m3851996850_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Color_t4194546905  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		int32_t L_0 = ___index0;
+		NullCheck((Il2CppArray *)__this);
+		int32_t L_1 = Array_get_Length_m1203127607((Il2CppArray *)__this, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_0) >= ((uint32_t)L_1))))
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		ArgumentOutOfRangeException_t3816648464 * L_2 = (ArgumentOutOfRangeException_t3816648464 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3816648464_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_2, (String_t*)_stringLiteral100346066, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	}
+
+IL_0017:
+	{
+		int32_t L_3 = ___index0;
+		NullCheck((Il2CppArray *)__this);
+		ArrayGetGenericValueImpl((Il2CppArray *)__this, (int32_t)L_3, (Color_t4194546905 *)(&V_0));
+		Color_t4194546905  L_4 = V_0;
+		return L_4;
+	}
+}
 // T System.Array::InternalArray__get_Item<UnityEngine.Color32>(System.Int32)
 extern Il2CppClass* ArgumentOutOfRangeException_t3816648464_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral100346066;
@@ -56517,13 +57089,13 @@ extern "C"  Il2CppObject * GameObject_AddComponent_TisIl2CppObject_m337943659_gs
 // T UnityEngine.GameObject::GetComponent<System.Object>()
 extern Il2CppClass* CastHelper_1_t1152456458_il2cpp_TypeInfo_var;
 extern Il2CppClass* Type_t_il2cpp_TypeInfo_var;
-extern const uint32_t GameObject_GetComponent_TisIl2CppObject_m2447772384_MetadataUsageId;
-extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared (GameObject_t3674682005 * __this, const MethodInfo* method)
+extern const uint32_t GameObject_GetComponent_TisIl2CppObject_m3652735468_MetadataUsageId;
+extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m3652735468_gshared (GameObject_t3674682005 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		il2cpp_codegen_initialize_method (GameObject_GetComponent_TisIl2CppObject_m2447772384_MetadataUsageId);
+		il2cpp_codegen_initialize_method (GameObject_GetComponent_TisIl2CppObject_m3652735468_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	CastHelper_1_t1152456458  V_0;
@@ -57381,296 +57953,5 @@ extern "C"  ObjectU5BU5D_t1108656482* Object_FindObjectsOfType_TisIl2CppObject_m
 		ObjectU5BU5D_t1015136018* L_1 = Object_FindObjectsOfType_m975740280(NULL /*static, unused*/, (Type_t *)L_0, /*hidden argument*/NULL);
 		ObjectU5BU5D_t1108656482* L_2 = ((  ObjectU5BU5D_t1108656482* (*) (Il2CppObject * /* static, unused */, ObjectU5BU5D_t1015136018*, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->methodPointer)(NULL /*static, unused*/, (ObjectU5BU5D_t1015136018*)L_1, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
 		return L_2;
-	}
-}
-// T[] UnityEngine.Resources::ConvertObjects<System.Object>(UnityEngine.Object[])
-extern "C"  ObjectU5BU5D_t1108656482* Resources_ConvertObjects_TisIl2CppObject_m1537961554_gshared (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t1015136018* ___rawObjects0, const MethodInfo* method)
-{
-	ObjectU5BU5D_t1108656482* V_0 = NULL;
-	int32_t V_1 = 0;
-	{
-		ObjectU5BU5D_t1015136018* L_0 = ___rawObjects0;
-		if (L_0)
-		{
-			goto IL_0008;
-		}
-	}
-	{
-		return (ObjectU5BU5D_t1108656482*)NULL;
-	}
-
-IL_0008:
-	{
-		ObjectU5BU5D_t1015136018* L_1 = ___rawObjects0;
-		NullCheck(L_1);
-		V_0 = (ObjectU5BU5D_t1108656482*)((ObjectU5BU5D_t1108656482*)SZArrayNew(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), (uint32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_1)->max_length))))));
-		V_1 = (int32_t)0;
-		goto IL_002b;
-	}
-
-IL_0018:
-	{
-		ObjectU5BU5D_t1108656482* L_2 = V_0;
-		int32_t L_3 = V_1;
-		ObjectU5BU5D_t1015136018* L_4 = ___rawObjects0;
-		int32_t L_5 = V_1;
-		NullCheck(L_4);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_4, L_5);
-		int32_t L_6 = L_5;
-		Object_t3071478659 * L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
-		NullCheck(L_2);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_2, L_3);
-		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(L_3), (Il2CppObject *)((Il2CppObject *)Castclass(L_7, IL2CPP_RGCTX_DATA(method->rgctx_data, 1))));
-		int32_t L_8 = V_1;
-		V_1 = (int32_t)((int32_t)((int32_t)L_8+(int32_t)1));
-	}
-
-IL_002b:
-	{
-		int32_t L_9 = V_1;
-		ObjectU5BU5D_t1108656482* L_10 = V_0;
-		NullCheck(L_10);
-		if ((((int32_t)L_9) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_10)->max_length)))))))
-		{
-			goto IL_0018;
-		}
-	}
-	{
-		ObjectU5BU5D_t1108656482* L_11 = V_0;
-		return L_11;
-	}
-}
-// TOutput[] System.Array::ConvertAll<System.Object,System.Object>(TInput[],System.Converter`2<TInput,TOutput>)
-extern Il2CppClass* ArgumentNullException_t3573189601_il2cpp_TypeInfo_var;
-extern Il2CppCodeGenString* _stringLiteral93090393;
-extern Il2CppCodeGenString* _stringLiteral3945236896;
-extern const uint32_t Array_ConvertAll_TisIl2CppObject_TisIl2CppObject_m2583007410_MetadataUsageId;
-extern "C"  ObjectU5BU5D_t1108656482* Array_ConvertAll_TisIl2CppObject_TisIl2CppObject_m2583007410_gshared (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t1108656482* ___array0, Converter_2_t3715610867 * ___converter1, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (Array_ConvertAll_TisIl2CppObject_TisIl2CppObject_m2583007410_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	ObjectU5BU5D_t1108656482* V_0 = NULL;
-	int32_t V_1 = 0;
-	{
-		ObjectU5BU5D_t1108656482* L_0 = ___array0;
-		if (L_0)
-		{
-			goto IL_0011;
-		}
-	}
-	{
-		ArgumentNullException_t3573189601 * L_1 = (ArgumentNullException_t3573189601 *)il2cpp_codegen_object_new(ArgumentNullException_t3573189601_il2cpp_TypeInfo_var);
-		ArgumentNullException__ctor_m135444188(L_1, (String_t*)_stringLiteral93090393, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
-	}
-
-IL_0011:
-	{
-		Converter_2_t3715610867 * L_2 = ___converter1;
-		if (L_2)
-		{
-			goto IL_0022;
-		}
-	}
-	{
-		ArgumentNullException_t3573189601 * L_3 = (ArgumentNullException_t3573189601 *)il2cpp_codegen_object_new(ArgumentNullException_t3573189601_il2cpp_TypeInfo_var);
-		ArgumentNullException__ctor_m135444188(L_3, (String_t*)_stringLiteral3945236896, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3);
-	}
-
-IL_0022:
-	{
-		ObjectU5BU5D_t1108656482* L_4 = ___array0;
-		NullCheck(L_4);
-		V_0 = (ObjectU5BU5D_t1108656482*)((ObjectU5BU5D_t1108656482*)SZArrayNew(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), (uint32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_4)->max_length))))));
-		V_1 = (int32_t)0;
-		goto IL_004a;
-	}
-
-IL_0032:
-	{
-		ObjectU5BU5D_t1108656482* L_5 = V_0;
-		int32_t L_6 = V_1;
-		Converter_2_t3715610867 * L_7 = ___converter1;
-		ObjectU5BU5D_t1108656482* L_8 = ___array0;
-		int32_t L_9 = V_1;
-		NullCheck(L_8);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_8, L_9);
-		int32_t L_10 = L_9;
-		Il2CppObject * L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
-		NullCheck((Converter_2_t3715610867 *)L_7);
-		Il2CppObject * L_12 = ((  Il2CppObject * (*) (Converter_2_t3715610867 *, Il2CppObject *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->methodPointer)((Converter_2_t3715610867 *)L_7, (Il2CppObject *)L_11, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
-		NullCheck(L_5);
-		IL2CPP_ARRAY_BOUNDS_CHECK(L_5, L_6);
-		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(L_6), (Il2CppObject *)L_12);
-		int32_t L_13 = V_1;
-		V_1 = (int32_t)((int32_t)((int32_t)L_13+(int32_t)1));
-	}
-
-IL_004a:
-	{
-		int32_t L_14 = V_1;
-		ObjectU5BU5D_t1108656482* L_15 = ___array0;
-		NullCheck(L_15);
-		if ((((int32_t)L_14) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_15)->max_length)))))))
-		{
-			goto IL_0032;
-		}
-	}
-	{
-		ObjectU5BU5D_t1108656482* L_16 = V_0;
-		return L_16;
-	}
-}
-// UnityEngine.GameObject UnityEngine.EventSystems.ExecuteEvents::ExecuteHierarchy<System.Object>(UnityEngine.GameObject,UnityEngine.EventSystems.BaseEventData,UnityEngine.EventSystems.ExecuteEvents/EventFunction`1<T>)
-extern Il2CppClass* ExecuteEvents_t2704060668_il2cpp_TypeInfo_var;
-extern const MethodInfo* List_1_get_Item_m2511824965_MethodInfo_var;
-extern const MethodInfo* List_1_get_Count_m2055567731_MethodInfo_var;
-extern const uint32_t ExecuteEvents_ExecuteHierarchy_TisIl2CppObject_m2445823293_MetadataUsageId;
-extern "C"  GameObject_t3674682005 * ExecuteEvents_ExecuteHierarchy_TisIl2CppObject_m2445823293_gshared (Il2CppObject * __this /* static, unused */, GameObject_t3674682005 * ___root0, BaseEventData_t2054899105 * ___eventData1, EventFunction_1_t864200549 * ___callbackFunction2, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (ExecuteEvents_ExecuteHierarchy_TisIl2CppObject_m2445823293_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	int32_t V_0 = 0;
-	Transform_t1659122786 * V_1 = NULL;
-	{
-		GameObject_t3674682005 * L_0 = ___root0;
-		IL2CPP_RUNTIME_CLASS_INIT(ExecuteEvents_t2704060668_il2cpp_TypeInfo_var);
-		List_1_t3027308338 * L_1 = ((ExecuteEvents_t2704060668_StaticFields*)ExecuteEvents_t2704060668_il2cpp_TypeInfo_var->static_fields)->get_s_InternalTransformList_18();
-		ExecuteEvents_GetEventChain_m1321751930(NULL /*static, unused*/, (GameObject_t3674682005 *)L_0, (Il2CppObject*)L_1, /*hidden argument*/NULL);
-		V_0 = (int32_t)0;
-		goto IL_003b;
-	}
-
-IL_0012:
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(ExecuteEvents_t2704060668_il2cpp_TypeInfo_var);
-		List_1_t3027308338 * L_2 = ((ExecuteEvents_t2704060668_StaticFields*)ExecuteEvents_t2704060668_il2cpp_TypeInfo_var->static_fields)->get_s_InternalTransformList_18();
-		int32_t L_3 = V_0;
-		NullCheck((List_1_t3027308338 *)L_2);
-		Transform_t1659122786 * L_4 = List_1_get_Item_m2511824965((List_1_t3027308338 *)L_2, (int32_t)L_3, /*hidden argument*/List_1_get_Item_m2511824965_MethodInfo_var);
-		V_1 = (Transform_t1659122786 *)L_4;
-		Transform_t1659122786 * L_5 = V_1;
-		NullCheck((Component_t3501516275 *)L_5);
-		GameObject_t3674682005 * L_6 = Component_get_gameObject_m1170635899((Component_t3501516275 *)L_5, /*hidden argument*/NULL);
-		BaseEventData_t2054899105 * L_7 = ___eventData1;
-		EventFunction_1_t864200549 * L_8 = ___callbackFunction2;
-		bool L_9 = ((  bool (*) (Il2CppObject * /* static, unused */, GameObject_t3674682005 *, BaseEventData_t2054899105 *, EventFunction_1_t864200549 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)(NULL /*static, unused*/, (GameObject_t3674682005 *)L_6, (BaseEventData_t2054899105 *)L_7, (EventFunction_1_t864200549 *)L_8, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
-		if (!L_9)
-		{
-			goto IL_0037;
-		}
-	}
-	{
-		Transform_t1659122786 * L_10 = V_1;
-		NullCheck((Component_t3501516275 *)L_10);
-		GameObject_t3674682005 * L_11 = Component_get_gameObject_m1170635899((Component_t3501516275 *)L_10, /*hidden argument*/NULL);
-		return L_11;
-	}
-
-IL_0037:
-	{
-		int32_t L_12 = V_0;
-		V_0 = (int32_t)((int32_t)((int32_t)L_12+(int32_t)1));
-	}
-
-IL_003b:
-	{
-		int32_t L_13 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(ExecuteEvents_t2704060668_il2cpp_TypeInfo_var);
-		List_1_t3027308338 * L_14 = ((ExecuteEvents_t2704060668_StaticFields*)ExecuteEvents_t2704060668_il2cpp_TypeInfo_var->static_fields)->get_s_InternalTransformList_18();
-		NullCheck((List_1_t3027308338 *)L_14);
-		int32_t L_15 = List_1_get_Count_m2055567731((List_1_t3027308338 *)L_14, /*hidden argument*/List_1_get_Count_m2055567731_MethodInfo_var);
-		if ((((int32_t)L_13) < ((int32_t)L_15)))
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		return (GameObject_t3674682005 *)NULL;
-	}
-}
-// UnityEngine.GameObject UnityEngine.EventSystems.ExecuteEvents::GetEventHandler<System.Object>(UnityEngine.GameObject)
-extern Il2CppClass* Object_t3071478659_il2cpp_TypeInfo_var;
-extern Il2CppClass* ExecuteEvents_t2704060668_il2cpp_TypeInfo_var;
-extern const uint32_t ExecuteEvents_GetEventHandler_TisIl2CppObject_m2285942506_MetadataUsageId;
-extern "C"  GameObject_t3674682005 * ExecuteEvents_GetEventHandler_TisIl2CppObject_m2285942506_gshared (Il2CppObject * __this /* static, unused */, GameObject_t3674682005 * ___root0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodIntialized;
-	if (!s_Il2CppMethodIntialized)
-	{
-		il2cpp_codegen_initialize_method (ExecuteEvents_GetEventHandler_TisIl2CppObject_m2285942506_MetadataUsageId);
-		s_Il2CppMethodIntialized = true;
-	}
-	Transform_t1659122786 * V_0 = NULL;
-	{
-		GameObject_t3674682005 * L_0 = ___root0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t3071478659_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Equality_m3964590952(NULL /*static, unused*/, (Object_t3071478659 *)L_0, (Object_t3071478659 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_000e;
-		}
-	}
-	{
-		return (GameObject_t3674682005 *)NULL;
-	}
-
-IL_000e:
-	{
-		GameObject_t3674682005 * L_2 = ___root0;
-		NullCheck((GameObject_t3674682005 *)L_2);
-		Transform_t1659122786 * L_3 = GameObject_get_transform_m1278640159((GameObject_t3674682005 *)L_2, /*hidden argument*/NULL);
-		V_0 = (Transform_t1659122786 *)L_3;
-		goto IL_0038;
-	}
-
-IL_001a:
-	{
-		Transform_t1659122786 * L_4 = V_0;
-		NullCheck((Component_t3501516275 *)L_4);
-		GameObject_t3674682005 * L_5 = Component_get_gameObject_m1170635899((Component_t3501516275 *)L_4, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(ExecuteEvents_t2704060668_il2cpp_TypeInfo_var);
-		bool L_6 = ((  bool (*) (Il2CppObject * /* static, unused */, GameObject_t3674682005 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)(NULL /*static, unused*/, (GameObject_t3674682005 *)L_5, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
-		if (!L_6)
-		{
-			goto IL_0031;
-		}
-	}
-	{
-		Transform_t1659122786 * L_7 = V_0;
-		NullCheck((Component_t3501516275 *)L_7);
-		GameObject_t3674682005 * L_8 = Component_get_gameObject_m1170635899((Component_t3501516275 *)L_7, /*hidden argument*/NULL);
-		return L_8;
-	}
-
-IL_0031:
-	{
-		Transform_t1659122786 * L_9 = V_0;
-		NullCheck((Transform_t1659122786 *)L_9);
-		Transform_t1659122786 * L_10 = Transform_get_parent_m2236876972((Transform_t1659122786 *)L_9, /*hidden argument*/NULL);
-		V_0 = (Transform_t1659122786 *)L_10;
-	}
-
-IL_0038:
-	{
-		Transform_t1659122786 * L_11 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t3071478659_il2cpp_TypeInfo_var);
-		bool L_12 = Object_op_Inequality_m1296218211(NULL /*static, unused*/, (Object_t3071478659 *)L_11, (Object_t3071478659 *)NULL, /*hidden argument*/NULL);
-		if (L_12)
-		{
-			goto IL_001a;
-		}
-	}
-	{
-		return (GameObject_t3674682005 *)NULL;
 	}
 }

@@ -24,7 +24,11 @@ struct Material_t3870600107;
 extern "C"  Material_t3870600107 * Renderer_get_material_m2720864603 (Renderer_t3076687687 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Renderer::set_material(UnityEngine.Material)
 extern "C"  void Renderer_set_material_m1012580896 (Renderer_t3076687687 * __this, Material_t3870600107 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Renderer::get_isVisible()
+extern "C"  bool Renderer_get_isVisible_m1011967393 (Renderer_t3076687687 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Renderer::get_sortingLayerID()
 extern "C"  int32_t Renderer_get_sortingLayerID_m1954594923 (Renderer_t3076687687 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Renderer::get_sortingOrder()
 extern "C"  int32_t Renderer_get_sortingOrder_m3623465101 (Renderer_t3076687687 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Renderer::set_sortingOrder(System.Int32)
+extern "C"  void Renderer_set_sortingOrder_m3971126610 (Renderer_t3076687687 * __this, int32_t ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;

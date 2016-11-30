@@ -24,7 +24,6 @@ struct IEnumerator_t3464575207;
 #include "UnityEngine_UnityEngine_Quaternion1553702882.h"
 #include "UnityEngine_UnityEngine_Transform1659122786.h"
 #include "UnityEngine_UnityEngine_Matrix4x41651859333.h"
-#include "UnityEngine_UnityEngine_Space4209342076.h"
 #include "mscorlib_System_String7231557.h"
 
 // UnityEngine.Vector3 UnityEngine.Transform::get_position()
@@ -43,6 +42,12 @@ extern "C"  void Transform_set_localPosition_m3504330903 (Transform_t1659122786 
 extern "C"  void Transform_INTERNAL_get_localPosition_m2703574131 (Transform_t1659122786 * __this, Vector3_t4282066566 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::INTERNAL_set_localPosition(UnityEngine.Vector3&)
 extern "C"  void Transform_INTERNAL_set_localPosition_m221305727 (Transform_t1659122786 * __this, Vector3_t4282066566 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Transform::get_eulerAngles()
+extern "C"  Vector3_t4282066566  Transform_get_eulerAngles_m1058084741 (Transform_t1659122786 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Transform::set_eulerAngles(UnityEngine.Vector3)
+extern "C"  void Transform_set_eulerAngles_m1704681314 (Transform_t1659122786 * __this, Vector3_t4282066566  ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Transform::get_up()
+extern "C"  Vector3_t4282066566  Transform_get_up_m297874561 (Transform_t1659122786 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Transform::get_forward()
 extern "C"  Vector3_t4282066566  Transform_get_forward_m877665793 (Transform_t1659122786 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Quaternion UnityEngine.Transform::get_rotation()
@@ -85,10 +90,6 @@ extern "C"  void Transform_SetParent_m263985879 (Transform_t1659122786 * __this,
 extern "C"  Matrix4x4_t1651859333  Transform_get_worldToLocalMatrix_m3792395652 (Transform_t1659122786 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::INTERNAL_get_worldToLocalMatrix(UnityEngine.Matrix4x4&)
 extern "C"  void Transform_INTERNAL_get_worldToLocalMatrix_m3861589095 (Transform_t1659122786 * __this, Matrix4x4_t1651859333 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Transform::Rotate(UnityEngine.Vector3)
-extern "C"  void Transform_Rotate_m637363399 (Transform_t1659122786 * __this, Vector3_t4282066566  ___eulerAngles0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Transform::Rotate(UnityEngine.Vector3,UnityEngine.Space)
-extern "C"  void Transform_Rotate_m3141515812 (Transform_t1659122786 * __this, Vector3_t4282066566  ___eulerAngles0, int32_t ___relativeTo1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Transform::TransformPoint(UnityEngine.Vector3)
 extern "C"  Vector3_t4282066566  Transform_TransformPoint_m437395512 (Transform_t1659122786 * __this, Vector3_t4282066566  ___position0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::INTERNAL_CALL_TransformPoint(UnityEngine.Transform,UnityEngine.Vector3&,UnityEngine.Vector3&)

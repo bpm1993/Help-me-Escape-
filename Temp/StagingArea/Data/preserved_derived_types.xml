@@ -24,6 +24,7 @@
 <type fullname="Player" preserve="all"/>
 <type fullname="Police" preserve="all"/>
 <type fullname="Sight" preserve="all"/>
+<type fullname="ZippyLights2D" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">
 <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all"/>

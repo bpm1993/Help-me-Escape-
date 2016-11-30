@@ -50,6 +50,8 @@ extern "C"  Color_t4194546905  Color_get_black_m1687201969 (Il2CppObject * __thi
 extern "C"  Color_t4194546905  Color_get_yellow_m599454500 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color::get_clear()
 extern "C"  Color_t4194546905  Color_get_clear_m2578346879 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Color UnityEngine.Color::op_Addition(UnityEngine.Color,UnityEngine.Color)
+extern "C"  Color_t4194546905  Color_op_Addition_m1421556689 (Il2CppObject * __this /* static, unused */, Color_t4194546905  ___a0, Color_t4194546905  ___b1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color::op_Multiply(UnityEngine.Color,System.Single)
 extern "C"  Color_t4194546905  Color_op_Multiply_m204757678 (Il2CppObject * __this /* static, unused */, Color_t4194546905  ___a0, float ___b1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Color::op_Equality(UnityEngine.Color,UnityEngine.Color)

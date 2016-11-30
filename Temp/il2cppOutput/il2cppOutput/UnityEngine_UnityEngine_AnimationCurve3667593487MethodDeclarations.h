@@ -29,6 +29,8 @@ extern "C"  void AnimationCurve__ctor_m4037844610 (AnimationCurve_t3667593487 * 
 extern "C"  void AnimationCurve_Cleanup_m386995588 (AnimationCurve_t3667593487 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.AnimationCurve::Finalize()
 extern "C"  void AnimationCurve_Finalize_m2382224032 (AnimationCurve_t3667593487 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.AnimationCurve::Evaluate(System.Single)
+extern "C"  float AnimationCurve_Evaluate_m547727012 (AnimationCurve_t3667593487 * __this, float ___time0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.AnimationCurve::Init(UnityEngine.Keyframe[])
 extern "C"  void AnimationCurve_Init_m4012213483 (AnimationCurve_t3667593487 * __this, KeyframeU5BU5D_t3589549831* ___keys0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 

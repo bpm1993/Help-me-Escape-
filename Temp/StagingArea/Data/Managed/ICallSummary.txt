@@ -1,3 +1,4 @@
+UnityEngine.AnimationCurve::Evaluate
 UnityEngine.AnimationCurve::Cleanup
 UnityEngine.AnimationCurve::Init
 UnityEngine.Animator::StringToHash
@@ -168,6 +169,7 @@ UnityEngine.GameObject::FindGameObjectWithTag
 UnityEngine.GameObject::FindGameObjectsWithTag
 UnityEngine.GameObject::get_transform
 UnityEngine.Gradient::Cleanup
+UnityEngine.Gradient::INTERNAL_CALL_Evaluate
 UnityEngine.Gradient::Init
 UnityEngine.GUI::INTERNAL_CALL_DoLabel
 UnityEngine.GUI::set_changed
@@ -316,6 +318,7 @@ UnityEngine.Mesh::PrintErrorCantAccessMeshForIndices
 UnityEngine.Mesh::RecalculateBounds
 UnityEngine.Mesh::SetArrayForChannelImpl
 UnityEngine.Mesh::SetTrianglesImpl
+UnityEngine.MeshFilter::set_mesh
 UnityEngine.MonoBehaviour::Internal_IsInvokingAll
 UnityEngine.MonoBehaviour::IsInvoking
 UnityEngine.MonoBehaviour::get_useGUILayout
@@ -408,6 +411,8 @@ UnityEngine.Object::Internal_CloneSingleWithParent
 UnityEngine.Object::FindObjectsOfType
 UnityEngine.Object::FindObjectsOfTypeIncludingAssets
 UnityEngine.Object::FindSceneObjectsOfType
+UnityEngine.ParticleSystem::Internal_Clear
+UnityEngine.ParticleSystem::INTERNAL_CALL_Emit
 UnityEngine.Physics::INTERNAL_CALL_Internal_Raycast
 UnityEngine.Physics::INTERNAL_CALL_RaycastAll
 UnityEngine.Physics2D::INTERNAL_CALL_Internal_Raycast
@@ -446,9 +451,11 @@ UnityEngine.RectTransform::INTERNAL_set_sizeDelta
 UnityEngine.RectTransformUtility::INTERNAL_CALL_RectangleContainsScreenPoint
 UnityEngine.RectTransformUtility::INTERNAL_CALL_PixelAdjustPoint
 UnityEngine.RectTransformUtility::INTERNAL_CALL_PixelAdjustRect
+UnityEngine.Renderer::get_isVisible
 UnityEngine.Renderer::get_sortingLayerID
 UnityEngine.Renderer::get_sortingOrder
 UnityEngine.Renderer::set_material
+UnityEngine.Renderer::set_sortingOrder
 UnityEngine.Renderer::get_material
 UnityEngine.RenderTexture::Internal_GetHeight
 UnityEngine.RenderTexture::Internal_GetWidth

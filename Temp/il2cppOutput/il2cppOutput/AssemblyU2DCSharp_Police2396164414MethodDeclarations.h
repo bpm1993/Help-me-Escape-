@@ -31,6 +31,8 @@ extern "C"  void Police_Start_m3452957213 (Police_t2396164414 * __this, const Me
 extern "C"  void Police_Update_m3968310672 (Police_t2396164414 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Police::decoy(UnityEngine.Vector3)
 extern "C"  void Police_decoy_m2412265394 (Police_t2396164414 * __this, Vector3_t4282066566  ___position0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Collections.IEnumerator Police::Stop()
+extern "C"  Il2CppObject * Police_Stop_m1162095697 (Police_t2396164414 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Police::Walk()
 extern "C"  void Police_Walk_m1039958032 (Police_t2396164414 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Police::callPolice()

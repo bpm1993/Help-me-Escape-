@@ -28,6 +28,8 @@ struct Vector3U5BU5D_t215400611;
 struct Vector4U5BU5D_t701588350;
 // UnityEngine.Vector2[]
 struct Vector2U5BU5D_t4024180168;
+// UnityEngine.Color[]
+struct ColorU5BU5D_t2441545636;
 // UnityEngine.Color32[]
 struct Color32U5BU5D_t2960766953;
 // System.Collections.Generic.List`1<UnityEngine.Vector3>
@@ -76,6 +78,8 @@ extern "C"  Il2CppArray * Mesh_ExtractArrayFromList_m2300152603 (Il2CppObject * 
 extern "C"  Int32U5BU5D_t3230847821* Mesh_GetIndicesImpl_m2338120260 (Mesh_t4241756145 * __this, int32_t ___submesh0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Mesh::SetTrianglesImpl(System.Int32,System.Array,System.Int32,System.Boolean)
 extern "C"  void Mesh_SetTrianglesImpl_m3687620564 (Mesh_t4241756145 * __this, int32_t ___submesh0, Il2CppArray * ___triangles1, int32_t ___arraySize2, bool ___calculateBounds3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Mesh::SetTrianglesImpl(System.Int32,System.Array,System.Int32)
+extern "C"  void Mesh_SetTrianglesImpl_m1324707977 (Mesh_t4241756145 * __this, int32_t ___submesh0, Il2CppArray * ___triangles1, int32_t ___arraySize2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Mesh::SetTriangles(System.Collections.Generic.List`1<System.Int32>,System.Int32)
 extern "C"  void Mesh_SetTriangles_m456382467 (Mesh_t4241756145 * __this, List_1_t2522024052 * ___triangles0, int32_t ___submesh1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Mesh::SetTriangles(System.Collections.Generic.List`1<System.Int32>,System.Int32,System.Boolean)
@@ -88,18 +92,26 @@ extern "C"  int32_t Mesh_get_subMeshCount_m4159827535 (Mesh_t4241756145 * __this
 extern "C"  int32_t Mesh_GetUVChannel_m584432922 (Mesh_t4241756145 * __this, int32_t ___uvIndex0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Mesh::DefaultDimensionForChannel(UnityEngine.Mesh/InternalShaderChannel)
 extern "C"  int32_t Mesh_DefaultDimensionForChannel_m1889643149 (Il2CppObject * __this /* static, unused */, int32_t ___channel0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Mesh::SafeLength(System.Array)
+extern "C"  int32_t Mesh_SafeLength_m2932719837 (Mesh_t4241756145 * __this, Il2CppArray * ___values0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Mesh::SetSizedArrayForChannel(UnityEngine.Mesh/InternalShaderChannel,UnityEngine.Mesh/InternalVertexChannelType,System.Int32,System.Array,System.Int32)
 extern "C"  void Mesh_SetSizedArrayForChannel_m2551235175 (Mesh_t4241756145 * __this, int32_t ___channel0, int32_t ___format1, int32_t ___dim2, Il2CppArray * ___values3, int32_t ___valuesCount4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3[] UnityEngine.Mesh::get_vertices()
 extern "C"  Vector3U5BU5D_t215400611* Mesh_get_vertices_m3685486174 (Mesh_t4241756145 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Mesh::set_vertices(UnityEngine.Vector3[])
+extern "C"  void Mesh_set_vertices_m2628866109 (Mesh_t4241756145 * __this, Vector3U5BU5D_t215400611* ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3[] UnityEngine.Mesh::get_normals()
 extern "C"  Vector3U5BU5D_t215400611* Mesh_get_normals_m3396909641 (Mesh_t4241756145 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector4[] UnityEngine.Mesh::get_tangents()
 extern "C"  Vector4U5BU5D_t701588350* Mesh_get_tangents_m3235865682 (Mesh_t4241756145 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector2[] UnityEngine.Mesh::get_uv()
 extern "C"  Vector2U5BU5D_t4024180168* Mesh_get_uv_m558008935 (Mesh_t4241756145 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Mesh::set_uv(UnityEngine.Vector2[])
+extern "C"  void Mesh_set_uv_m498907190 (Mesh_t4241756145 * __this, Vector2U5BU5D_t4024180168* ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector2[] UnityEngine.Mesh::get_uv2()
 extern "C"  Vector2U5BU5D_t4024180168* Mesh_get_uv2_m118417421 (Mesh_t4241756145 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Mesh::set_colors(UnityEngine.Color[])
+extern "C"  void Mesh_set_colors_m1701609395 (Mesh_t4241756145 * __this, ColorU5BU5D_t2441545636* ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color32[] UnityEngine.Mesh::get_colors32()
 extern "C"  Color32U5BU5D_t2960766953* Mesh_get_colors32_m192356802 (Mesh_t4241756145 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Mesh::SetVertices(System.Collections.Generic.List`1<UnityEngine.Vector3>)
@@ -118,5 +130,7 @@ extern "C"  bool Mesh_CheckCanAccessSubmesh_m3375419187 (Mesh_t4241756145 * __th
 extern "C"  bool Mesh_CheckCanAccessSubmeshTriangles_m1968826789 (Mesh_t4241756145 * __this, int32_t ___submesh0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Mesh::CheckCanAccessSubmeshIndices(System.Int32)
 extern "C"  bool Mesh_CheckCanAccessSubmeshIndices_m3478679265 (Mesh_t4241756145 * __this, int32_t ___submesh0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Mesh::set_triangles(System.Int32[])
+extern "C"  void Mesh_set_triangles_m2341339867 (Mesh_t4241756145 * __this, Int32U5BU5D_t3230847821* ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32[] UnityEngine.Mesh::GetIndices(System.Int32)
 extern "C"  Int32U5BU5D_t3230847821* Mesh_GetIndices_m637494532 (Mesh_t4241756145 * __this, int32_t ___submesh0, const MethodInfo* method) IL2CPP_METHOD_ATTR;

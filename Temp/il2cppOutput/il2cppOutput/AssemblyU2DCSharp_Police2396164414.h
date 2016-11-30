@@ -46,6 +46,8 @@ public:
 	float ___rotationTimer_17;
 	// System.Single Police::rotation
 	float ___rotation_18;
+	// System.Boolean Police::stop
+	bool ___stop_19;
 
 public:
 	inline static int32_t get_offset_of_positions_10() { return static_cast<int32_t>(offsetof(Police_t2396164414, ___positions_10)); }
@@ -120,6 +122,14 @@ public:
 	inline void set_rotation_18(float value)
 	{
 		___rotation_18 = value;
+	}
+
+	inline static int32_t get_offset_of_stop_19() { return static_cast<int32_t>(offsetof(Police_t2396164414, ___stop_19)); }
+	inline bool get_stop_19() const { return ___stop_19; }
+	inline bool* get_address_of_stop_19() { return &___stop_19; }
+	inline void set_stop_19(bool value)
+	{
+		___stop_19 = value;
 	}
 };
 

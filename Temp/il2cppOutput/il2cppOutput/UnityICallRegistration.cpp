@@ -1,7 +1,11 @@
-//Generated on : 28/11/2016 23:07:25
+//Generated on : 29/11/2016 22:19:08
 void RegisterAllStrippedInternalCalls()
 {
 	//Start Registrations for type : UnityEngine.AnimationCurve
+
+		//System.Single UnityEngine.AnimationCurve::Evaluate(System.Single)
+		void Register_UnityEngine_AnimationCurve_Evaluate();
+		Register_UnityEngine_AnimationCurve_Evaluate();
 
 		//System.Void UnityEngine.AnimationCurve::Cleanup()
 		void Register_UnityEngine_AnimationCurve_Cleanup();
@@ -791,6 +795,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Gradient_Cleanup();
 		Register_UnityEngine_Gradient_Cleanup();
 
+		//System.Void UnityEngine.Gradient::INTERNAL_CALL_Evaluate(UnityEngine.Gradient,System.Single,UnityEngine.Color&)
+		void Register_UnityEngine_Gradient_INTERNAL_CALL_Evaluate();
+		Register_UnityEngine_Gradient_INTERNAL_CALL_Evaluate();
+
 		//System.Void UnityEngine.Gradient::Init()
 		void Register_UnityEngine_Gradient_Init();
 		Register_UnityEngine_Gradient_Init();
@@ -1449,6 +1457,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Mesh
 
+	//Start Registrations for type : UnityEngine.MeshFilter
+
+		//System.Void UnityEngine.MeshFilter::set_mesh(UnityEngine.Mesh)
+		void Register_UnityEngine_MeshFilter_set_mesh();
+		Register_UnityEngine_MeshFilter_set_mesh();
+
+	//End Registrations for type : UnityEngine.MeshFilter
+
 	//Start Registrations for type : UnityEngine.MonoBehaviour
 
 		//System.Boolean UnityEngine.MonoBehaviour::Internal_IsInvokingAll()
@@ -1857,6 +1873,18 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Object
 
+	//Start Registrations for type : UnityEngine.ParticleSystem
+
+		//System.Boolean UnityEngine.ParticleSystem::Internal_Clear(UnityEngine.ParticleSystem)
+		void Register_UnityEngine_ParticleSystem_Internal_Clear();
+		Register_UnityEngine_ParticleSystem_Internal_Clear();
+
+		//System.Void UnityEngine.ParticleSystem::INTERNAL_CALL_Emit(UnityEngine.ParticleSystem,System.Int32)
+		void Register_UnityEngine_ParticleSystem_INTERNAL_CALL_Emit();
+		Register_UnityEngine_ParticleSystem_INTERNAL_CALL_Emit();
+
+	//End Registrations for type : UnityEngine.ParticleSystem
+
 	//Start Registrations for type : UnityEngine.Physics
 
 		//System.Boolean UnityEngine.Physics::INTERNAL_CALL_Internal_Raycast(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
@@ -2039,6 +2067,10 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Renderer
 
+		//System.Boolean UnityEngine.Renderer::get_isVisible()
+		void Register_UnityEngine_Renderer_get_isVisible();
+		Register_UnityEngine_Renderer_get_isVisible();
+
 		//System.Int32 UnityEngine.Renderer::get_sortingLayerID()
 		void Register_UnityEngine_Renderer_get_sortingLayerID();
 		Register_UnityEngine_Renderer_get_sortingLayerID();
@@ -2050,6 +2082,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Renderer::set_material(UnityEngine.Material)
 		void Register_UnityEngine_Renderer_set_material();
 		Register_UnityEngine_Renderer_set_material();
+
+		//System.Void UnityEngine.Renderer::set_sortingOrder(System.Int32)
+		void Register_UnityEngine_Renderer_set_sortingOrder();
+		Register_UnityEngine_Renderer_set_sortingOrder();
 
 		//UnityEngine.Material UnityEngine.Renderer::get_material()
 		void Register_UnityEngine_Renderer_get_material();

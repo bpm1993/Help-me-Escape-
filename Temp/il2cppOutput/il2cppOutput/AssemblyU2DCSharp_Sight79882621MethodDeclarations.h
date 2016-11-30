@@ -32,3 +32,5 @@ extern "C"  void Sight_OnTriggerEnter2D_m3606457514 (Sight_t79882621 * __this, C
 extern "C"  void Sight_OnTriggerStay2D_m3466871859 (Sight_t79882621 * __this, Collider2D_t1552025098 * ___col0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Sight::OnTriggerExit2D(UnityEngine.Collider2D)
 extern "C"  void Sight_OnTriggerExit2D_m3529857720 (Sight_t79882621 * __this, Collider2D_t1552025098 * ___col0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Sight::policeCallback()
+extern "C"  void Sight_policeCallback_m3839396697 (Sight_t79882621 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
