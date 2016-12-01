@@ -50,7 +50,7 @@ public class Police : Enemy {
 
 	// Update is called once per frame
 	protected override void Update () {
-		print (state);
+//		print (state);
 		base.Update ();
 		if (state == 1) {
 			LookAt (nextPosition);
@@ -66,7 +66,12 @@ public class Police : Enemy {
 			if (transform.position == nextPosition) {
 				if (!stop) {
 					if (index == positions.GetLength (0) - 1) {
-						transform.GetComponentInChildren<Light> ().color = Color.white;
+						Color c = new Color();
+						c.r = 49;
+						c.g = 48;
+						c.b = 27;
+						c.a = 1.0f;
+						transform.GetComponentInChildren<ZippyLights2D> ().vertexColor = c;
 						StartCoroutine (setState (1, 2f));
 						stop = true;
 					} else {
@@ -188,7 +193,7 @@ public class Police : Enemy {
 			decoy (col.transform.position);
 		}
 		if (col.name == "Player") {
-			print ("Pegou com sarna!");
+//			print ("Pegou com sarna!");
 			GameObject.Find("Main Game").GetComponent<MatrixMap>().PlayerPego();
 			Time.timeScale = 0;
 		}

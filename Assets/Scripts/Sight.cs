@@ -38,14 +38,14 @@ public class Sight : MonoBehaviour {
 		if (col.name == "Player" && parent.state!= 7 && !parent.onSight) {
 			parent.setState (2);
 			parent.onSight = true;
-			parent.GetComponentInChildren<Light> ().color = Color.red;
+			parent.GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.red;
 		}
 	}
 
 	void OnTriggerExit2D (Collider2D col){
 		if (col.tag == "Player" && parent.state == 2 && parent.onSight && transform.parent.GetComponent<Police> () != null) {
 			transform.parent.GetComponent<Police>().onSight = false;
-			transform.parent.GetComponentInChildren<Light> ().color = Color.yellow;
+			transform.parent.GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.yellow;
 			parent.state = 0;
 			searchPosition = GameObject.Find ("Player").transform.position;
 			Invoke ("policeCallback", 3f);

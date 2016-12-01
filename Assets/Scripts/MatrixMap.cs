@@ -77,7 +77,7 @@ public class MatrixMap : MonoBehaviour {
 		setBrightness ();
 
 		if (cornsDobrados == redCorns) {
-			print ("VENCEU");
+//			print ("VENCEU");
 			Time.timeScale = 0;
 			finalText.text = "Você está mais perto de ser resgatado!";
 			if (panelFinal.transform.position.x > 0){
@@ -150,7 +150,7 @@ public class MatrixMap : MonoBehaviour {
 		if (alertBool) {
 			
 			Color color = alertPerigoBorder.color;
-			print ("OE");
+//			print ("OE");
 			float t = (Time.time - alertTimer) / 1.0f;
 			if (alertBool) {
 //			shine.SetFloat("_Adjust",Mathf.SmoothStep (2f, 4f, t));
@@ -170,7 +170,7 @@ public class MatrixMap : MonoBehaviour {
 				}
 			}
 		} else {
-			print("AQUI");
+//			print("AQUI");
 			alertBool = false;
 			Color color = alertPerigoBorder.color;
 			color.a = 0.0f;
@@ -188,7 +188,7 @@ public class MatrixMap : MonoBehaviour {
     }
 
 	public void distraction(){
-		print ("DECOY");
+//		print ("DECOY");
 		coolingDownDistraction = true;
 		startTimeDistraction = Time.timeSinceLevelLoad;
 		waitTimeDistraction = secondsDistraction + 5.0f;
@@ -198,7 +198,7 @@ public class MatrixMap : MonoBehaviour {
 	}
 
 	public void mindControl(){
-		print ("MIND");
+//		print ("MIND");
 		coolingDownMind = true;
 		startTimeMind = Time.timeSinceLevelLoad;
 		waitTimeMind = secondsTimeMind + 5.0f;
@@ -219,7 +219,7 @@ public class MatrixMap : MonoBehaviour {
 	}
 
 	public void slowMotion(){
-		print ("SLOW MO");
+//		print ("SLOW MO");
 		coolingDownSlow = true;
 		startTimeSlow = Time.timeSinceLevelLoad;
 		waitTimeSlow = secondsTimeSlow + 5.0f;
@@ -274,7 +274,7 @@ public class MatrixMap : MonoBehaviour {
 	}
 
 	public void test(){
-		print ("teste");
+//		print ("teste");
 	}
 }
 	

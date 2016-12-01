@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
 	void Start () {
 		lastFoot = this.transform.position;
 		lastFootBool = false;
-
+		print (LayerMask.NameToLayer("Player"));
 	
 	}
 
