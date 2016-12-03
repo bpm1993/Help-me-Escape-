@@ -66,7 +66,7 @@ public class Police : Enemy {
 			if (transform.position == nextPosition) {
 				if (!stop) {
 					if (index == positions.GetLength (0) - 1) {
-						transform.GetComponentInChildren<Light> ().color = Color.white;
+						transform.GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.white;
 						StartCoroutine (setState (1, 2f));
 						stop = true;
 					} else {

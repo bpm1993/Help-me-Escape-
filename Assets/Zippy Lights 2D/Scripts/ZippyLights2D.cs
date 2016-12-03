@@ -268,6 +268,9 @@ public class ZippyLights2D : MonoBehaviour {
 			RaycastHit2D hit = Physics2D.Raycast(cacheTransform.position, qd, range, layers);
 			float dist = hit.distance;
 			if (hit) {
+				if (hit.collider.gameObject.name == "Player"){
+					print ("ACHOU");
+				}
 				if (particles && dist < particleRangeLimitMax && dist > particleRangeLimitMin && i % pr == Random.Range(0, pr+1) ) {
 					pointsP[pointsPlenght] = hit.point;
 					pointsPlenght++;
