@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Camera : MonoBehaviour {
+public class CameraInGame : MonoBehaviour {
 
 	public Vector3 offset;
 	public Transform target;

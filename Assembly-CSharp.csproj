@@ -45,7 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Camera.cs" />
+     <Compile Include="Assets\Menu\Scripts\FaseButton.cs" />
+     <Compile Include="Assets\Menu\Scripts\MenuControl.cs" />
+     <Compile Include="Assets\Menu\Scripts\MovingBackground.cs" />
+     <Compile Include="Assets\Scripts\CameraInGame.cs" />
      <Compile Include="Assets\Scripts\CreateEnemies.cs" />
      <Compile Include="Assets\Scripts\CreateMap.cs" />
      <Compile Include="Assets\Scripts\Decoy.cs" />
