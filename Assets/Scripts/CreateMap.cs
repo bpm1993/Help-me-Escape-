@@ -6,6 +6,7 @@ public class CreateMap : MonoBehaviour {
 	public GameObject bush;
 	public GameObject dirtGO;
 	public GameObject lightDirt;
+	public GameObject boulder;
 	public int redCorns = 0;
 
 	// Use this for initialization
@@ -13,8 +14,8 @@ public class CreateMap : MonoBehaviour {
 		float[,] map = new float[42, 42] {
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -30,7 +31,7 @@ public class CreateMap : MonoBehaviour {
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0 },
-			{ 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -38,7 +39,7 @@ public class CreateMap : MonoBehaviour {
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -85,30 +86,35 @@ public class CreateMap : MonoBehaviour {
 		for (int contX = 0; contX < 42; contX++) {
 			for (int contY = 0; contY < 42; contY++) {
 				GameObject dirt;
-				if (map[contY,contX] == 1) {
-					dirt = (GameObject)Instantiate(this.lightDirt);
+				if (map [contY, contX] == 1) {
+					dirt = (GameObject)Instantiate (this.lightDirt);
 					redCorns++;
+				} else if (map [contY, contX] == 2) {
+					dirt = (GameObject)Instantiate (this.boulder);
 				} else {
-					dirt = (GameObject)Instantiate(this.dirtGO);
+					dirt = (GameObject)Instantiate (this.dirtGO);
 				}
-				Sprite underPlant = (Sprite)underMilhoList [Random.Range (0, underMilhoList.Count)];
-				SpriteRenderer underRenderer = dirt.transform.FindChild ("Corn").FindChild("Under Plant").gameObject.GetComponent<SpriteRenderer> ();
-				underRenderer.sprite = underPlant;
-				underRenderer.material = Resources.Load<Material> ("Lightning2");
 
-				Sprite midlePlant = (Sprite)midMilhoList [Random.Range (0, underMilhoList.Count)];
-				SpriteRenderer midRenderer= dirt.transform.FindChild ("Corn").FindChild("Mid Plant").gameObject.GetComponent<SpriteRenderer> ();
-				midRenderer.sprite = midlePlant;
-				midRenderer.material = Resources.Load<Material> ("Lightning2");
+				if (map [contY, contX] <= 1) {
+					Sprite underPlant = (Sprite)underMilhoList [Random.Range (0, underMilhoList.Count)];
+					SpriteRenderer underRenderer = dirt.transform.FindChild ("Corn").FindChild("Under Plant").gameObject.GetComponent<SpriteRenderer> ();
+					underRenderer.sprite = underPlant;
+					underRenderer.material = Resources.Load<Material> ("Lightning2");
 
-				Sprite topPlant = (Sprite)topMilhoList [Random.Range (0, underMilhoList.Count)];
-				SpriteRenderer topRenderer= dirt.transform.FindChild ("Corn").FindChild("Top Plant").gameObject.GetComponent<SpriteRenderer> ();
-				topRenderer.sprite = topPlant;
-				topRenderer.material = Resources.Load<Material> ("Lightning2");
+					Sprite midlePlant = (Sprite)midMilhoList [Random.Range (0, underMilhoList.Count)];
+					SpriteRenderer midRenderer= dirt.transform.FindChild ("Corn").FindChild("Mid Plant").gameObject.GetComponent<SpriteRenderer> ();
+					midRenderer.sprite = midlePlant;
+					midRenderer.material = Resources.Load<Material> ("Lightning2");
+
+					Sprite topPlant = (Sprite)topMilhoList [Random.Range (0, underMilhoList.Count)];
+					SpriteRenderer topRenderer= dirt.transform.FindChild ("Corn").FindChild("Top Plant").gameObject.GetComponent<SpriteRenderer> ();
+					topRenderer.sprite = topPlant;
+					topRenderer.material = Resources.Load<Material> ("Lightning2");
 
 
+					GetComponent<MatrixMap>().addObject(dirt,contX, contY);
+				}
 				dirt.transform.position = new Vector3 (pointX + contX, pointY + contY, 1);
-                GetComponent<MatrixMap>().addObject(dirt,contX, contY);
 			}
 		}
 		gameObject.GetComponentInParent<MatrixMap> ().RecebeRedCorns (redCorns);

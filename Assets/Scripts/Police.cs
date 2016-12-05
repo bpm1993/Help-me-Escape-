@@ -209,7 +209,6 @@ public class Police : Enemy {
 			color.a = 1.0f;
 			renderer.color = color;
 		}
-		print ("Entrei");
 	}
 
 	public override void onSightStay(){
@@ -219,10 +218,10 @@ public class Police : Enemy {
 			setState (2);
 			onSight = true;
 			GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.red;
-			GameObject.Find("Main Game").GetComponent<MatrixMap>().alertBool = true;
+
 		}
 
-		print ("Fiquei");
+		GameObject.Find("Main Game").GetComponent<MatrixMap>().alertBool = true;
 	}
 
 	public override void onSightExit(){
@@ -235,8 +234,6 @@ public class Police : Enemy {
 			searchPosition = GameObject.Find ("Player").transform.position;
 			Invoke ("policeCallback", 3f);
 		}
-
-		print ("Sai");
 	}
 
 	void policeCallback(){

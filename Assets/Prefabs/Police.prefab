@@ -347,14 +347,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idle: 0
-  lightEnabled: 1
+  lightEnabled: 0
   resolution: 13
   degrees: 60
   oldDegrees: 60
   moveToUpdate: 0
   layers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1536
   unityLight: {fileID: 0}
   follow: {fileID: 0}
   range: 5

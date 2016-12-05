@@ -129,7 +129,6 @@ public class MatrixMap : MonoBehaviour {
 	}
 
 	public void PlayerPego (){
-		print ("Pegou com sarna!");
 		pego = true;
 	}
 

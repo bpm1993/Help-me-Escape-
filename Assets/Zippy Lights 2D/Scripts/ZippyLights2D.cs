@@ -289,21 +289,23 @@ public class ZippyLights2D : MonoBehaviour {
 				str[i] = 0;
 			}
 		}
-		if (transform.parent.GetComponent<Enemy> () != null) {
-			if (lightCol) {
-				if (prevSightState) {
-					transform.parent.GetComponent<Enemy> ().onSightStay ();
-				} else {
-					transform.parent.GetComponent<Enemy> ().onSightEnter ();
+		if (transform.parent != null) {
+			if (transform.parent.GetComponent<Enemy> () != null) {
+				if (lightCol) {
+					if (prevSightState) {
+						transform.parent.GetComponent<Enemy> ().onSightStay ();
+					} else {
+						transform.parent.GetComponent<Enemy> ().onSightEnter ();
+					}
+					prevSightState = true;
+				} else if (!lightCol && prevSightState) {
+					prevSightState = false;
+					transform.parent.GetComponent<Enemy> ().onSightExit ();
 				}
-				prevSightState = true;
-			} else if (!lightCol && prevSightState) {
-				prevSightState = false;
-				transform.parent.GetComponent<Enemy> ().onSightExit ();
-			}
 
-			if (decoyCol) {
-				transform.parent.GetComponent<Enemy> ().decoy (transform.position);
+				if (decoyCol) {
+					transform.parent.GetComponent<Enemy> ().decoy (transform.position);
+				}
 			}
 		}
 	}

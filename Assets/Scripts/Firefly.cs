@@ -33,8 +33,6 @@ public class Firefly : MonoBehaviour {
 		}
 
 		if (transform.position.y > 23 || transform.position.y < -23 || transform.position.x > 23 || transform.position.x < -23) {
-			print (transform.position.y);
-			print (transform.position.x);
 			die ();
 		}
 	}
