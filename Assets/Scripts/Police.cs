@@ -7,12 +7,17 @@ public class Police : Enemy {
 	private int index;
 	private Vector3 nextPosition;
 	private Vector3 tempPosition;
-	public Transform light;
 	private Vector3 lastPos;
 	private bool isRotating;
 	private float rotationTimer;
 	private float rotation;
 	private bool stop;
+
+	public AudioClip achouSound;
+	private AudioSource source;
+	public GameObject alertSymbol;
+
+	private Vector3 searchPosition;
 
 	/*
      * States:
@@ -31,6 +36,7 @@ public class Police : Enemy {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
+		source = GetComponent<AudioSource>();
 		positions = new float[4, 2] {
 			{ Random.Range(-15, 15), Random.Range(-15, 15) },
 			{ Random.Range(-15, 15), Random.Range(-15, 15) },
@@ -50,7 +56,6 @@ public class Police : Enemy {
 
 	// Update is called once per frame
 	protected override void Update () {
-		print (state);
 		base.Update ();
 		if (state == 1) {
 			LookAt (nextPosition);
@@ -103,7 +108,8 @@ public class Police : Enemy {
 		}
 	}
 
-	public void decoy(Vector3 position){
+	public override void decoy(Vector3 position){
+		base.decoy (position);
 		setState (9);
 		tempPosition = nextPosition;
 		nextPosition = position;
@@ -188,9 +194,52 @@ public class Police : Enemy {
 			decoy (col.transform.position);
 		}
 		if (col.name == "Player") {
-			print ("Pegou com sarna!");
 			GameObject.Find("Main Game").GetComponent<MatrixMap>().PlayerPego();
 			Time.timeScale = 0;
 		}
+	}
+
+	public override void onSightEnter(){
+		base.onSightEnter ();
+		if (state != 7 && !onSight) {
+			source.PlayOneShot(achouSound,.5f);
+
+			SpriteRenderer renderer = alertSymbol.GetComponent<SpriteRenderer> ();
+			Color color = renderer.color;
+			color.a = 1.0f;
+			renderer.color = color;
+		}
+		print ("Entrei");
+	}
+
+	public override void onSightStay(){
+		base.onSightStay ();
+
+		if (state != 7 && !onSight) {
+			setState (2);
+			onSight = true;
+			GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.red;
+			GameObject.Find("Main Game").GetComponent<MatrixMap>().alertBool = true;
+		}
+
+		print ("Fiquei");
+	}
+
+	public override void onSightExit(){
+		base.onSightExit ();
+
+		if (state == 2 && onSight) {
+			onSight = false;
+			GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.yellow;
+			state = 0;
+			searchPosition = GameObject.Find ("Player").transform.position;
+			Invoke ("policeCallback", 3f);
+		}
+
+		print ("Sai");
+	}
+
+	void policeCallback(){
+		inspectPosition (searchPosition);
 	}
 }

@@ -251,6 +251,9 @@ public class ZippyLights2D : MonoBehaviour {
 		if (animateRange) range = rangeAnimation.Evaluate(lightTime * animateRangeSpeed % 1) * animateRangeScale;
 	}
 
+	bool prevSightState = false;
+	bool prevDecoyState = false;
+
 	void ScanPoints() {
 		degreeResolution = degrees / resolution;
 
@@ -262,14 +265,18 @@ public class ZippyLights2D : MonoBehaviour {
 		Vector3 d = cacheTransform.up;
 		int pr = (int)(resolution * particleRayAmount);
 		Vector3 f = Vector3.forward;
+		bool lightCol = false;
+		bool decoyCol = false;
 		for (int i = 0; i < resolution; i++) {
 			Quaternion q = Quaternion.AngleAxis((float)(i * degreeResolution) + noiseVal, f);
 			Vector3 qd = q*d;
 			RaycastHit2D hit = Physics2D.Raycast(cacheTransform.position, qd, range, layers);
 			float dist = hit.distance;
 			if (hit) {
-				if (hit.collider.gameObject.name == "Player"){
-					print ("ACHOU");
+				if (hit.collider.gameObject.name == "Player" && !lightCol){
+					lightCol = true;
+				} else if(hit.collider.gameObject.name == "Decoy" && !decoyCol){
+					decoyCol = true;
 				}
 				if (particles && dist < particleRangeLimitMax && dist > particleRangeLimitMin && i % pr == Random.Range(0, pr+1) ) {
 					pointsP[pointsPlenght] = hit.point;
@@ -280,6 +287,23 @@ public class ZippyLights2D : MonoBehaviour {
 			} else {
 				points[i] = cacheTransform.position + qd * range;
 				str[i] = 0;
+			}
+		}
+		if (transform.parent.GetComponent<Enemy> () != null) {
+			if (lightCol) {
+				if (prevSightState) {
+					transform.parent.GetComponent<Enemy> ().onSightStay ();
+				} else {
+					transform.parent.GetComponent<Enemy> ().onSightEnter ();
+				}
+				prevSightState = true;
+			} else if (!lightCol && prevSightState) {
+				prevSightState = false;
+				transform.parent.GetComponent<Enemy> ().onSightExit ();
+			}
+
+			if (decoyCol) {
+				transform.parent.GetComponent<Enemy> ().decoy (transform.position);
 			}
 		}
 	}

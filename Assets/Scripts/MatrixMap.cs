@@ -136,21 +136,18 @@ public class MatrixMap : MonoBehaviour {
 	public void RecebeRedCorns(int numberOfRedCorns){
 		redCorns = numberOfRedCorns;
 		milhosRestantesText.text = redCorns.ToString ();
-		print ("Red: " + redCorns);
 	}
 
 	public void CornDobrado(){
 		cornsDobrados++;
 		int milhosRestantes = redCorns - cornsDobrados;
 		milhosRestantesText.text = milhosRestantes.ToString();
-		print ("Green: " + cornsDobrados);
 	}
 
 	public void PlayerEmPerigo(){
 		if (alertBool) {
 			
 			Color color = alertPerigoBorder.color;
-			print ("OE");
 			float t = (Time.time - alertTimer) / 1.0f;
 			if (alertBool) {
 //			shine.SetFloat("_Adjust",Mathf.SmoothStep (2f, 4f, t));
@@ -170,7 +167,6 @@ public class MatrixMap : MonoBehaviour {
 				}
 			}
 		} else {
-			print("AQUI");
 			alertBool = false;
 			Color color = alertPerigoBorder.color;
 			color.a = 0.0f;

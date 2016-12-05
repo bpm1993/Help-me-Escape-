@@ -68,4 +68,19 @@ public class Enemy : MonoBehaviour {
 		transform.rotation = Quaternion.Slerp(transform.rotation, target, (Time.deltaTime * 2.5f) * slowMoSpeed);
 	}
 
+	public virtual void decoy(Vector3 position){
+
+	}
+
+	public virtual void onSightEnter(){
+		
+	}
+
+	public virtual void onSightStay(){
+
+	}
+
+	public virtual void onSightExit(){
+
+	}
 }

@@ -11,6 +11,10 @@ public class Farmer : Enemy {
 	public Transform pivot;
 	public Transform light;
 
+	public AudioClip achouSound;
+	private AudioSource source;
+	public GameObject alertSymbol;
+
     /*
      * States:
      * 1 = Normal;
@@ -24,6 +28,8 @@ public class Farmer : Enemy {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
+		onSight = false;
+		source = GetComponent<AudioSource>();
 		positions = new float[4, 2] {
 			{ 2, 10 },
 			{ -7, 10 },
@@ -37,7 +43,8 @@ public class Farmer : Enemy {
 		LookAt (nextPosition);
 	}
 
-	public void decoy(Vector3 position){
+	public override void decoy(Vector3 position){
+		base.decoy(position);
 		setState (3);
 		tempPosition = nextPosition;
 		nextPosition = position;
@@ -104,5 +111,29 @@ public class Farmer : Enemy {
 		if (col.tag == "Decoy" && state != 2) {
 			decoy (col.transform.position);
 		}
+	}
+
+	public override void onSightEnter(){
+		base.onSightEnter ();
+		if (state != 7 && !onSight) {
+			source.PlayOneShot(achouSound,.5f);
+
+			SpriteRenderer renderer = alertSymbol.GetComponent<SpriteRenderer> ();
+			Color color = renderer.color;
+			color.a = 1.0f;
+			renderer.color = color;
+
+			onSight = true;
+			Invoke ("runAway", 3f);
+			setState (2);
+		}
+	}
+
+	public override void onSightStay(){
+
+	}
+
+	public override void onSightExit(){
+
 	}
 }

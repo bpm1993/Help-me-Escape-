@@ -111,7 +111,6 @@ public class CreateMap : MonoBehaviour {
                 GetComponent<MatrixMap>().addObject(dirt,contX, contY);
 			}
 		}
-		print (redCorns);
 		gameObject.GetComponentInParent<MatrixMap> ().RecebeRedCorns (redCorns);
 	}
 }
