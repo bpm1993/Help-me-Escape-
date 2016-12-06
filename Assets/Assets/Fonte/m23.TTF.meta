@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 4cbb41593d0ef0a47bb0862e52f86e83
+timeCreated: 1479239849
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - M23_HYDRANT SPECIAL
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

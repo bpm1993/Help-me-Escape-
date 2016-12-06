@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
 	public GameObject gameControl;
 	private bool lastFootBool;
 	public GameObject milhoDobrado;
+	public Rigidbody2D rgb;
 
 	// Use this for initialization
 	void Start () {
@@ -29,21 +30,21 @@ public class Player : MonoBehaviour {
 
 		move (moveHorizontal, moveVertical);
 		footstep ();
-
+		rgb = GetComponent<Rigidbody2D> ();
 
 	}
 
 	void move(float moveHorizontal, float moveVertical) {
+		rgb.velocity = new Vector2 (moveHorizontal*speed, moveVertical*speed);
 		Vector3 move = new Vector3 (moveHorizontal, moveVertical, 0);
-		transform.position += move * speed * Time.deltaTime;
-        if (move != Vector3.zero){
-            float angle = (Mathf.Atan2(move.y, move.x) * Mathf.Rad2Deg) - 90;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
-        else
-        {
-            transform.rotation = transform.rotation;
-        }
+		if (move != Vector3.zero){
+			float angle = (Mathf.Atan2(move.y, move.x) * Mathf.Rad2Deg) - 90;
+			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+		}
+		else
+		{
+			transform.rotation = transform.rotation;
+		}
 	}
 
 	void footstep(){
