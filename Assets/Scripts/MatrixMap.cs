@@ -40,6 +40,10 @@ public class MatrixMap : MonoBehaviour {
 	public bool alertBool;
 	//Text milhos que faltam
 	public Text milhosRestantesText;
+	public Text timerText;
+	public float timeLeft;
+	private bool terminouATempo = true;
+	public bool naoFoiVisto = true;
 	//Fim Daniel
 
 	float shineTimer;
@@ -58,12 +62,22 @@ public class MatrixMap : MonoBehaviour {
 		shine.SetFloat ("_Adjust", 2);
 		pego = false;
 		fireflyTimer = Time.time;
+		Time.timeScale = 1;
 		//condicao de vitoria
 //		redCorns = gameObject.GetComponentInParent<CreateMap>().redCorns;
 //		print ("Red: " + redCorns);
 
 	}
 	void Update(){
+
+		timeLeft -= Time.deltaTime;
+		float minutos = timeLeft / 60;
+		float segundos = timeLeft % 60;
+		timerText.text = Mathf.Floor(minutos)+ ":" + Mathf.Round(segundos);
+		if(timeLeft < 0){
+			terminouATempo = false;
+		}
+
 		float delta = Time.time - fireflyTimer;
 		int rand = Random.Range (0, 10);
 		if (delta >= 5f) {
@@ -126,6 +140,10 @@ public class MatrixMap : MonoBehaviour {
 //		if (alertBool == true) {
 			PlayerEmPerigo ();
 //		}
+	}
+
+	public void PlayerVisto (){
+		naoFoiVisto = false;
 	}
 
 	public void PlayerPego (){
@@ -270,6 +288,10 @@ public class MatrixMap : MonoBehaviour {
 
 	public void test(){
 		print ("teste");
+	}
+
+	public void tentarNovamente(){
+		Application.LoadLevel (Application.loadedLevel);
 	}
 }
 	

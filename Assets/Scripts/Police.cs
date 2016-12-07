@@ -71,7 +71,7 @@ public class Police : Enemy {
 			if (transform.position == nextPosition) {
 				if (!stop) {
 					if (index == positions.GetLength (0) - 1) {
-						transform.GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.white;
+//						transform.GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.white;
 						StartCoroutine (setState (1, 2f));
 						stop = true;
 					} else {
@@ -217,8 +217,8 @@ public class Police : Enemy {
 		if (state != 7 && !onSight) {
 			setState (2);
 			onSight = true;
-			GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.red;
-
+//			GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.red;
+			GameObject.Find("Main Game").GetComponent<MatrixMap>().PlayerVisto();
 		}
 
 		GameObject.Find("Main Game").GetComponent<MatrixMap>().alertBool = true;
@@ -229,7 +229,7 @@ public class Police : Enemy {
 
 		if (state == 2 && onSight) {
 			onSight = false;
-			GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.yellow;
+//			GetComponentInChildren<ZippyLights2D> ().vertexColor = Color.yellow;
 			state = 0;
 			searchPosition = GameObject.Find ("Player").transform.position;
 			Invoke ("policeCallback", 3f);

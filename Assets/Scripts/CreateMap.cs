@@ -95,9 +95,9 @@ public class CreateMap : MonoBehaviour {
 				GameObject dirt;
 				if (map [contY, contX] == 0) {
 					dirt = (GameObject)Instantiate (this.dirtGO);
-					redCorns++;
 				} else if (map [contY, contX] == 1) {
 					dirt = (GameObject)Instantiate (this.lightDirt);
+					redCorns++;
 				} else if (map [contY, contX] == 2) {
 					dirt = (GameObject)Instantiate (this.boulder);
 				} else if (map [contY, contX] == 3) {

@@ -13,14 +13,14 @@ public class SoundVolume : MonoBehaviour {
         float mus = sliderMusic.value;
         float sfx = sliderSFx.value;
 
-		mixerMusic.GetFloat("Musica", out mus);
-        mixerMusic.GetFloat("SFx", out sfx);
+		mixerMusic.GetFloat("musicVol", out mus);
+        mixerMusic.GetFloat("sfxVol", out sfx);
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		mixerMusic.SetFloat("Musica", sliderMusic.value);
-		mixerMusic.SetFloat("SFx", sliderSFx.value);
+		mixerMusic.SetFloat("musicVol", sliderMusic.value);
+		mixerMusic.SetFloat("sfxVol", sliderSFx.value);
     }
 }

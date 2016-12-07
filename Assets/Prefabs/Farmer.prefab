@@ -75,8 +75,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
+  m_GravityScale: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -321,7 +321,8 @@ AudioSource:
   m_GameObject: {fileID: 114404}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243000011011994700, guid: 774017057da39e946a80ab30ba774d06,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -400,7 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idle: 0
   lightEnabled: 1
-  resolution: 13
+  resolution: 20
   degrees: 60
   oldDegrees: 60
   moveToUpdate: 0
@@ -409,7 +410,7 @@ MonoBehaviour:
     m_Bits: 1536
   unityLight: {fileID: 0}
   follow: {fileID: 0}
-  range: 7.7
+  range: 7
   animateRange: 0
   rangeAnimation:
     serializedVersion: 2
@@ -420,7 +421,7 @@ MonoBehaviour:
   animateRangeSpeed: 1
   animateRangeScale: 1
   enableVertexColors: 1
-  vertexFade: 1
+  vertexFade: 0
   vertexColor: {r: 0.19117647, g: 0.188811, b: 0.105428204, a: 1}
   ColorCycleEnabled: 0
   ColorCycle:
@@ -539,7 +540,21 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   str:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   - 0
   - 0
   - 0

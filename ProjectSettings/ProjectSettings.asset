@@ -7,9 +7,9 @@ PlayerSettings:
   productGUID: 831c6379a0961a44482a760e0099f503
   AndroidProfiler: 0
   defaultScreenOrientation: 4
-  targetDevice: 2
+  targetDevice: 0
   useOnDemandResources: 0
-  accelerometerFrequency: 60
+  accelerometerFrequency: 0
   companyName: DefaultCompany
   productName: Escape!
   defaultCursor: {fileID: 0}
