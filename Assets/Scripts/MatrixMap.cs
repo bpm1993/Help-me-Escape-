@@ -27,6 +27,7 @@ public class MatrixMap : MonoBehaviour {
 	public float waitTimeSlow = 5.0f;
 	private float secondsTimeSlow = 0.0f;
 	private float startTimeSlow;
+	public Image slowMoPanel;
 	//Condicao de vitoria
 	private int redCorns;
 	private int cornsDobrados;
@@ -44,6 +45,14 @@ public class MatrixMap : MonoBehaviour {
 	public float timeLeft;
 	private bool terminouATempo = true;
 	public bool naoFoiVisto = true;
+	public Image pausePanel;
+	public Slider sliderMusica;
+	public Slider sliderSFX;
+	public Text musicaTxt;
+	public Text sfxTxt;
+	public Image primeiraEstrela;
+	public Image segundaEstrela;
+	public Image terceiraEstrela;
 	//Fim Daniel
 
 	float shineTimer;
@@ -63,13 +72,17 @@ public class MatrixMap : MonoBehaviour {
 		pego = false;
 		fireflyTimer = Time.time;
 		Time.timeScale = 1;
+		slowMoPanel.enabled=false;
+		primeiraEstrela.enabled = false;
+		segundaEstrela.enabled = false;
+		terceiraEstrela.enabled = false;
+
 		//condicao de vitoria
 //		redCorns = gameObject.GetComponentInParent<CreateMap>().redCorns;
 //		print ("Red: " + redCorns);
 
 	}
 	void Update(){
-
 		timeLeft -= Time.deltaTime;
 		float minutos = timeLeft / 60;
 		float segundos = timeLeft % 60;
@@ -92,6 +105,14 @@ public class MatrixMap : MonoBehaviour {
 
 		if (cornsDobrados == redCorns) {
 			print ("VENCEU");
+			primeiraEstrela.enabled = true;
+			if(terminouATempo =true || naoFoiVisto ==true){
+				segundaEstrela.enabled = true;
+			}
+			if(terminouATempo =true && naoFoiVisto ==true){
+				segundaEstrela.enabled = true;
+				terceiraEstrela.enabled = true;
+			}
 			Time.timeScale = 0;
 			finalText.text = "Você está mais perto de ser resgatado!";
 			if (panelFinal.transform.position.x > 0){
@@ -129,12 +150,13 @@ public class MatrixMap : MonoBehaviour {
 		}
 		//SLOW MO
 		if (coolingDownSlow == true && secondsTimeSlow<=waitTimeSlow)
-		{
+		{	slowMoPanel.enabled = true;
 			secondsTimeSlow = Time.timeSinceLevelLoad - startTimeSlow;
 			SlowMoImg.fillAmount = secondsTimeSlow/waitTimeSlow;
 			//			print (secondsTime/waitTime);
 			if (secondsTimeSlow/waitTimeSlow >= 1.0f) {
 				coolingDownSlow = false;
+				slowMoPanel.enabled = false;
 			}
 		}
 //		if (alertBool == true) {
@@ -208,6 +230,8 @@ public class MatrixMap : MonoBehaviour {
 		GameObject player = GameObject.FindGameObjectWithTag ("Player");
 		GameObject instantDecoy = (GameObject)Instantiate(this.decoy);
 		instantDecoy.transform.position = player.transform.position;
+		instantDecoy.transform.rotation = player.transform.rotation;
+
 	}
 
 	public void mindControl(){
@@ -292,6 +316,18 @@ public class MatrixMap : MonoBehaviour {
 
 	public void tentarNovamente(){
 		Application.LoadLevel (Application.loadedLevel);
+	}
+
+	public void pauseBtn(){
+		
+		if (Time.timeScale == 0) {
+			pausePanel.transform.position = new Vector3(5000, pausePanel.transform.position.y, pausePanel.transform.position.z);
+			Time.timeScale = 1;
+		} else {
+			pausePanel.transform.position = new Vector3(pausePanel.transform.parent.position.x, pausePanel.transform.position.y, pausePanel.transform.position.z);
+			Time.timeScale = 0;
+		}
+
 	}
 }
 	
